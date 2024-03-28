@@ -1,0 +1,184 @@
+<main class="bg-gray-900">
+  <!-- Pricing section -->
+  <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-32 lg:px-8">
+    <div class="mx-auto max-w-4xl text-center">
+      <h1 class="text-base font-semibold leading-7 text-indigo-400">Pricing</h1>
+      <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">Pricing plans for teams of&nbsp;all&nbsp;sizes</p>
+    </div>
+    <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">Choose from our flexible pricing plans. We charge based on speed increases. The more speed, the less per each we charge. </p>
+    <div class="mt-16 flex justify-center">
+      <!-- grid-cols-1 class when annually label used -->
+      <fieldset class="grid grid-cols-1 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-white">
+        <legend class="sr-only">Payment frequency</legend>
+        <!-- Checked: "bg-indigo-500" -->
+        <label class="cursor-pointer rounded-full px-2.5 py-1 bg-indigo-500">
+          <input type="radio" name="frequency" value="monthly" class="sr-only">
+          <span>Monthly</span>
+        </label>
+        <!-- toggle month/annually -->
+        <!-- Checked: "bg-indigo-500" -->
+        <!-- <label class="cursor-pointer rounded-full px-2.5 py-1">
+          <input type="radio" name="frequency" value="annually" class="sr-only">
+          <span>Annually</span>
+        </label> -->
+      </fieldset>
+    </div>
+    <div class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <div class="rounded-3xl p-8 xl:p-10 ring-1 ring-white/10">
+        <div class="flex items-center justify-between gap-x-4">
+          <h2 id="tier-freelancer" class="text-lg font-semibold leading-8 text-white">Free</h2>
+        </div>
+        <p class="mt-4 text-sm leading-6 text-gray-300">For initial setup.</p>
+        <p class="mt-6 flex items-baseline gap-x-1">
+          <!-- Price, update based on frequency toggle state -->
+          <span class="text-4xl font-bold tracking-tight text-white">0</span>
+          <!-- Payment frequency, update based on frequency toggle state -->
+          <span class="text-sm font-semibold leading-6 text-gray-300">/month</span>
+        </p>
+        <a href="https://app.ruby.ci/" aria-describedby="tier-freelancer" class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white">Get started</a>
+        <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Initial automated setup
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Manual help by our team
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Initial number of runs to try the product
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Unlimited team members
+          </li>
+        </ul>
+      </div>
+      <div class="rounded-3xl p-8 xl:p-10 bg-white/5 ring-2 ring-indigo-500">
+        <div class="flex items-center justify-between gap-x-4">
+          <h2 id="tier-startup" class="text-lg font-semibold leading-8 text-white">Performance</h2>
+          <p class="rounded-full bg-indigo-500 px-2.5 py-1 text-xs font-semibold leading-5 text-white">Most popular</p>
+        </div>
+        <p class="mt-4 text-sm leading-6 text-gray-300">Grow As Much As You Need.</p>
+        <p class="mt-6 flex items-baseline gap-x-1">
+          <!-- Price, update based on frequency toggle state -->
+          <span class="text-sm font-semibold leading-6 text-gray-300">from</span>
+          <span class="text-4xl font-bold tracking-tight text-white">$79</span>
+          <!-- Payment frequency, update based on frequency toggle state -->
+          <span class="text-sm font-semibold leading-6 text-gray-300">/speed</span>
+        </p>
+        <a href="https://app.ruby.ci/" aria-describedby="tier-startup" class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500">Get started</a>
+        <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Everything from Free
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Scale up to 30x the speed
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Simple pricing per acceleration
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            More speed, less price per concurency
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Exclusive Slack channel for support
+          </li>
+        </ul>
+      </div>
+      <div class="rounded-3xl p-8 xl:p-10 ring-1 ring-white/10">
+        <div class="flex items-center justify-between gap-x-4">
+          <h2 id="tier-custom" class="text-lg font-semibold leading-8 text-white">Custom</h2>
+        </div>
+        <p class="mt-4 text-sm leading-6 text-gray-300">Unlimited Possibilities</p>
+        <p class="mt-6 flex items-baseline gap-x-1">
+          <!-- Price, update based on frequency toggle state -->
+          <span class="text-4xl font-bold tracking-tight text-white invisible">$</span>
+          <!-- Payment frequency, update based on frequency toggle state -->
+          <span class="text-sm font-semibold leading-6 text-gray-300 invisible">/month</span>
+        </p>
+        <a href="https://app.ruby.ci/" aria-describedby="tier-custom" class="mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white">Get started</a>
+        <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Any customizations for your project
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Scale up to 256x faster
+          </li>
+          <li class="flex gap-x-3">
+            <svg class="h-6 w-5 flex-none text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
+            </svg>
+            Pricing guarantee*
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial section -->
+  <div class="mx-auto mt-24 max-w-7xl px-6 sm:mt-56 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20">
+        <%= image_tag 'rby.svg', alt: '', class: 'h-12 self-start' %>
+        <figure class="mt-10 flex flex-auto flex-col justify-between">
+          <blockquote class="text-lg leading-8 text-white">
+            <p>“Adding a new project was as simple as it could be.”</p>
+          </blockquote>
+          <figcaption class="mt-10 flex items-center gap-x-6">
+            <%= image_tag 'avatar-Betty.png', alt: 'betty', class: 'h-14 w-14 rounded-full bg-gray-800' %>
+            <div class="text-base">
+              <div class="font-semibold text-white">Leo Bennet</div>
+              <div class="mt-1 text-gray-400">Senior developer at Lambda Devs</div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="flex flex-col border-t border-white/10 pt-10 sm:pt-16 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-20">
+        <%= image_tag 'rb.svg', alt: '', class: 'h-12 self-start' %>
+        <figure class="mt-10 flex flex-auto flex-col justify-between">
+          <blockquote class="text-lg leading-8 text-white">
+            <p>“Flexible pricing is scaling with our company as we grow.”</p>
+          </blockquote>
+          <figcaption class="mt-10 flex items-center gap-x-6">
+            <%= image_tag 'avatar-john.png', alt: 'john', class: 'h-14 w-14 rounded-full bg-gray-800' %>
+            <div class="text-base">
+              <div class="font-semibold text-white">Aleksandar Soch</div>
+              <div class="mt-1 text-gray-400">CEO at LinkLuna</div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</main>
