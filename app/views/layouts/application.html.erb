@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ruby.ci</title>
+    <title>Ruby.ci fastest Ruby on Rails CI in cloud</title>
 
     <%= favicon_link_tag 'favicon.svg' %>
     <%= csrf_meta_tags %>
@@ -13,14 +13,16 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= render 'layouts/partials/scripts_header' %>
   </head>
 
   <body class="bg-gray-900">
-    <%= render 'layouts/partials/join_us' %>
+    <%#= render 'layouts/partials/top' %>
     <%= render 'layouts/partials/header' %>
     <div class="page-wrapper">
       <%= yield %>
       <%= render 'layouts/partials/footer' %>
     </div>
+    <%= render 'layouts/partials/scripts_footer' %>
   </body>
 </html>
