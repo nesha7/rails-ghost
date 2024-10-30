@@ -1,0 +1,43 @@
+<div class="relative flex flex-col flex-auto min-w-0 py-16">
+  <div class="grid grid-cols-1 xl:grid-cols-[auto_theme(spacing.56)]">
+      <div data-toc-src="" class="flex-auto min-w-0 px-0 lg:pl-8 xl:px-16">
+          <h2 id="___TOCBOT___" class="sr-only m-0">
+              <span aria-hidden="true"><%= @post['title'] %></span>
+          </h2>
+
+          <article class="overflow-x-hidden max-w-3xl mx-auto">
+              <header>
+                          <span class="block text-sm font-medium text-accent mt-0 mb-1 group-[.no-sections]:hidden">
+                                  Tutorial
+                          </span>
+
+                  <h1 class="text-4xl leading-tight tracking-tight font-extrabold text-gray-900 dark:text-gray-50 js-toc-ignore">
+                      <%= @post['title'] %>
+                  </h1>
+
+
+                          <figure class="mt-8 has-links ">
+                              <div class="relative rounded-md overflow-hidden bg-gray-50 dark:bg-gray-800 
+                                      after:absolute after:top-0 after:left-0 after:w-full after:h-full after:ring-1 after:ring-inset after:ring-gray-900/5 dark:after:ring-gray-50/5 after:rounded-md
+                                          aspect-w-16 aspect-h-9
+                                                                                          ">
+                                  <img class="!m-0 object-cover lazyautosizes ls-is-cached lazyloaded" src=<%= @post['feature_image'] %> alt="Installation" sizes="618px">
+                              </div>
+                          </figure>
+              </header>
+
+              <div class="mt-8 content 4xl:content-lg">
+                 <%= raw @post['html'] %>
+              </div>
+
+          </article>
+      </div>
+
+      <div data-toc-container="" class="invisible hidden xl:block sticky top-[theme(spacing.36)] flex-none w-56 max-h-[calc(100vh-theme(spacing.48))]">
+          <h2 class="text-2xs uppercase font-bold tracking-wider mb-3 dark:text-gray-200">
+              On this page
+          </h2>
+          <nav data-toc-target="" class="relative text-xs leading-4 overflow-auto max-h-[calc(100vh-theme(spacing.48))] text-gray-500 dark:text-gray-400 [&amp;_.current]:dark:text-gray-300"><ol class="toc-list "><li class="toc-list-item is-active-li"><a href="#___TOCBOT___" class="toc-link node-name--H2 flex py-1.5 hover:text-gray-700 dark:hover:text-gray-300 [&amp;.node-name--H3]:py-1 [&amp;.node-name--H3]:before:content-['—'] [&amp;.node-name--H3]:before:inline [&amp;.node-name--H3]:before:mr-1 [&amp;.node-name--H3]:before:opacity-50 current text-gray-700 font-medium -tracking-xs">Installation</a></li></ol></nav>
+      </div>
+  </div>
+</div>

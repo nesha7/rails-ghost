@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="group/html min-h-screen has-inline-code-block dark has-sidebar-dark has-gray-scale-Slate">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ruby.ci fastest Ruby on Rails CI in cloud</title>
+
+    <%= favicon_link_tag 'favicon.svg' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "ghost", media: 'all', "data-turbo-track": "reload" %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="post-template tag-tutorial tag-hash-docs-2 tag-hash-docs min-h-screen flex flex-col antialiased overflow-x-hidden text-gray-900 bg-white dark:text-gray-400 dark:bg-gray-900 [&amp;.has-modal]:h-screen [&amp;.has-modal]:overflow-hidden sal-disabled">
+    <div class="absolute right-0 top-0 -z-10 overflow-hidden">
+      <div class="relative w-[600px] h-[600px] -translate-y-2/3 translate-x-2/3 lg:-translate-y-1/2 lg:translate-x-1/2 bg-gradient-to-bl from-accent to-transparent rounded-full blur-[100px] opacity-50"></div>
+    </div>
+
+    <div id="viewport" class="min-h-screen flex flex-col">
+      <a href="#main" class="group sr-only focus:not-sr-only focus-within:not-sr-only outline-none">
+        <span class="relative flex items-center justify-center w-full h-12 font-semibold bg-gray-900 text-gray-50 text-sm group-focus-within:ring group-focus:ring ring-1 ring-inset ring-accent dark:bg-gray-800/60">
+            Skip to main content
+        </span>
+      </a>
+
+      <%= render 'layouts/partials/header_ghost' %>
+      <main id="main" tabindex="-1" class="flex-none outline-none">
+        <div class="outer xl:outer-xl">
+          <div class="inner">
+            <div class="group flex relative">
+              <div class="hidden lg:block absolute top-0 left-0 h-full w-screen -translate-x-full 
+                    group-[.has-sidebar-transparent]/html:hidden">
+                <div class="sticky top-20 w-full h-[calc(100vh_-_theme(spacing.20))] bg-gray-50 dark:bg-gray-800 group-[.has-sidebar-dark]/html:bg-gray-900 group-[.has-sidebar-dark]/html:dark:bg-gray-950"></div>
+              </div>
+
+              <div data-docs-menu="" class="group fixed -left-full invisible lg:visible lg:h-[calc(100vh_-_theme(spacing.20))] lg:sticky lg:left-0 lg:top-20 flex-none overflow-hidden
+                [&amp;.open]:max-lg:visible [&amp;.open]:max-lg:z-50 [&amp;.open]:max-lg:inset-0  dark ">
+
+                <div data-docs-menu-close="" class="hidden group-[.open]:max-lg:block fixed -z-10 inset-0 bg-black/20 backdrop-blur-sm"></div>
+
+                <div class="docs-menu h-full w-full max-w-xs lg:w-72 px-10 lg:pl-0 py-16 relative z-10 bg-gray-50 dark:bg-gray-800 overflow-x-hidden overflow-y-auto 
+                  max-lg:pl-8 max-lg:pr-12 max-lg:-translate-x-full group-[.open]:max-lg:translate-x-0 group-[.open]:max-lg:shadow-lg group-[.open]:max-lg:transition group-[.open]:max-lg:ease-out
+                  group-[.has-sidebar-transparent]/html:lg:bg-transparent group-[.has-sidebar-transparent]/html:lg:dark:bg-transparent group-[.has-sidebar-transparent]/html:lg:border-r group-[.has-sidebar-transparent]/html:lg:border-gray-900/5 group-[.has-sidebar-transparent]/html:lg:dark:border-gray-50/5
+                  group-[.has-sidebar-dark]/html:bg-gray-900 group-[.has-sidebar-dark.dark]/html:bg-gray-950
+                  ">
+                  <div class="sticky top-0 h-0 w-full z-10">
+                      <button data-docs-menu-close="" aria-label="Close" class="-translate-y-12 translate-x-full hidden group-[.open]:max-lg:flex items-center justify-center p-2 ml-auto rounded-md text-gray-400 hover:text-gray-700 dark:hover:text-gray-100 bg-gray-50 dark:bg-gray-800 group-[.has-sidebar-dark]/html:bg-gray-900 group-[.has-sidebar-dark.dark]/html:bg-gray-950">
+                          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" focusable="false" aria-hidden="true">
+<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+                      </button>    
+                  </div>
+                  <ul role="list" class="text-sm space-y-8 group-[.no-sections]:space-y-0">
+                 
+                  <li data-docs-section="" class="group/ds ">
+                      <h3 data-docs-section-heading="" class="group/dh relative w-full font-semibold dark:text-gray-50 group-[.no-sections]:hidden  ">
+                              Tutorial
+
+                      <button class=" hidden  absolute top-0 right-0 w-5 h-5 rounded flex-shrink-0 items-center justify-center translate-x-full group-hover/dh:bg-gray-900/5 dark:group-hover/dh:bg-gray-50/10" aria-label="Toggle menu">
+                            <svg class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400 group-[.open]/ds:rotate-90" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" focusable="false" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                      </h3>
+                      <ul class="group-[.open]/ds:block  mt-5 space-y-4 border-l-2 border-gray-900/10 dark:border-gray-50/10 group-[.no-sections]:pt-4 group-[.no-sections]:mt-0" role="list">
+                        <% @posts.each do |post| %>
+                          <li class="relative">
+                            <a href="/<%= post['slug'] %>" class="group relative flex scroll-m-10 current" data-section="Tutorial" data-slug="installation" data-title="Installation">
+                                <span class="h-5 flex-none mr-3 group-[.current]:mr-2 flex items-center">
+                                    <span class="flex-none w-4 h-0.5 group-[.current]:w-2 bg-gray-900/10 dark:bg-gray-50/10"></span>
+                                    <span class="hidden group-[.current]:flex relative flex-none items-center justify-center w-3 h-3 rounded-full overflow-hidden before:block before:opacity-20 before:bg-accent before:absolute before:inset-0 after:block after:bg-accent after:w-1.5 after:h-1.5 after:rounded-full"></span>
+                                </span>
+                                <span class="leading-5 text-gray-500 hover:text-gray-600 group-[.current]:font-semibold group-[.current]:text-accent dark:text-gray-400 dark:hover:text-gray-300 group-[.current]:dark:hover:text-accent">
+                                    <%= post['title'] %>
+                                </span>
+                            </a>
+                          </li>
+                        <% end %>
+                      </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        <%= yield %>
+      </main>
+
+      <%= render 'layouts/partials/footer_ghost' %>
+    </div>
+  </body>
+</html>

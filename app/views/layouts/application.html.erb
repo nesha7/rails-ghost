@@ -11,17 +11,26 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <%#= stylesheet_link_tag "application", media: 'all', "data-turbo-track": "reload" %>
     <%#= javascript_importmap_tags %>
-    <%#= render 'layouts/partials/scripts_header' %>
+    <%= render 'layouts/partials/scripts_header' %>
   </head>
 
-  <body class="bg-gray-900">
+  <body class="bg-gray-900 relative">
     <%#= render 'layouts/partials/top' %>
     <%= render 'layouts/partials/header' %>
     <div class="page-wrapper">
       <%= yield %>
       <%= render 'layouts/partials/footer' %>
+    </div>
+    <div>
+      <%= image_tag 'light-blue-footer.svg', class: 'absolute h-32 left-0 bottom-0', alt: '' %>
+      <%= image_tag 'orange-footer.svg', class: 'absolute right-0 bottom-0', alt: '' %>
+      <%= image_tag 'blue-footer.svg', class: 'absolute right-0 bottom-0', alt: '' %>
     </div>
     <%#= render 'layouts/partials/scripts_footer' %>
   </body>
