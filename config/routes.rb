@@ -15,5 +15,5 @@ Rails.application.routes.draw do
   get '/jenkins_ci', to: 'pages#jenkins_ci'
   get '/get_started', to: 'pages#get_started'
 
-  match '*unmatched', to: 'application#route_not_found', via: :all
+  match '*path', to: 'pages#post', via: :get
 end
