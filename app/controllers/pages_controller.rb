@@ -1,9 +1,21 @@
 class PagesController < ApplicationController
 	def post
 		@posts = ghost_client.get_posts.reverse
-		@post = request.path == '/docs' ? @posts.first : ghost_client.get_post(request.path)
+		@post = request.path == '/docs' ? 
+			@posts.select {|p| p['custom_template'] == 'custom-documentation'}.first : ghost_client.get_post(request.path)
 
-		render layout: 'docs'
+		if @post['custom_template'] == 'custom-documentation'
+			render layout: 'docs'
+		else
+			render 'pages/blog', layout: 'blog'
+		end
+	end
+
+	def blogs
+		@posts = ghost_client.get_posts.select {|p| p['custom_template'] != 'custom-documentation'}
+		@fatured = @posts.select {|p| p['featured']}.first(3)
+
+		render layout: 'blog'
 	end
 
 	private

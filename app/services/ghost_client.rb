@@ -5,7 +5,7 @@ class GhostClient
   def get_post(slug)
     begin
       resp = HTTParty.get(
-        "#{HOST_URL}/content/posts/slug#{slug}?key=#{CONTENT_API_KEY}&include=tags"
+        "#{HOST_URL}/content/posts/slug#{slug}?key=#{CONTENT_API_KEY}&include=authors,tags"
       )
 
       JSON.parse(resp.body)['posts'].first
@@ -17,7 +17,7 @@ class GhostClient
   def get_posts
     begin
       resp = HTTParty.get(
-        "#{HOST_URL}/content/posts/?key=#{CONTENT_API_KEY}&include=tags"
+        "#{HOST_URL}/content/posts/?key=#{CONTENT_API_KEY}&include=authors,tags"
       )
 
       JSON.parse(resp.body)['posts']

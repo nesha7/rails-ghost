@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="group/html min-h-screen has-inline-code-block dark has-gray-scale-Slate">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ruby.ci fastest Ruby on Rails CI in cloud</title>
+
+    <%= favicon_link_tag 'favicon.svg' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "ghost", media: 'all', "data-turbo-track": "reload" %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="page-template page-blog tag-hash-blog-grid min-h-screen flex flex-col antialiased overflow-x-hidden text-gray-900 bg-white dark:text-gray-400 dark:bg-gray-900 [&amp;.has-modal]:h-screen [&amp;.has-modal]:overflow-hidden sal-disabled">
+    <div class="absolute right-0 top-0 -z-10 overflow-hidden">
+      <div class="relative w-[600px] h-[600px] -translate-y-2/3 translate-x-2/3 lg:-translate-y-1/2 lg:translate-x-1/2 bg-gradient-to-bl from-accent to-transparent rounded-full blur-[100px] opacity-50"></div>
+    </div>
+
+    <div id="viewport" class="min-h-screen flex flex-col">
+      <a href="#main" class="group sr-only focus:not-sr-only focus-within:not-sr-only outline-none">
+        <span class="relative flex items-center justify-center w-full h-12 font-semibold bg-gray-900 text-gray-50 text-sm group-focus-within:ring group-focus:ring ring-1 ring-inset ring-accent dark:bg-gray-800/60">
+            Skip to main content
+        </span>
+      </a> 
+
+      <%= render 'layouts/partials/header_ghost' %>
+      <main id="main" tabindex="-1" class="flex-none outline-none"> 
+        <%= yield %>
+      </main>
+
+      <%= render 'layouts/partials/footer_ghost' %>
+    </div>
+  </body>
+</html>
