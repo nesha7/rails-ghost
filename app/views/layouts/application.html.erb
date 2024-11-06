@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Ruby.ci fastest Ruby on Rails CI in cloud</title>
 
-    <%= favicon_link_tag 'favicon.svg' %>
+    <%= favicon_link_tag 'logo-linear.svg' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -36,6 +36,7 @@
       <%= yield %>
       <%= render 'layouts/partials/footer' %>
     </div>
+    <%= render 'layouts/partials/features_script' if action_name == 'features' %>
     <%= raw @settings['codeinjection_foot'] %>
   </body>
 </html>

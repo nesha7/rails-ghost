@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/github_ci', to: 'pages#github_ci'
   get '/jenkins_ci', to: 'pages#jenkins_ci'
   get '/get_started', to: 'pages#get_started'
+  get '/features', to: 'pages#features'
 
   match '*path', to: 'pages#post', via: :get
 end

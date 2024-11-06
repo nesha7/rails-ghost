@@ -1,0 +1,39 @@
+<script>
+// Sticky navigation function
+  function stickyNavigation() {
+    const secondaryNav = document.getElementById('secondary_nav');
+    const headerNav = document.querySelector('header nav');
+    
+    const stickyNavTop = secondaryNav.offsetTop - 160;
+    // const topHeight = headerNav.offsetHeight;
+    const topHeight = 80;
+
+    function handleScroll() {
+      const scrollTop = window.pageYOffset;
+      
+      if (scrollTop >= stickyNavTop) {
+        secondaryNav.style.position = 'fixed';
+        secondaryNav.style.top = `${topHeight}px`;
+        secondaryNav.classList.add('bg-slate-900');
+      } else {
+        secondaryNav.style.position = 'relative';
+        secondaryNav.style.top = '0';
+        secondaryNav.classList.remove('bg-slate-900');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+  }
+
+  // Initialize sticky navigation
+  document.addEventListener('DOMContentLoaded', function() {
+    stickyNavigation();
+  });
+
+ // Add event listener for Turbo:load
+ /*
+  document.addEventListener('turbo:load', function() {
+    console.log('Turbo:load event triggered');
+    stickyNavigation();
+  }); */
+</script>

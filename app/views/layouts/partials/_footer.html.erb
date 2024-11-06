@@ -4,14 +4,16 @@
     <div class="flex flex-wrap items-center justify-between">
       <p class="pb-16 lg:pb-32 mr-6 text-3xl font-normal tracking-tight text-white">Making the world a better place through<br>constructing elegant hierarchies.</p>
       <div class="grow flex items-center justify-center gap-x-6 pb-16 lg:pb-32">
-        <a href="https://app.ruby.ci/users/auth/github" class="rounded-full bg-blue-500 px-4 py-2 sm:px-8 sm:py-4 text-base text-white shadow-sm hover:bg-blue-400">Free Trial Month</a>
-        <a href="/pricing" class="rounded-full px-4 py-2 sm:px-8 sm:py-4 text-base text-white shadow-sm hover:bg-blue-400 shadow-sm ring-1 ring-inset ring-white hover:ring-0 hover:text-white">View Pricing</a>
+        <a href="https://app.ruby.ci/users/auth/github" class="rounded-full bg-gradient-to-b from-blue-500 to-[#7953AA] px-4 py-2 sm:px-8 sm:py-4 text-base text-white hover:bg-gradient-to-t">Free Trial Month</a>
+        <a href="/pricing" class="rounded-full px-4 py-2 sm:px-8 sm:py-4 text-base text-white ring-1 ring-inset ring-white from-blue-500 to-[#7953AA] hover:bg-gradient-to-b hover:ring-0 hover:text-white">View Pricing</a>
       </div>
     </div>
     <div class="flex flex-col md:flex-row justify-between">
       <div class="space-y-8">
-        <%= image_tag 'logo-rubyci-new.png', class: 'h-7', alt: "Logo" %>
-        <!-- <p class="font-semibold text-2xl text-white">Ruby.ci</p> -->
+        <a href="/" class="-m-1.5 p-1.5 flex items-center">
+          <%=image_tag 'logo-linear.svg', class: "h-7", alt: "Logo"%>
+          <span class="ml-2 text-3xl text-white font-semibold">RUBY<b>CI</b></span>
+        </a>
         <p class="text-sm leading-6 text-white">Place where Ruby on Rails projects feel like home.<br>And that's how it should be.</p>
         <div class="flex space-x-6">
           <a href="https://www.linkedin.com/company/77198253" class="text-gray-500 hover:text-gray-400">
@@ -52,7 +54,7 @@
             <h3 class="text-sm font-semibold leading-6 text-white">Support</h3>
             <ul role="list" class="mt-6 space-y-4">
               <li>
-                <a href="/#features" class="text-sm leading-6 text-gray-300 hover:text-white">Features</a>
+                <a href="/features" class="text-sm leading-6 text-gray-300 hover:text-white">Features</a>
               </li>
               <li>
                 <a href="/docs" class="text-sm leading-6 text-gray-300 hover:text-white">Transition</a>
@@ -95,6 +97,6 @@
   <div id="footer-imgs">
     <%=image_tag 'light-blue-footer.svg', class: "absolute h-32 left-0 bottom-0" %>
     <%=image_tag 'orange-footer.svg', class: "absolute right-0 bottom-0" %>
-    <%=image_tag 'blue-footer.svg', class: "absolute right-0 bottom-0" %>
+    <%=image_tag 'light-purple-footer.svg', class: "absolute right-0 bottom-0" %>
   </div>
 </footer>
