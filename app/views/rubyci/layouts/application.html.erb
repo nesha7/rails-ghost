@@ -36,7 +36,7 @@
       <%= yield %>
       <%= render 'rubyci/layouts/partials/footer' %>
     </div>
-    <%= render 'layouts/partials/features_script' if action_name == 'features' %>
+    <%= render 'rubyci/layouts/partials/features_script' if action_name == 'features' %>
     <%= raw @settings['codeinjection_foot'] %>
   </body>
 </html>

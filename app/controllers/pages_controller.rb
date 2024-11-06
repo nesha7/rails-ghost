@@ -10,6 +10,10 @@ class PagesController < ApplicationController
 		render "#{@app}/pages/pricing", layout: "#{@app}/layouts/application"
 	end
 
+	def features
+		render "#{@app}/pages/features", layout: "#{@app}/layouts/application"
+	end
+
 	def post
 		@posts = Rails.cache.fetch("posts", expires_in: 1.hour) do
 			ghost_client.get_posts.reverse
