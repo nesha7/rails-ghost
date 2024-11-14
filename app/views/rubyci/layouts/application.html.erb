@@ -11,7 +11,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <link rel="canonical" href="https://ruby.ci" />
+    <link rel="canonical" href="<%= request.url %>" />
 
     <% if current_user.present? && current_user.admin? %>
       <%= javascript_include_tag "phrasing" %>
