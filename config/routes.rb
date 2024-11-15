@@ -15,8 +15,14 @@ Rails.application.routes.draw do
   get '/circle_ci', to: 'pages#circle_ci'
   get '/github_ci', to: 'pages#github_ci'
   get '/jenkins_ci', to: 'pages#jenkins_ci'
+  get '/featured', to: 'pages#featured'
   get '/get_started', to: 'pages#get_started'
   get '/features', to: 'pages#features'
+  get '/about', to: 'pages#about'
+  get '/contact', to: 'pages#contact'
+  get '/process', to: 'pages#process_page'
+  get '/code_review', to: 'pages#code_review'
+  get '/portfolio', to: 'pages#portfolio'
 
   get '/blog/:slug', to: redirect { |path_params, req| "/#{path_params[:slug]}" }
 

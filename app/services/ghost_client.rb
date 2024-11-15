@@ -44,7 +44,9 @@ class GhostClient
   private
 
   def host_url
-    if host == 'fast.ci'
+    if host == 'kolosek.com'
+      ENV['GHOST_API_URL_KOLOSEK']
+    elsif host == 'fast.ci'
       ENV['GHOST_API_URL_FAST_CI']
     else
       ENV['GHOST_API_URL']
@@ -52,7 +54,9 @@ class GhostClient
   end
 
   def api_key
-    if host == 'fast.ci'
+    if host == 'kolosek.com'
+      ENV['GHOST_CONTENT_API_KEY_KOLOSEK']
+    elsif host == 'fast.ci'
       ENV['GHOST_CONTENT_API_KEY_FAST_CI']
     else
       ENV['GHOST_CONTENT_API_KEY']

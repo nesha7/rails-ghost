@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 	before_action :resolve_app
 	before_action :set_settings
+	before_action :set_posts, only: :index
 
 	def index
 		render "#{@app}/pages/index", layout: "#{@app}/layouts/application"
@@ -15,7 +16,7 @@ class PagesController < ApplicationController
 	end
 
 	def post
-		@posts = Rails.cache.fetch("posts", expires_in: 1.hour) do
+		@posts = Rails.cache.fetch("posts_#{@app}", expires_in: 1.hour) do
 			ghost_client.get_posts.reverse
 		end
 
@@ -30,7 +31,7 @@ class PagesController < ApplicationController
 	end
 
 	def blogs
-		@posts  = Rails.cache.fetch("blogs", expires_in: 1.hour) do
+		@posts  = Rails.cache.fetch("blogs_#{@app}", expires_in: 1.hour) do
 			ghost_client.get_posts.select {|p| p['custom_template'] != 'custom-documentation'}
 		end
 		@fatured = @posts.select {|p| p['featured']}.first(3)
@@ -38,25 +39,61 @@ class PagesController < ApplicationController
 		render "#{@app}/pages/blogs", layout: "#{@app}/layouts/blog"
 	end
 
+	def featured
+		render "#{@app}/pages/featured", layout: "#{@app}/layouts/application"
+	end
+
+	def about
+		render "#{@app}/pages/about", layout: "#{@app}/layouts/application"
+	end
+
+	def contact
+		render "#{@app}/pages/contact", layout: "#{@app}/layouts/application"
+	end
+
+	def process_page
+		render "#{@app}/pages/process", layout: "#{@app}/layouts/application"
+	end
+
+	def code_review
+		render "#{@app}/pages/code_review", layout: "#{@app}/layouts/application"
+	end
+
+	def portfolio
+		render "#{@app}/pages/portfolio", layout: "#{@app}/layouts/portfolio"
+	end
+
 	private
 
 	def ghost_client
-		@ghost_client ||= GhostClient.new(request.host)
+		@ghost_client ||= GhostClient.new(@host)
 	end
 
 	def set_settings
-		@settings = Rails.cache.fetch("ghost_settings", expires_in: 1.hour) do
+		@settings = Rails.cache.fetch("ghost_settings_#{@app}", expires_in: 1.hour) do
 			ghost_client.settings
 		end
 	end
 
 	def resolve_app
-		if request.host == 'fast.ci'
+		if request.host == 'kolosek.com'
+			@app = 'kolosek'
+			@host = 'kolosek.com'
+		elsif request.host == 'fast.ci'
 			@app = 'fastci'
 			@host = 'fast.ci'
 		else
 			@app = 'rubyci'
 			@host = 'ruby.ci'
+		end
+	end
+
+	def set_posts
+		if @host == 'kolosek.com'
+			@posts  = Rails.cache.fetch("blogs_#{@app}", expires_in: 1.hour) do
+				ghost_client.get_posts.select {|p| p['custom_template'] != 'custom-documentation'}
+			end
+			@fatured = @posts.select {|p| p['featured']}.first
 		end
 	end
 end
