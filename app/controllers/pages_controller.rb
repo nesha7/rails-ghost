@@ -32,7 +32,7 @@ class PagesController < ApplicationController
 
 	def blogs
 		@posts  = Rails.cache.fetch("blogs_#{@app}", expires_in: 1.hour) do
-			ghost_client.get_posts.select {|p| p['custom_template'] != 'custom-documentation'}
+			ghost_client.get_posts(params[:page] || 1).select {|p| p['custom_template'] != 'custom-documentation'}
 		end
 		@fatured = @posts.select {|p| p['featured']}.first(3)
 
@@ -95,7 +95,7 @@ class PagesController < ApplicationController
 	def set_posts
 		if @host == 'kolosek.com'
 			@posts  = Rails.cache.fetch("blogs_#{@app}", expires_in: 1.hour) do
-				ghost_client.get_posts.select {|p| p['custom_template'] != 'custom-documentation'}
+				ghost_client.get_posts(params[:page] || 1).select {|p| p['custom_template'] != 'custom-documentation'}
 			end
 			@fatured = @posts.select {|p| p['featured']}.first
 		end

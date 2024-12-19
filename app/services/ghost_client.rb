@@ -17,10 +17,10 @@ class GhostClient
     end
   end
 
-  def get_posts
+  def get_posts(page = 1)
     begin
       resp = HTTParty.get(
-        "#{host_url}/content/posts?key=#{api_key}&include=authors,tags"
+        "#{host_url}/content/posts?key=#{api_key}&include=authors,tags&page=#{page}"
       )
 
       JSON.parse(resp.body)['posts']
