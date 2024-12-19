@@ -1,35 +1,87 @@
-<section class="bg-gray-900 mt-24 py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-      <div class="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20">
-        <%= image_tag 'nomad_logo.svg', alt: 'Nomad', width: '158', height: '48', class: 'h-12 self-start' %>
-        <figure class="mt-10 flex flex-auto flex-col justify-between">
-          <blockquote class="text-lg leading-8 text-white">
-            <p>“Feedback loop is really great. The tools using on ruby.ci is best by far. compared to other CI solutions”</p>
-          </blockquote>
-          <figcaption class="mt-10 flex items-center gap-x-6">
-            <%= image_tag 'wedson-lima.webp', alt: 'wedson-lima', class: 'h-14 w-14 rounded-full bg-gray-800' %>
-            <div class="text-base">
-              <div class="font-semibold text-white">Wedson de Sousa Lima</div>
-              <div class="mt-1 text-gray-400">Nomad</div>
-            </div>
-          </figcaption>
-        </figure>
+<section id="testimonials-section" class="relative lg:h-[800px]">
+  <div class="bg-gray-950">
+    <div class="mx-auto max-w-7xl pt-24 px-2 xs:px-6 lg:px-0">
+      <div class="">
+        <p class="mt-2 text-3xl font-light tracking-tight text-white sm:text-5xl"><%= phrase('section4-title-part1') %><br><%= phrase('section4-title-part2') %></p>
+        <p class="mt-4 text-base font-normal tracking-tight text-white sm:text-lg"><%= phrase('section4-subtitle') %></p>
       </div>
-      <div class="flex flex-col border-t border-white/10 pt-10 sm:pt-16 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-20">
-        <%= image_tag 'agenda_logo.svg', alt: 'Agendaedu', width: '158', height: '48', class: 'h-12 self-start' %>
-        <figure class="mt-10 flex flex-auto flex-col justify-between">
-          <blockquote class="text-lg leading-8 text-white">
-            <p>“Ruby.ci does its magic and everything just works. The CI is really fast compared to other solutions.”</p>
-          </blockquote>
-          <figcaption class="mt-10 flex items-center gap-x-6">
-            <img class="h-14 w-14 rounded-full bg-gray-800" src="https://pbs.twimg.com/profile_images/1167483797039996929/AwWD9r5Y_400x400.jpg" alt="">
-            <div class="text-base">
-              <div class="font-semibold text-white">Renan Gurgel</div>
-              <div class="mt-1 text-gray-400">CTO at Agenda Edu</div>
-            </div>
-          </figcaption>
-        </figure>
+      <div class="relative z-10 mt-16 flow-root sm:mt-24 lg:mx-0">
+        <div class="-mt-8 sm:-mx-4 flex flex-col lg:flex-row">
+          <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+              <figure class="rounded-3xl bg-gray-900 p-4 xs:p-8 text-sm leading-6 ring-1 ring-inset ring-slate-700">
+              <div class="flex justify-between items-center mb-11">
+                <%= image_tag 'agendaedu_logo.svg', class: 'h-8 xs:h-10', width: "166", height: "47", alt: 'agenda_edu' %>
+                <%= image_tag 'five-stars.svg', class: 'h-4 xs:h-5', width: "121", height: "20", alt: '' %>
+              </div>
+              <blockquote class="text-white font-medium text-2xl">
+                <p>“Feedback loop is really great. The tools using on ruby.ci is best by far. compared to other CI solutions”</p>
+              </blockquote>
+              <figcaption class="mt-8 flex items-center gap-x-4">
+                <%= image_tag 'renan-gurgel.webp', class: 'h-10 w-10 rounded-full bg-gray-950', alt: 'renan-gurgel' %>
+                <div>
+                  <div class="font-semibold text-white text-lg">Renan Gurgel</div>
+                  <div class="text-white text-base">CTO at Agenda Edu</div>
+                  <a href="#" class="text-blue-400" aria-label="Renan ln link">
+                    <svg class="h-5 w-5 mt-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M19.5 0.5C20.2969 0.5 21 1.20312 21 2.04688V20C21 20.8438 20.2969 21.5 19.5 21.5H1.45312C0.65625 21.5 0 20.8438 0 20V2.04688C0 1.20312 0.65625 0.5 1.45312 0.5H19.5ZM6.32812 18.5V8.51562H3.23438V18.5H6.32812ZM4.78125 7.10938C5.76562 7.10938 6.5625 6.3125 6.5625 5.32812C6.5625 4.34375 5.76562 3.5 4.78125 3.5C3.75 3.5 2.95312 4.34375 2.95312 5.32812C2.95312 6.3125 3.75 7.10938 4.78125 7.10938ZM18 18.5V13.0156C18 10.3438 17.3906 8.23438 14.25 8.23438C12.75 8.23438 11.7188 9.07812 11.2969 9.875H11.25V8.51562H8.29688V18.5H11.3906V13.5781C11.3906 12.2656 11.625 11 13.2656 11C14.8594 11 14.8594 12.5 14.8594 13.625V18.5H18Z" clip-rule="evenodd"/>
+                    </svg>
+                  </a>
+                </div>
+              </figcaption>
+              <div class="mt-8 rounded-2xl bg-white/5 sm:px-10 py-4 sm:py-8">
+                <dl class="grid lg:gap-x-8 gap-y-4 sm:gap-y-16 grid-cols-1 xs:grid-cols-2">
+                  <div class="flex flex-col">
+                    <dt class="text-base font-medium leading-7 text-white text-center">Money saved in a year</dt>
+                    <dd class="order-first text-3xl pb-2 font-normal text-center tracking-tight text-yellow-500">$28,500</dd>
+                  </div>
+                  <div class="mx-auto border-t border-white/15 my-4 w-32 xs:hidden"></div>
+                  <div class="flex flex-col xs:border-l xs:border-white/15">
+                    <dt class="text-base font-medium leading-7 text-white text-center">Total minutes run</dt>
+                    <dd class="order-first text-3xl pb-2 font-medium tracking-tight text-blue-500 text-center">1,322,010</dd>
+                  </div>
+                </dl>
+              </div>
+            </figure>
+          </div>
+          <div class="mt-12 lg:pt-24 sm:inline-block sm:w-full sm:px-4">
+              <figure class="rounded-3xl bg-gray-900 p-4 xs:p-8 text-sm leading-6 ring-1 ring-inset ring-slate-700">
+              <div class="flex justify-between items-center mb-11">
+                <%= image_tag 'husky_logo.svg', class: 'h-8 xs:h-10', width: "123", height: "37", alt: 'huskey' %>
+                <%= image_tag 'five-stars.svg', class: 'h-4 xs:h-5', width: "121", height: "20", alt: '' %>
+              </div>
+              <blockquote class="text-white font-medium text-2xl">
+                <p>“Feedback loop is really great. The tools using on ruby.ci is best by far. compared to other CI solutions”</p>
+              </blockquote>
+              <figcaption class="mt-8 flex items-center gap-x-4">
+                <%= image_tag 'wedson-lima.webp', class: 'h-10 w-10 rounded-full bg-gray-950', alt: 'wedson-lima' %>
+                <div>
+                  <div class="font-semibold text-white text-lg">Wedson de Sousa Lima</div>
+                  <div class="text-white text-base">Developer</div>
+                  <a href="#" class="text-blue-400" aria-label="Wedson ln link">
+                    <svg class="h-5 w-5 mt-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M19.5 0.5C20.2969 0.5 21 1.20312 21 2.04688V20C21 20.8438 20.2969 21.5 19.5 21.5H1.45312C0.65625 21.5 0 20.8438 0 20V2.04688C0 1.20312 0.65625 0.5 1.45312 0.5H19.5ZM6.32812 18.5V8.51562H3.23438V18.5H6.32812ZM4.78125 7.10938C5.76562 7.10938 6.5625 6.3125 6.5625 5.32812C6.5625 4.34375 5.76562 3.5 4.78125 3.5C3.75 3.5 2.95312 4.34375 2.95312 5.32812C2.95312 6.3125 3.75 7.10938 4.78125 7.10938ZM18 18.5V13.0156C18 10.3438 17.3906 8.23438 14.25 8.23438C12.75 8.23438 11.7188 9.07812 11.2969 9.875H11.25V8.51562H8.29688V18.5H11.3906V13.5781C11.3906 12.2656 11.625 11 13.2656 11C14.8594 11 14.8594 12.5 14.8594 13.625V18.5H18Z" clip-rule="evenodd"/>
+                    </svg>
+                  </a>
+                </div>
+              </figcaption>
+              <div class="mt-8 rounded-2xl bg-white/5 sm:px-10 py-4 sm:py-8">
+                <dl class="grid lg:gap-x-8 gap-y-4 sm:gap-y-16 grid-cols-1 xs:grid-cols-2">
+                  <div class="flex flex-col">
+                    <dt class="text-base font-medium leading-7 text-white text-center">Money saved in a year</dt>
+                    <dd class="order-first text-3xl pb-2 font-normal text-center tracking-tight text-yellow-500">$16,450</dd>
+                  </div>
+                  <div class="mx-auto border-t border-white/15 my-4 w-32 xs:hidden"></div>
+                  <div class="flex flex-col xs:border-l xs:border-white/15">
+                    <dt class="text-base font-medium leading-7 text-white text-center">Total minutes run</dt>
+                    <dd class="order-first text-3xl pb-2 font-medium tracking-tight text-blue-500 text-center">620,015</dd>
+                  </div>
+                </dl>
+              </div>
+            </figure>
+          </div>
+
+          <!-- More testimonials... -->
+        </div>
       </div>
     </div>
   </div>
