@@ -1,0 +1,757 @@
+<main>
+  <section id="pricing-hero-section" class="bg-[#F6F6F8] relative px-6 pt-14 lg:px-8 opacity-0 animate-fade-in">
+    <div class="mx-auto max-w-4xl pt-16 sm:pt-24">
+      <div class="mx-auto max-w-2xl flex flex-col gap-y-6 justify-center w-full text-center">
+        <div class="flex items-center justify-center text-green-dark text-xs">
+          <svg class="h-4 w-4"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="pl-1 font-bold">Pricing</p>
+        </div>
+        <h3 class="text-heading sm:text-6xl tracking-wide">
+          Choose a plan <br> that's right for you.
+        </h3>
+        <p class="text-base font-normal text-gray-500 sm:text-lg/8">No hidden fees. No stress. Built with ease and transparency.</p>
+      </div>
+    </div>
+    <div class="max-w-7xl min-w-auto mx-auto flex flex-col justify-center pb-6">
+      <div class="mt-16 flex justify-center">
+        <fieldset aria-label="Payment frequency">
+          <div class="relative grid grid-cols-2 gap-x-2 rounded-full p-1 text-center text-sm font-semibold border border-[#E6E6EB]">
+            <div class="absolute right-3 -top-4.5 flex items-center h-6 rounded-full px-2 bg-[#EDF6E9] border border-[#C4DCBB]">
+              <span class="text-sm text-[#2D6E16] font-semibold">-17%</span>
+            </div>
+            <label class="h-10 flex items-center cursor-pointer rounded-full px-5 py-1 border">
+              <input type="radio" name="frequency" value="monthly" checked class="sr-only">
+              <span>Monthly</span>
+            </label>
+            <label class="h-10 flex items-center cursor-pointer rounded-full px-5 py-1 border">
+              <input type="radio" name="frequency" value="Yearly" class="sr-only">
+              <span>Yearly</span>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="mx-auto mt-10 grid grid-cols-1 gap-8 max-w-6xl lg:grid-cols-3">
+        <div class="bg-white rounded-3xl p-8 border border-[#E6E6EB]">
+          <h3 id="tier-free" class="text-3xl font-semibold text-gray-900">Free</h3>
+          <p class="mt-4 text-sm/6 text-gray-600">Get started for free with essential features and resources.</p>
+          <p class="mt-6 flex items-baseline gap-x-1">
+            <!-- Price, update based on frequency toggle state -->
+            <span class="text-2xl font-semibold tracking-tight text-gray-900" data-price-monthly="0$" data-price-annually="0$"></span>
+            <!-- Payment frequency, update based on frequency toggle state -->
+            <span class="text-sm/6 font-semibold text-gray-600">/mo</span>
+          </p>
+          <p class="my-2 text-sm">Currently only as a free trial</p>
+          <div class="h-px bg-[#E6E6EB] mt-8"></div>
+          <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600">
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Import from most popular tools
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              50 Stories
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Attachment storage
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Unlimited users
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Unlimited projects
+            </li>
+          </ul>
+          <a href="https://app.litetracker.com/" aria-describedby="tier-free" class="w-fit flex items-center mt-8 block rounded-xl px-3 py-2 text-sm/6 font-semibold text-black border border-[#E6E6EB] hover:bg-[#FAFAFA]">
+            Get started
+            <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <polyline points="9 6 15 12 9 18" />
+            </svg>
+          </a>
+        </div>
+        <div class="bg-white rounded-3xl p-8 border border-[#E6E6EB]">
+          <div class="flex items-center justify-between">
+            <h3 id="tier-free" class="text-3xl font-semibold text-gray-900">Basic</h3>
+            <div class="flex items-center justify-center gap-0.5 h-7 pl-2 pr-3 bg-[#F6F1E9] text-sm text-[#6E6316] rounded-full border border-[#DCCEBB]">
+              <svg class="h-4 h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  
+                <path stroke="none" d="M0 0h24v24H0z"/>  
+                <path d="M18 15a6 6 0 1 1 -10.853 -3.529c1.926-2.338 4.763-3.327 3.848-8.47 2.355 1.761 5.84 5.38 2.022 9.406-1.136 1.091-.244 2.767 1.221 2.593.882-.105 2.023-.966 3.23-2.3.532.68.532 1.717.532 2.3z" />
+              </svg>
+              <span class="font-semibold">
+                Popular
+              </span>
+            </div>
+          </div>
+          <p class="mt-4 text-sm/6 text-gray-600">For growing businesses, expanding companies, and ambitious startups.</p>
+          <p class="mt-6 flex items-baseline gap-x-1">
+            <!-- Price, update based on frequency toggle state -->
+            <span class="text-2xl font-semibold tracking-tight text-gray-900" data-price-monthly="14$" data-price-annually="~11,60$"></span>
+            <!-- Payment frequency, update based on frequency toggle state -->
+            <span class="text-sm/6 font-semibold text-gray-600">/seat/mo</span>
+          </p>
+          <p class="my-2 text-sm" data-price-monthly="Billed monthly*" data-price-annually="Billed annually*"></p>
+          <div class="h-px bg-[#E6E6EB] mt-8"></div>
+          <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600">
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              All features
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Unlimited paid members
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Unlimited projects
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Unlimited file uploads
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Analytics
+            </li>
+          </ul>
+          <a href="https://app.litetracker.com/" aria-describedby="tier-free" class="bg-black w-fit flex items-center mt-8 block rounded-xl px-3 py-2 text-sm/6 font-semibold text-white border border-[#E6E6EB]">
+            Get started
+            <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <polyline points="9 6 15 12 9 18" />
+            </svg>
+          </a>
+        </div>
+        <div class="bg-white rounded-3xl p-8 border border-[#E6E6EB]">
+          <h3 id="tier-free" class="text-3xl font-semibold text-gray-900">Custom</h3>
+          <p class="mt-4 text-sm/6 text-gray-600">Custom (not expensive) pricing for companies with some special needs.</p>
+          <p class="mt-6 flex items-baseline gap-x-1">
+            <span class="text-2xl font-semibold tracking-tight text-gray-900">Custom</span>
+          </p>
+          <p class="my-2">Monthly and Yearly billing</p>
+          <div class="h-px bg-[#E6E6EB] mt-8"></div>
+          <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600">
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              US/EU Data location
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              IP whitelisting
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Administrators
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              BYO Storage
+            </li>
+            <li class="flex gap-x-3">
+              <svg class="h-6 w-5 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+              </svg>
+              Advanced analytics
+            </li>
+          </ul>
+          <a href="https://cal.com/neshaz/litetracker" aria-describedby="tier-free" class="w-fit flex items-center mt-8 block rounded-xl px-3 py-2 text-sm/6 font-semibold text-black border border-[#E6E6EB] hover:bg-[#FAFAFA]">
+            Talk to sales
+            <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <polyline points="9 6 15 12 9 18" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="partners-section" class="mx-auto max-w-7xl pt-10">
+      <div class="">
+        <p class="mb-8 text-center text-lg tracking-normal text-zinc-500">
+          Trusted by the world leaders
+        </p>
+      </div>
+      <div class="slideshow flex items-center h-24 max-w-3xl relative mx-auto my-0 overflow-hidden" style="mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 25%, rgb(0, 0, 0) 75%, rgba(0, 0, 0, 0) 100%);">
+        <div class="autoscroller absolute overflow-x-hidden top-0 left-0 w-max transition-all easy-in-out animate-[moveSlideshow_60s_linear_infinite]">
+          <%= image_tag 'litetracker/logo-closet.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-boardspan.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-squire.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-simone-leblanc.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-listium.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-oschool.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-movie-pilot.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-wrap.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-ruby-ci.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-versa-commerce.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-style-myle.png', class: "inline-block h-8 m-0", alt: "" %>
+          <!-- same set of images to match keyframe width and continue loop smoothly -->
+          <%= image_tag 'litetracker/logo-closet.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-boardspan.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-squire.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-simone-leblanc.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-listium.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-oschool.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-movie-pilot.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-wrap.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-ruby-ci.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-versa-commerce.png', class: "inline-block h-8 m-0", alt: "" %>
+          <%= image_tag 'litetracker/logo-style-myle.png', class: "inline-block h-8 m-0", alt: "" %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing-compare">
+    <div class="relative mx-auto max-w-7xl py-16 sm:py-24 flex items-center flex-col justify-start gap-y-24 w-full">
+      <div class="mx-auto max-w-2xl flex flex-col gap-y-6 justify-center w-full text-center">
+        <h3 class="text-heading">
+          Compare plans
+        </h3>
+        <p class="text-base font-normal text-gray-500 sm:text-lg/8">Get an overview of what is included.</p>
+      </div>
+      <div class="flex flex-col gap-16 items-center justify-center w-full px-2">
+        <div class="flex flex-col gap-4 items-center justify-center w-full">
+          <!-- Header -->
+          <div class="hidden sm:flex items-center justify-center gap-2.5 w-full">
+            <div class="flex-grow min-h-11 w-px"></div>
+            <div class="flex-grow flex flex-col items-center justify-center gap-6 w-px">
+              <div class="flex flex-col items-center justify-center gap-2 w-full">
+                <h6 class="font-medium text-xl">Free</h6>
+                <div class="flex items-center justify-center gap-1 w-full text-lg">
+                  <p class="font-medium">0$</p>
+                  <p class="text-gray-600">/mo</p>
+                </div>
+              </div>
+              <a href="https://app.litetracker.com/" aria-describedby="tier-free" class="w-fit flex items-center block rounded-xl px-3 py-2 text-sm/6 font-semibold text-black border border-[#E6E6EB] hover:bg-[#FAFAFA]">
+                Get started
+                <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="flex-grow flex flex-col items-center justify-center gap-6 w-px">
+              <div class="flex flex-col items-center justify-center gap-2 w-full">
+                <h6 class="font-medium text-xl">Basic</h6>
+                <div class="flex items-center justify-center gap-1 w-full text-lg">
+                  <p class="font-medium">11.6$</p>
+                  <p class="text-gray-600">/mo</p>
+                </div>
+              </div>
+              <a href="https://app.litetracker.com/" aria-describedby="tier-free" class="bg-black w-fit flex items-center block rounded-xl px-3 py-2 text-sm/6 font-semibold text-white border border-[#E6E6EB]">
+                Get started
+                <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+
+            <div class="flex-grow flex flex-col items-center justify-center gap-6 w-px">
+              <div class="flex flex-col items-center justify-center gap-2 w-full">
+                <h6 class="font-medium text-xl">Custom</h6>
+                <div class="flex items-center justify-center gap-1 w-full text-lg">
+                  <p class="font-medium">custom</p>
+                </div>
+              </div>
+              <a href="https://cal.com/neshaz/litetracker" aria-describedby="tier-free" class="w-fit flex items-center block rounded-xl px-3 py-2 text-sm/6 font-semibold text-black border border-[#E6E6EB] hover:bg-[#FAFAFA]">
+                Talk to sales
+                <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div> <!-- end Header -->
+          <div class="flex w-full text-left">
+            <p class="text-sm font-semibold">Core</p>
+          </div>
+          <!-- content -->
+          <div class="flex flex-col items-center justify-center w-full border-t border-[#E6E6EB]">
+            <!-- row -->
+            <div class="flex items-stretch justify-center w-full">
+              <div class="grow flex items-center justify-start py-4 w-px border-r border-b border-[#E6E6EB]">
+                <p class="w-full text-left text-sm leading-[21px] font-normal">Import from Pivotal Tracker</p>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div> <!-- END row -->
+            <div class="flex items-stretch justify-center w-full">
+              <div class="grow flex items-center justify-start py-4 w-px border-r border-b border-[#E6E6EB]">
+                <p class="w-full text-left text-sm leading-[21px] font-normal">Viewer roles</p>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-stretch justify-center w-full">
+              <div class="grow flex items-center justify-start py-4 w-px border-r border-b border-[#E6E6EB]">
+                <p class="w-full text-left text-sm leading-[21px] font-normal">Core features</p>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-stretch justify-center w-full">
+              <div class="grow flex items-center justify-start py-4 w-px border-r border-b border-[#E6E6EB]">
+                <p class="w-full text-left text-sm leading-[21px] font-normal">Unlimited projects</p>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-stretch justify-center w-full">
+              <div class="grow flex items-center justify-start py-4 w-px border-r border-b border-[#E6E6EB]">
+                <p class="w-full text-left text-sm leading-[21px] font-normal">Custom data location</p>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <span class="text-sm leading-[21px]">-</span>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 items-center justify-center w-full">
+          <div class="flex w-full text-left">
+            <p class="text-sm font-semibold">Collaboration</p>
+          </div>
+          <!-- content -->
+          <div class="flex flex-col items-center justify-center w-full border-t border-[#E6E6EB]">
+            <!-- row -->
+            <div class="flex items-stretch justify-center w-full">
+              <div class="grow flex items-center justify-start py-4 w-px border-r border-b border-[#E6E6EB]">
+                <p class="w-full text-left text-sm leading-[21px] font-normal">Team members</p>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <span class="text-sm leading-[21px]">unlimited</span>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <span class="text-sm leading-[21px]">unlimited</span>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-b border-[#E6E6EB]">
+                <span class="text-sm leading-[21px]">unlimited</span>
+              </div>
+            </div> <!-- END row -->
+            <div class="flex items-stretch justify-center w-full">
+              <div class="grow flex items-center justify-start py-4 w-px border-r border-b border-[#E6E6EB]">
+                <p class="w-full text-left text-sm leading-[21px] font-normal">User roles and permissions</p>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-stretch justify-center w-full">
+              <div class="grow flex items-center justify-start py-4 w-px border-r border-b border-[#E6E6EB]">
+                <p class="w-full text-left text-sm leading-[21px] font-normal">Guest accounts</p>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <span class="text-sm leading-[21px]">-</span>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 items-center justify-center w-full">
+          <div class="flex w-full text-left">
+            <p class="text-sm font-semibold">Support</p>
+          </div>
+          <!-- content -->
+          <div class="flex flex-col items-center justify-center w-full border-t border-[#E6E6EB]">
+            <!-- row -->
+            <div class="flex items-stretch justify-center w-full">
+              <div class="grow flex items-center justify-start py-4 w-px border-r border-b border-[#E6E6EB]">
+                <p class="w-full text-left text-sm leading-[21px] font-normal">Email support</p>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <span class="text-sm leading-[21px]">unlimited</span>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <span class="text-sm leading-[21px]">unlimited</span>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-b border-[#E6E6EB]">
+                <span class="text-sm leading-[21px]">unlimited</span>
+              </div>
+            </div> <!-- END row -->
+            <div class="flex items-stretch justify-center w-full">
+              <div class="grow flex items-center justify-start py-4 w-px border-r border-b border-[#E6E6EB]">
+                <p class="w-full text-left text-sm leading-[21px] font-normal">Onboarding support</p>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <span class="text-sm leading-[21px]">-</span>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-stretch justify-center w-full">
+              <div class="grow flex items-center justify-start py-4 w-px border-r border-b border-[#E6E6EB]">
+                <p class="w-full text-left text-sm leading-[21px] font-normal">Dedicated account manager</p>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <span class="text-sm leading-[21px]">-</span>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-r border-b border-[#E6E6EB]">
+                <span class="text-sm leading-[21px]">-</span>
+              </div>
+              <div class="grow-[0.4] sm:grow flex items-center justify-center py-4 w-px border-b border-[#E6E6EB]">
+                <svg class="h-5 w-4 flex-none text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing-book-a-demo">
+    <div class="relative mx-auto max-w-7xl pb-16 sm:pb-24 flex items-center flex-col justify-start gap-y-24">
+      <div class="grid grid-cols-1 gap-x-36 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-center">
+        <div class="flex flex-col gap-10 px-2 xs:px-6 lg:px-0">
+          <div class="flex flex-col gap-4 text-center xs:text-left">
+            <p class="flex items-center justify-center xs:justify-start gap-1 text-green-dark font-semibold text-sm">
+              <svg class="h-4 w-4"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+              Story-Based Iteration Planning
+            </p>
+            <p class="text-heading font-medium tracking-tight text-black">Get in touch with us</p>
+            <ol class="space-y-3">
+              <li class="text-subheading flex items-center xs:items-start">
+                Let our experienced team help you clarify your next steps.
+              </li>
+            </ol>
+          </div>
+          <div class="flex items-center justify-center xs:justify-start gap-4">
+            <div class="h-11 w-fit">
+              <a href="https://cal.com/neshaz/litetracker" class="bg-black w-fit flex items-center rounded-xl px-3 py-2 text-sm/6 font-semibold text-white border border-[#E6E6EB]">
+                Book a demo
+                <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+            <div class="h-11 w-fit">
+              <a href="https://app.litetracker.com" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 text-sm/6 border border-gray-200 text-black font-semibold hover:bg-gray-100">
+                <span>Start for free</span>
+                <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="grow flex items-center justify-start sm:px-6 lg:px-0 max-w-md w-full xs:w-px">
+          <div class="grow h-80 xs:h-112 aspect-square relative px-2 xs:px-6 mx-auto rounded-2xl sm:pl-0 sm:pr-0 lg:mx-0">
+            <div class="xs:absolute shadow-xl rounded-2xl">
+              <%= image_tag 'litetracker/kolosek-image.avif', alt: "", class: "w-full h-full rounded-2xl aspect-square object-cover object-center" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ section -->
+  <section id="faq-section" class="pb-16 lg:py-28">
+    <div class="relative mx-auto max-w-7xl py-16 sm:pt-24 flex flex-col items-center gap-y-24">
+      <div class="mx-auto max-w-2xl flex flex-col gap-y-6 text-center">
+        <div class="flex items-center justify-center text-green-dark text-xs">
+          <svg class="h-4 w-4"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="pl-1 font-bold">FAQ</p>
+        </div>
+        <h3 class="text-heading">In case you missed anything</h3>
+        <p class="text-base font-normal text-gray-500 sm:text-lg">
+          We're here to answer all your questions.
+        </p>
+        <div class="mx-auto h-11 w-fit mt-8">
+          <a href="https://eu.bigin.online/org20102608918/forms/litetracker" class="flex items-center opacity-100 justify-center rounded-xl h-full pr-4 pl-5 font-semibold text-black bg-white hover:bg-gray-100 border border-black shadow-[rgba(0,0,0,0.25)_0px_1px_4px_0px]">
+            <span>Contact support</span>
+            <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z"/>
+              <polyline points="9 6 15 12 9 18" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex-grow px-7 md:px-10 xl:px-2 py-4">
+        <div class="mx-auto max-w-2xl sm:min-w-2xl">
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="answer-1" id="answer-1" class="peer sr-only">
+            <label for="answer-1" class="cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>Is my data safe with your platform?</span>
+              <svg class="h-5 w-5 open-icon block"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block" id="answer-1">
+              We use encryption protocols to safeguard data transmission, regularly monitor for any vulnerabilities, and implement industry-standard security practices. Rest assured, your data is in safe hands.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="answer-2" id="answer-2" class="peer sr-only">
+            <label for="answer-2" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>What kind of customer support do you offer?</span>
+              <svg class="h-5 w-5 open-icon block"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block" id="answer-2">
+              We take pride in providing excellent customer support. Our team is readily available to assist you with any queries or issues you may have. We offer various support channels, including email and live chat.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="answer-4" id="answer-4" class="peer sr-only">
+            <label for="answer-4" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>How does the pricing for your web solution work?</span>
+              <svg class="h-5 w-5 open-icon block"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block" id="answer-4">
+              Our pricing structure is based on a subscription model. We offer one pricing plans which is expanable through addons. If you have special requests we usually tailor subscription best for you. You can choose the plan that best suits your needs, and we provide transparent pricing information on our website.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="answer-6" id="answer-6" class="peer sr-only">
+            <label for="answer-6" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>Can I cancel my subscription at any time?</span>
+              <svg class="h-5 w-5 open-icon block"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block" id="answer-6">
+              We understand that business needs may change, and we aim to provide flexibility to our customers. Please refer to our cancellation policy for any specific terms and conditions regarding subscription cancellations.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="answer-3" id="answer-3" class="peer sr-only">
+            <label for="answer-3" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>How can I manage my subscription?</span>
+              <svg class="h-5 w-5 open-icon block"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block" id="answer-3">
+              Yes, you have the flexibility to upgrade or downgrade your subscription plan based on your evolving needs. You can change your subscription directly on your profile when you login to LiteTracker.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> <!-- END FAQ section -->
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const frequencyRadios = document.querySelectorAll('input[name="frequency"]');
+    const priceElements = document.querySelectorAll('[data-price-monthly]');
+
+    function updatePrices() {
+      const selectedFrequency = Array.from(frequencyRadios).find(radio => radio.checked).value;
+
+      priceElements.forEach(element => {
+        const monthlyPrice = element.getAttribute('data-price-monthly');
+        const annualPrice = element.getAttribute('data-price-annually');
+
+        element.textContent = selectedFrequency === 'monthly' ? monthlyPrice : annualPrice;
+
+        // const frequencyText = element.nextElementSibling;
+        // frequencyText.textContent = selectedFrequency === 'monthly' ? '/seat/mo' : '/year';
+      });
+
+      // Update radio button UI
+      updateRadioButtonUI();
+    }
+
+    function toggleRadio(e) {
+      const clickedButton = e.target;
+
+      // Uncheck all buttons first
+      frequencyRadios.forEach(button => button.checked = false);
+
+      // Check the clicked button
+      clickedButton.checked = true;
+
+      // Update UI based on checked state
+      updatePrices();
+    }
+
+    function updateRadioButtonUI() {
+      frequencyRadios.forEach(radio => {
+        const label = radio.closest('label');
+
+        if (radio.checked) {
+          label.classList.add('bg-white', 'text-[#020a0f]', 'border-[#E6E6EB]');
+          label.classList.remove('text-[#50565d]', 'border-transparent');
+        } else {
+          label.classList.add('text-[#50565d]', 'border-transparent');
+          label.classList.remove('bg-white', 'text-[#020a0f]', 'border-[#E6E6EB]');
+        }
+      });
+    }
+
+    frequencyRadios.forEach(radio => {
+      radio.addEventListener('click', toggleRadio);
+      radio.addEventListener('change', updatePrices);
+    });
+
+    // Initial update
+    updatePrices();
+  });
+</script>

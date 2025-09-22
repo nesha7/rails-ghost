@@ -38,6 +38,10 @@ Rails.application.routes.draw do
     get '/featured', to: 'pages#featured'
   end
 
+  constraints host: %w[demo.litetracker.com litetracker.com] do
+    get '/pricing', to: 'pages#pricing'
+  end
+
   get '/blog/:slug', to: redirect { |path_params, req| "/#{path_params[:slug]}" }
 
   match '*path', to: 'pages#post', via: :get

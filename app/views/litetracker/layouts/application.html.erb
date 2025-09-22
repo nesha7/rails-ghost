@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
       @theme {
+        --breakpoint-xs: 480px;
         --color-blue-dark: #1b65be;
         --color-light-gray: #50565d;
         --color-orange: #d67b00;
@@ -56,6 +57,12 @@
           }
           0% {
             transform: translateY(-50%);
+          }
+        }
+
+        @keyframes moveSlideshow {
+          100% { 
+            transform: translateX(-2434px);
           }
         }
       }
