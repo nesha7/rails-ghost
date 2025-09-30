@@ -41,6 +41,7 @@ Rails.application.routes.draw do
   constraints host: %w[demo.litetracker.com litetracker.com] do
     get '/pricing', to: 'pages#pricing'
     get '/about', to: 'pages#about'
+    get '/integrations', to: 'pages#integrations'
   end
 
   get '/blog/:slug', to: redirect { |path_params, req| "/#{path_params[:slug]}" }

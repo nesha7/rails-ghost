@@ -1,0 +1,76 @@
+<main>
+  <section id="about-hero-section" class="bg-[#F6F6F8] relative px-6 pt-14 sm:pt-24 lg:px-8 flex flex-col justify-start gap-y-24 shadow-[inset_0_-2px_4px_-3px_#0003]">
+    <div class="mx-auto max-w-4xl pt-16 sm:pt-24">
+      <div class="mx-auto max-w-2xl flex flex-col gap-y-6 justify-center w-full text-center">
+        <div class="flex items-center justify-center text-green-dark text-xs">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <g>
+              <path d="M8 2.66699L2.66666 5.33366L8 8.00033L13.3333 5.33366L8 2.66699Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M2.66666 8L8 10.6667L13.3333 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M2.66666 10.667L8 13.3337L13.3333 10.667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+          </svg>
+          <p class="pl-1 font-bold">Integrations</p>
+        </div>
+        <h3 class="text-heading sm:text-6xl tracking-wide">
+          <%#= phrase('litetracker_integrations-hero-header') %>
+          Integrates with your favorite tools
+        </h3>
+        <p class="text-base font-normal text-gray-500 sm:text-lg/8">
+          <%#= phrase('litetracker_integrations-hero-subheader') %>
+          Enhance productivity, streamline processes, and keep everything connected without disrupting your current setup.
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center justify-start pb-6 mx-auto max-w-7xl w-full">
+      <div class="flex items-center gap-2 w-full">
+        <svg class="h-4.5 w-4.5"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+        </svg>
+        <p class="text-sm font-medium">Popular</p>
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#F6F6F8] relative px-6 pt-4 pb-33 lg:px-8 flex flex-col justify-start gap-y-24">
+    <div class="max-w-7xl min-w-auto mx-auto flex flex-col justify-start pb-6 w-full">
+      <div class="flex flex-col items-start justify-start gap-6 w-full">
+        <p class="text-black-light text-xl">Popular</p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 w-full">
+          <a href="#" class="flex items-center w-full border border-gray-200 rounded-2xl">
+            <div class="w-full rounded-2xl shadow-xl bg-white p-6 flex flex-col items-start gap-6">
+              <div class="aspect-square w-10">
+                <%= image_tag 'litetracker/integrations-github.avif', class: "w-full h-full object-cover object-[center_center]", alt: '' %>
+              </div>
+              <div class="w-full flex flex-col items-start justify-start gap-2">
+                <p class="text-black-light text-sm font-semibold">Github</p>
+                <p class="text-light-gray text-sm tracking-wider">Connect LiteTracker with Github to track commits and PRs</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="flex items-center w-full border border-gray-200 rounded-2xl">
+            <div class="w-full rounded-2xl shadow-xl bg-white p-6 flex flex-col items-start gap-6">
+              <div class="aspect-square w-10">
+                <%= image_tag 'litetracker/integrations-gitlab.avif', class: "w-full h-full object-cover object-[center_center]", alt: '' %>
+              </div>
+              <div class="w-full flex flex-col items-start justify-start gap-2">
+                <p class="text-black-light text-sm font-semibold">Gitlab</p>
+                <p class="text-light-gray text-sm tracking-wider">Integrate LiteTracker with Gitlab to connect stories and gitlab commits and Pull Requests</p>
+              </div>
+            </div>
+          </a>
+          <a href="#" class="flex items-center w-full border border-gray-200 rounded-2xl">
+            <div class="w-full rounded-2xl shadow-xl bg-white p-6 flex flex-col items-start gap-6">
+              <div class="aspect-square w-10">
+                <%= image_tag 'litetracker/integrations-slack.png', class: "w-full h-full object-cover object-[center_center]", alt: '' %>
+              </div>
+              <div class="w-full flex flex-col items-start justify-start gap-2">
+                <p class="text-black-light text-sm font-semibold">Slack</p>
+                <p class="text-light-gray text-sm tracking-wider">Connect Slack with LiteTracker and get instant notifications on your favourite chat tool</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

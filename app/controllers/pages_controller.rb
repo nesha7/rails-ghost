@@ -67,6 +67,10 @@ class PagesController < ApplicationController
 		render "#{@app}/pages/portfolio", layout: "#{@app}/layouts/portfolio"
 	end
 
+	def integrations
+		render "#{@app}/pages/integrations", layout: "#{@app}/layouts/application"
+	end
+
 	private
 
 	def ghost_client
