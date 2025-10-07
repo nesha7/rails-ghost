@@ -42,6 +42,7 @@ Rails.application.routes.draw do
     get '/pricing', to: 'pages#pricing'
     get '/about', to: 'pages#about'
     get '/integrations', to: 'pages#integrations'
+    get '/onboard', to: 'pages#onboard'
   end
 
   get '/blog/:slug', to: redirect { |path_params, req| "/#{path_params[:slug]}" }
