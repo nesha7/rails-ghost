@@ -12,7 +12,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'sqlite3', '>= 2.7'
+  gem 'sqlite3', '~> 1.4'
 end
 
 gem 'dotenv'
