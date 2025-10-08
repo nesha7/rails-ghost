@@ -26,6 +26,8 @@
                       ">
               <% if @post['feature_image'].present? %>
                 <img class="!m-0 object-cover lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" alt="<%= @post['title'] %>" src="<%= @post['feature_image'] %>" sizes="541px">
+              <% else %>
+                <%= image_tag 'litetracker/lt-black-square.png', class: "!m-0 object-cover z-10 hover:scale-105 lazyautosizes ls-is-cached lazyloaded", sizes: "361px" %>
               <% end %>
           </div>
       </figure>

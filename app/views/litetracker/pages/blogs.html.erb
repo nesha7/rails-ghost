@@ -11,14 +11,17 @@
 	        Featured
 	    </div>
 	    <% @fatured.each do |post| %>              
-			  <div class="post tag-hash-news tag-hash-blog featured <%= post['feature_image'].present? ? '' : 'no-image' %>">
+			  <div class="post tag-hash-news tag-hash-blog featured">
 			  	<a href="<%= post['slug'] %>" class="group block mb-2">
 		        <figure>
 	            <div class="relative rounded-md overflow-hidden bg-gray-50 dark:bg-gray-800 
 	                    after:absolute after:top-0 after:left-0 after:w-full after:h-full after:ring-1 after:ring-inset after:ring-gray-900/5 dark:after:ring-gray-50/5 after:rounded-md
-	                            aspect-w-16 aspect-h-9
-	                                                                    ">
-	                <img class="!m-0 object-cover z-10 hover:scale-105 lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" src="<%= post['feature_image'] %>" alt="<%= post['title'] %>" loading="lazy" sizes="361px">
+	                            aspect-w-16 aspect-h-9">
+	                <% if  post['feature_image'].present? %>
+	                	<img class="!m-0 object-cover z-10 hover:scale-105 lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" src="<%= post['feature_image'] %>" alt="<%= post['title'] %>" loading="lazy" sizes="361px">
+	                <% else %>
+	                	<%= image_tag 'litetracker/lt-black-square.png', class: "!m-0 object-cover z-10 hover:scale-105 lazyautosizes ls-is-cached lazyloaded", sizes: "361px" %>
+	                <% end %>
 	            </div>
 		        </figure>     
 		    	</a>
@@ -50,6 +53,8 @@
 	                                                                    ">
 	                <% if post['feature_image'].present? %>
 	                	<img class="!m-0 object-cover z-10 hover:scale-105 lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" src="<%= post['feature_image'] %>" alt="<%= post['title'] %>" loading="lazy" sizes="361px">
+	                <% else %>
+	                	<%= image_tag 'litetracker/lt-black-square.png', class: "!m-0 object-cover z-10 hover:scale-105 lazyautosizes ls-is-cached lazyloaded", sizes: "361px" %>
 	                <% end %>
 	            </div>
 		        </figure>     

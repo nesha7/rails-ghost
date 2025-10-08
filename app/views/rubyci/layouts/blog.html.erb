@@ -6,6 +6,7 @@
     <title><%= @post.present? ? @post['meta_title'] : 'Ruby.ci fastest Ruby on Rails CI in cloud' %></title>
     <meta name="description" content="<%= @post.present? ? @post['meta_description'] : 'Blog page' %>">
     <meta name="keywords" content="ruby, continuous integration, automated tests">
+    <meta name="canonical"  content="<%= @post['canonical_url'] %>">
 
     <%= favicon_link_tag 'favicon.svg' %>
     <%= csrf_meta_tags %>

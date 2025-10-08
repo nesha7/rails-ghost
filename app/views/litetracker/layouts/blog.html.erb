@@ -6,6 +6,9 @@
     <title><%= @post.present? ? @post['meta_title'] : 'LiteTracker | Agile software development tool' %></title>
     <meta name="description" content="<%= @post.present? ? @post['meta_description'] : 'Blog page' %>">
     <meta name="keywords" content="ruby, continuous integration, automated tests">
+    <% if @post.present? %>
+      <meta name="canonical"  content="<%= @post['canonical_url'] %>">
+    <% end %>
 
     <%= favicon_link_tag 'litetracker/favicon.ico' %>
     <%= csrf_meta_tags %>
