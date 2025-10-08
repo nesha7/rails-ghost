@@ -13,17 +13,17 @@
             <svg class="w-4 h-4 text-neutral-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="Windframe_abV5IUrLS">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
             </svg>
-            <span class="text-gray-700 font-medium">Limited Time Offer</span>
+            <span class="text-gray-700 font-medium"><%= safe_phrase('litetracker_onboard-hero-badge', 'Limited Time Offer') %></span>
           </div>
           <div class="flex justify-between w-full">
             <div class="space-y-6 lg:w-6/12 lg:text-left">
               <p class="text-5xl font-bold leading-tight lg:text-7xl text-gray-900">
-                Launch Your Product with $100 Free Credits
+                <%= safe_phrase('litetracker_onboard-hero-header', 'Launch Your Product with $100 Free Credits') %>
               </p>
               <p class="text-xl text-gray-700/80 mx-auto max-w-3xl">
-                Join thousands of successful
+                <%= safe_phrase('litetracker_onboard-hero-header', "Join thousands of successful
                 launches. Get started today with $100 in platform credits and unlock premium features to accelerate your
-                product's growth.
+                product's growth.") %>
               </p>
             </div>
             <div class="hidden lg:w-5/12 order-2 transform-gpu [transform-style:preserve-3d]">
@@ -48,7 +48,7 @@
               <div class="space-y-3">
                 <p class="text-2xl font-semibold text-gray-900">Submit Your Details</p>
                 <p class="text-gray-700/80">
-                  Fill out a quick form and get instant access to your $100 credits. Start launching within minutes.
+                  <%= safe_phrase('litetracker_onboard-user_details-subheader', 'Fill out a quick form and get instant access to your $100 credits. Start launching within minutes.') %>
                 </p>
               </div>
               <form class="space-y-4">
@@ -65,7 +65,7 @@
                   <input type="text" placeholder="Acme Inc." class="border border-zinc-300/70 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-neutral-900 w-full px-4 py-3 rounded-lg bg-white text-gray-900">
                 </div>
                 <button type="submit" class="inline-flex border border-transparent transition-colors hover:bg-neutral-700 w-full items-center justify-center rounded-lg bg-neutral-900 px-6 py-3 font-semibold text-neutral-100">
-                  Claim $100 Credits
+                  <%= safe_phrase('litetracker_onboard-btn-claim-credits', 'Claim $100 Credits') %>
                 </button>
               </form>
             </div>
@@ -77,7 +77,9 @@
               </div>
               <div class="space-y-3">
                 <p class="text-2xl font-semibold text-gray-900">Schedule a Call</p>
-                <p class="text-gray-700/80">Talk to our launch experts and get personalized guidance for your product launch journey.</p>
+                <p class="text-gray-700/80">
+                  <%= safe_phrase('litetracker_onboard-schedule-subheader', 'Talk to our launch experts and get personalized guidance for your product launch journey.') %>
+                </p>
               </div>
               <div class="space-y-4">
                 <div class="space-y-3">
@@ -86,8 +88,8 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     <div>
-                      <p class="font-medium text-gray-900">Personalized Strategy</p>
-                      <p class="text-sm text-gray-700/80">Custom launch plan tailored to your needs</p>
+                      <p class="font-medium text-gray-900"><%= safe_phrase('litetracker_onboard-schedule-benefit_1-header', 'Personalized Strategy') %></p>
+                      <p class="text-sm text-gray-700/80"><%= safe_phrase('litetracker_onboard-schedule-benefit_1-subheader', 'Custom launch plan tailored to your needs') %></p>
                     </div>
                   </div>
                   <div class="items-start rounded-lg bg-white flex gap-3 p-4 border border-zinc-300/50">
@@ -95,8 +97,8 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     <div>
-                      <p class="font-medium text-gray-900">Expert Guidance</p>
-                      <p class="text-sm text-gray-700/80">Learn from successful launch veterans</p>
+                      <p class="font-medium text-gray-900"><%= safe_phrase('litetracker_onboard-schedule-benefit_2-header', 'Expert Guidance') %></p>
+                      <p class="text-sm text-gray-700/80"><%= safe_phrase('litetracker_onboard-schedule-benefit_2-subheader', 'Learn from successful launch veterans') %></p>
                     </div>
                   </div>
                   <div class="items-start rounded-lg bg-white flex gap-3 p-4 border border-zinc-300/50">
@@ -104,8 +106,8 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     <div>
-                      <p class="font-medium text-gray-900">Priority Support</p>
-                      <p class="text-sm text-gray-700/80">Get dedicated assistance throughout launch</p>
+                      <p class="font-medium text-gray-900"><%= safe_phrase('litetracker_onboard-schedule-benefit_3-header', 'Priority Support') %></p>
+                      <p class="text-sm text-gray-700/80"><%= safe_phrase('litetracker_onboard-schedule-benefit_3-subheader', 'Get dedicated assistance throughout launch') %></p>
                     </div>
                   </div>
                 </div>
@@ -118,20 +120,20 @@
         </div>
         <div class="items-center justify-center pt-12 flex gap-12 flex-wrap">
           <div class="text-center">
-            <div class="text-3xl font-bold text-gray-900">$100</div>
-            <div class="text-sm text-gray-700/80">Free Credits</div>
+            <div class="text-3xl font-bold text-gray-900"><%= safe_phrase('litetracker_onboard-info-1-value', '$100') %></div>
+            <div class="text-sm text-gray-700/80"><%= safe_phrase('litetracker_onboard-info-1-info', 'Free Credits') %></div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold text-gray-900">10K+</div>
-            <div class="text-sm text-gray-700/80">Successful Launches</div>
+            <div class="text-3xl font-bold text-gray-900"><%= safe_phrase('litetracker_onboard-info-2-value', '10K+') %></div>
+            <div class="text-sm text-gray-700/80"><%= safe_phrase('litetracker_onboard-info-2-info', 'Successful Launches') %></div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold text-gray-900">24/7</div>
-            <div class="text-sm text-gray-700/80">Support Available</div>
+            <div class="text-3xl font-bold text-gray-900"><%= safe_phrase('litetracker_onboard-info-3-value', '24/7') %></div>
+            <div class="text-sm text-gray-700/80"><%= safe_phrase('litetracker_onboard-info-3-info', 'Support Available') %></div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold text-gray-900">98%</div>
-            <div class="text-sm text-gray-700/80">Satisfaction Rate</div>
+            <div class="text-3xl font-bold text-gray-900"><%= safe_phrase('litetracker_onboard-info-4-value', '98%') %></div>
+            <div class="text-sm text-gray-700/80"><%= safe_phrase('litetracker_onboard-info-4-info', 'Satisfaction Rate') %></div>
           </div>
         </div>
       </div>
@@ -139,8 +141,8 @@
     <section class="py-16 border-t border-zinc-300/70">
       <div class="mx-auto max-w-6xl">
         <div class="text-center mb-12">
-          <p class="text-3xl font-bold text-gray-900 mb-4">What's Included with Your Credits</p>
-          <p class="text-lg text-gray-700/80">Everything you need to launch successfully</p>
+          <p class="text-3xl font-bold text-gray-900 mb-4"><%= safe_phrase('litetracker_onboard-whats_included-header', '100') %>What's Included with Your Credits</p>
+          <p class="text-lg text-gray-700/80"><%= safe_phrase('litetracker_onboard-whats_included-subheader', '100') %>Everything you need to launch successfully</p>
         </div>
         <div class="lg:grid-cols-2 items-center grid gap-12">
           <div class="space-y-8">
@@ -151,9 +153,10 @@
                 </svg>
               </div>
               <div class="space-y-2">
-                <p class="text-xl font-semibold text-gray-900">Fast Deployment</p>
-                <p class="text-gray-700/80">Launch your product in minutes with our
-                    streamlined platform and automated workflows.</p>
+                <p class="text-xl font-semibold text-gray-900"><%= safe_phrase('litetracker_onboard-whats_included-1-header', 'Fast Deployment') %></p>
+                <p class="text-gray-700/80">
+                  <%= safe_phrase('litetracker_onboard-whats_included-1-subheader', 'Launch your product in minutes with our streamlined platform and automated workflows.') %>
+                </p>
               </div>
             </div>
             <div class="items-start flex gap-6">
@@ -163,9 +166,10 @@
                 </svg>
               </div>
               <div class="space-y-2">
-                <p class="text-xl font-semibold text-gray-900">Premium Security</p>
-                <p class="text-gray-700/80">Enterprise-grade security features to protect
-                    your product and customer data.</p>
+                <p class="text-xl font-semibold text-gray-900"><%= safe_phrase('litetracker_onboard-whats_included-2-header', 'Premium Security') %></p>
+                <p class="text-gray-700/80">
+                  <%= safe_phrase('litetracker_onboard-whats_included-2-subheader', 'Enterprise-grade security features to protect your product and customer data.') %>
+                </p>
               </div>
             </div>
             <div class="items-start flex gap-6">
@@ -175,9 +179,10 @@
                 </svg>
               </div>
               <div class="space-y-2">
-                <p class="text-xl font-semibold text-gray-900">Analytics Dashboard</p>
-                <p class="text-gray-700/80">Track your launch performance with detailed
-                    insights and real-time metrics.</p>
+                <p class="text-xl font-semibold text-gray-900"><%= safe_phrase('litetracker_onboard-whats_included-3-header', 'Analytics Dashboard') %></p>
+                <p class="text-gray-700/80">
+                  <%= safe_phrase('litetracker_onboard-whats_included-3-subheader', 'Track your launch performance with detailed insights and real-time metrics.') %>
+                </p>
               </div>
             </div>
           </div>
@@ -190,9 +195,9 @@
     <section class="py-16 border-y border-zinc-300/70">
       <div class="mx-auto text-center max-w-4xl space-y-8">
         <div class="space-y-4">
-          <p class="text-3xl font-bold text-gray-900">Ready to Launch?</p>
+          <p class="text-3xl font-bold text-gray-900"><%= safe_phrase('litetracker_onboard-proof-header', 'Ready to Launch?') %></p>
           <p class="text-lg text-gray-700/80">
-            Join thousands of successful product launches today and claim your $100 credits
+            <%= safe_phrase('litetracker_onboard-proof-subheader', 'Join thousands of successful product launches today and claim your $100 credits') %>
           </p>
         </div>
         <div class="sm:flex-row justify-center items-center flex flex-col gap-4">
@@ -208,7 +213,7 @@
               <img class="inline-block size-7 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
             </div>
             <div class="flex items-center ml-1">
-              <p class="text-sm text-zinc-500">Social proof: Join 3000+ already onboarded</p>
+              <p class="text-sm text-zinc-500"><%= safe_phrase('litetracker_onboard-proof-social-proof', 'Social proof: Join 3000+ already onboarded') %></p>
             </div>
           </div>
         </div>
