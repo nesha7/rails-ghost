@@ -24,6 +24,8 @@ class PagesController < ApplicationController
 			ghost_client.get_posts.reverse
 		end
 
+		@posts = ghost_client.get_posts.reverse unless @posts.present?
+
 		@post = request.path == '/docs' ? 
 			@posts.select {|p| p['custom_template'] == 'custom-documentation'}.first : ghost_client.get_post(request.path)
 
@@ -98,9 +100,12 @@ class PagesController < ApplicationController
 		elsif request.host == 'fast.ci'
 			@app = 'fastci'
 			@host = 'fast.ci'
-		elsif request.host == 'demo.litetracker.com' || request.host == 'litetracker.com'
+		elsif request.host == 'litetracker.com'
 			@app = 'litetracker'
 			@host = 'litetracker.com'
+		elsif request.host == 'demo.litetracker.com'
+			@app = 'demo.litetracker'
+			@host = 'demo.litetracker.com'
 		else
 			@app = 'rubyci'
 			@host = 'ruby.ci'
