@@ -80,6 +80,10 @@ class PagesController < ApplicationController
 		render "#{@app}/pages/onboard", layout: "#{@app}/layouts/application"
 	end
 
+	def nesha
+		render "#{@app}/pages/nesha", layout: "#{@app}/layouts/application"
+	end
+
 	private
 
 	def ghost_client

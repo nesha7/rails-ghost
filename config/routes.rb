@@ -43,6 +43,7 @@ Rails.application.routes.draw do
     get '/about', to: 'pages#about'
     get '/integrations', to: 'pages#integrations'
     get '/onboard', to: 'pages#onboard'
+    get '/nesha', to: 'pages#nesha'
   end
 
   get '/blog/:slug', to: redirect { |path_params, req| "/#{path_params[:slug]}" }
