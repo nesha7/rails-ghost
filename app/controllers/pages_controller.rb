@@ -20,6 +20,10 @@ class PagesController < ApplicationController
 	end
 
 	def post
+		if params[:path] == 'hcpm'
+			head :ok and return
+		end
+
 		@posts = Rails.cache.fetch("posts_#{@app}", expires_in: 1.hour) do
 			ghost_client.get_posts.reverse
 		end
