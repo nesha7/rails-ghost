@@ -6,6 +6,11 @@ module PhrasingHelper
   def safe_phrase(key, default_content = "")
     content = phrase(key) # call phrasing gem
     text_only = ActionView::Base.full_sanitizer.sanitize(content.to_s)
-    text_only == key ? phrase(default_content) : content
+    if text_only == key
+      PhrasingPhrase.find_or_create_by(key: key).update(value: default_content)
+      content = phrase(key)
+    end
+
+    content
   end
 end
