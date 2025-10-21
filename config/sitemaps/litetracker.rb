@@ -25,4 +25,20 @@ SitemapGenerator::Sitemap.create(filename: :sitemap_litetracker) do
 
     page += 1
   end
+
+  # --- Ghost pages ---
+  page = 1
+  loop do
+    pages = ghost_client.get_pages(page)
+    break if pages.blank?
+
+    pages.each do |ghost_page|
+      add "/#{ghost_page['slug']}",
+          lastmod: ghost_page['updated_at'] || ghost_page['published_at'],
+          changefreq: 'monthly',
+          priority: 0.7
+    end
+
+    page += 1
+  end
 end

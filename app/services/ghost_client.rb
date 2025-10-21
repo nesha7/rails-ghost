@@ -5,6 +5,19 @@ class GhostClient
     @host = host
   end
 
+  def get_pages(page = 1)
+    begin
+      resp = HTTParty.get(
+        "#{host_url}/content/pages?key=#{api_key}&page=#{page}"
+      )
+
+      JSON.parse(resp.body)['pages']
+    rescue => e
+      Rails.logger.error e.message
+      []
+    end
+  end
+
   def get_post(slug)
     begin
       resp = HTTParty.get(
