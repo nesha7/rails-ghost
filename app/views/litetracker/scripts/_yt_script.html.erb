@@ -1,0 +1,42 @@
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", () => {
+    const iframe = document.getElementById("hero-video");
+    const wrapper = document.getElementById("hero-video-wrapper");
+    if (!iframe || !wrapper) return;
+
+    let player;
+
+    // Load YouTube API
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = document.getElementsByTagName("script")[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // YouTube API callback
+    window.onYouTubeIframeAPIReady = () => {
+      player = new YT.Player("hero-video", {
+        events: {
+          onReady: () => {
+            player.mute();
+          },
+          onStateChange: (event) => {
+            // Loop manually if needed
+            if (event.data === YT.PlayerState.ENDED) {
+              player.seekTo(0);
+              player.playVideo();
+            }
+          },
+        },
+      });
+
+      // Hover play/pause logic
+      wrapper.addEventListener("mouseenter", () => {
+        if (player && player.playVideo) player.playVideo();
+      });
+
+      wrapper.addEventListener("mouseleave", () => {
+        if (player && player.pauseVideo) player.pauseVideo();
+      });
+    };
+  });
+</script>

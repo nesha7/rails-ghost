@@ -140,5 +140,6 @@
     <%= raw @settings['codeinjection_foot'] %>
 
     <%= content_for?(:cal_script) ? yield(:cal_script) : render('litetracker/scripts/cal_litetracker_script') %>
+    <%= yield :scripts %>
   </body>
 </html>

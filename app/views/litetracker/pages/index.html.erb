@@ -1,3 +1,6 @@
+<% content_for :scripts do %>
+  <%= render 'litetracker/scripts/yt_script' %>
+<% end %>
 <main>
   <section id="hero-section" class="relative px-6 pt-14 lg:px-8 opacity-0 animate-fade-in">
     <div class="mx-auto max-w-4xl py-16 sm:pt-24">
@@ -21,7 +24,7 @@
     </div>
     <div class="max-w-7xl min-w-auto mx-auto flex justify-center pb-6">
       <div class="relative w-full h-full">
-        <div id="hero-video-wrapper" class="w-full h-full rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 overflow-hidden aspect-[2880/1606]">
+        <div id="hero-video-wrapper" class="w-full h-full rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 overflow-hidden aspect-[2880/1606] cursor-pointer">
           <iframe 
             id="hero-video"
             class="w-full h-full object-cover object-[left_center]"
