@@ -39,6 +39,7 @@
     <%= raw @settings['codeinjection_head'] %>
     <%= render 'rubyci/layouts/partials/scripts_header' %>
     <%= render 'rubyci/layouts/partials/pricing_script' if action_name == 'pricing' %>
+    <%= raw @header_script if @header_script.present? %>
   </head>
 
   <body class="bg-gray-900 relative">
@@ -54,5 +55,6 @@
     </div>
     <%= render 'rubyci/layouts/partials/features_script' if action_name == 'features' %>
     <%= raw @settings['codeinjection_foot'] %>
+    <%= raw @footer_script if @footer_script.present? %>
   </body>
 </html>

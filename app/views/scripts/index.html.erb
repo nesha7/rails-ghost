@@ -1,0 +1,15 @@
+<h1>Edit Header and Footer Scripts</h1>
+
+<%= form_with url: update_script_path, method: :patch do %>
+  <h2>Header Script</h2>
+  <%= hidden_field_tag :key, 'header' %>
+  <%= text_area_tag :value, @header_script.value, rows: 10, cols: 80 %>
+  <%= submit_tag "Update Header" %>
+<% end %>
+
+<%= form_with url: update_script_path, method: :patch do %>
+  <h2>Footer Script</h2>
+  <%= hidden_field_tag :key, 'footer' %>
+  <%= text_area_tag :value, @footer_script.value, rows: 10, cols: 80 %>
+  <%= submit_tag "Update Footer" %>
+<% end %>

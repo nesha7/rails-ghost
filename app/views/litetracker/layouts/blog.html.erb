@@ -18,6 +18,7 @@
 
     <%= raw @settings['codeinjection_head'] %>
     <%= raw @post['codeinjection_head'] if @post.present? %>
+    <%= raw @header_script if @header_script.present? %>
   </head>
 
   <body class="page-template page-blog tag-hash-blog-grid min-h-screen flex flex-col antialiased overflow-x-hidden text-gray-900 bg-white dark:text-gray-400 dark:bg-gray-900 [&amp;.has-modal]:h-screen [&amp;.has-modal]:overflow-hidden sal-disabled">
@@ -41,5 +42,6 @@
     </div>
     <%= raw @settings['codeinjection_foot'] %>
     <%= raw @post['codeinjection_foot'] if @post.present? %>
+    <%= raw @footer_script if @footer_script.present? %>
   </body>
 </html>

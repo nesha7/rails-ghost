@@ -10,9 +10,9 @@
 	    <div class="md:col-span-2 lg:col-span-3 text-gray-500 dark:text-gray-400">
 	        Featured
 	    </div>
-	    <% @fatured.each do |post| %>              
+	    <% @posts.select {|p| p['featured']}.first(3).each do |post| %>              
 			  <div class="post tag-hash-news tag-hash-blog featured">
-			  	<a href="<%= post['slug'] %>" class="group block mb-2">
+			  	<a href="blog/<%= post['slug'] %>" class="group block mb-2">
 		        <figure>
 	            <div class="relative rounded-md overflow-hidden bg-gray-50 dark:bg-gray-800 
 	                    after:absolute after:top-0 after:left-0 after:w-full after:h-full after:ring-1 after:ring-inset after:ring-gray-900/5 dark:after:ring-gray-50/5 after:rounded-md
@@ -26,7 +26,7 @@
 		        </figure>     
 		    	</a>
 		      <h2>
-		        <a class="font-semibold hover:opacity-80 text-gray-900 dark:text-gray-200" href="<%= post['slug'] %>">
+		        <a class="font-semibold hover:opacity-80 text-gray-900 dark:text-gray-200" href="blog/<%= post['slug'] %>">
 		        	<%= post['title'] %>  
 		        </a>
 		      </h2>
@@ -45,7 +45,7 @@
       </div>
       <% @posts.each do |post| %>                
 	      <div data-pagination-post="" class="post tag-hash-news tag-hash-blog featured <%= post['feature_image'].present? ? '' : 'no-image' %>">
-		      <a href="<%= post['slug'] %>" class="group block mb-2">
+		      <a href="blog/<%= post['slug'] %>" class="group block mb-2">
 		        <figure>
 	            <div class="relative rounded-md overflow-hidden bg-gray-50 dark:bg-gray-800 
 	                    after:absolute after:top-0 after:left-0 after:w-full after:h-full after:ring-1 after:ring-inset after:ring-gray-900/5 dark:after:ring-gray-50/5 after:rounded-md
@@ -60,7 +60,7 @@
 		        </figure>     
 	    		</a>
 		      <h2>
-	          <a class="font-semibold hover:opacity-80 text-gray-900 dark:text-gray-200" href="<%= post['slug'] %>">
+	          <a class="font-semibold hover:opacity-80 text-gray-900 dark:text-gray-200" href="blog/<%= post['slug'] %>">
 	            <%= post['title'] %> 
 	          </a>
 		      </h2>

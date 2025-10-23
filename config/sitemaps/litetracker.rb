@@ -9,7 +9,7 @@ SitemapGenerator::Sitemap.create(filename: :sitemap_litetracker) do
   add '/nesha', changefreq: 'monthly', priority: 0.8
 
   # --- Ghost blog posts ---
-  ghost_client = GhostClient.new('litetracker.com')
+  ghost_client = GhostClient.new
   page = 1
 
   loop do
@@ -17,7 +17,7 @@ SitemapGenerator::Sitemap.create(filename: :sitemap_litetracker) do
     break if posts.blank?
 
     posts.each do |post|
-      add "/#{post['slug']}", 
+      add "/blog/#{post['slug']}", 
           lastmod: post['updated_at'] || post['published_at'], 
           changefreq: 'monthly', 
           priority: 0.6

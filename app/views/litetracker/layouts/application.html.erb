@@ -124,6 +124,8 @@
     <% end %>
 
     <%= raw @settings['codeinjection_head'] %>
+
+    <%= raw @header_script if @header_script.present? %>
   </head>
 
   <body class="home-template is-head-left-logo has-cover">
@@ -141,5 +143,7 @@
 
     <%= content_for?(:cal_script) ? yield(:cal_script) : render('litetracker/scripts/cal_litetracker_script') %>
     <%= yield :scripts %>
+
+    <%= raw @footer_script if @footer_script.present? %>
   </body>
 </html>
