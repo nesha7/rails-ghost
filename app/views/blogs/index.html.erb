@@ -12,7 +12,7 @@
 	    </div>
 	    <% @posts.select {|p| p['featured']}.first(3).each do |post| %>              
 			  <div class="post tag-hash-news tag-hash-blog featured">
-			  	<a href="post/<%= post['slug'] %>" class="group block mb-2">
+			  	<a href="blog/<%= post['slug'] %>" class="group block mb-2">
 		        <figure>
 	            <div class="relative rounded-md overflow-hidden bg-gray-50 dark:bg-gray-800 
 	                    after:absolute after:top-0 after:left-0 after:w-full after:h-full after:ring-1 after:ring-inset after:ring-gray-900/5 dark:after:ring-gray-50/5 after:rounded-md
@@ -45,7 +45,7 @@
       </div>
       <% @posts.each do |post| %>                
 	      <div data-pagination-post="" class="post tag-hash-news tag-hash-blog featured <%= post['feature_image'].present? ? '' : 'no-image' %>">
-		      <a href="post/<%= post['slug'] %>" class="group block mb-2">
+		      <a href="blog/<%= post['slug'] %>" class="group block mb-2">
 		        <figure>
 	            <div class="relative rounded-md overflow-hidden bg-gray-50 dark:bg-gray-800 
 	                    after:absolute after:top-0 after:left-0 after:w-full after:h-full after:ring-1 after:ring-inset after:ring-gray-900/5 dark:after:ring-gray-50/5 after:rounded-md
@@ -60,7 +60,7 @@
 		        </figure>     
 	    		</a>
 		      <h2>
-	          <a class="font-semibold hover:opacity-80 text-gray-900 dark:text-gray-200" href="post/<%= post['slug'] %>">
+	          <a class="font-semibold hover:opacity-80 text-gray-900 dark:text-gray-200" href="blog/<%= post['slug'] %>">
 	            <%= post['title'] %> 
 	          </a>
 		      </h2>
@@ -75,8 +75,8 @@
 
 		<div align="center" style="padding-bottom: 50px;">
 	    <nav class="pagination" role="navigation" style="display: block">
-	    	<%= link_to 'Previous', posts_path(page: (params[:page] || 1).to_i - 1), class: 'newer-posts text-lg font-medium mr-2', style: "#{'pointer-events: none; color: gray' if params[:page].nil?}" %>
-	    	<%= link_to 'Next', posts_path(page: (params[:page] || 1).to_i + 1), class: 'older-posts text-lg font-medium ml-2', style: "#{'pointer-events: none; color: gray' if @posts.size < 15}" %>
+	    	<%= link_to 'Previous', blog_path(page: (params[:page] || 1).to_i - 1), class: 'newer-posts text-lg font-medium mr-2', style: "#{'pointer-events: none; color: gray' if params[:page].nil?}" %>
+	    	<%= link_to 'Next', blog_path(page: (params[:page] || 1).to_i + 1), class: 'older-posts text-lg font-medium ml-2', style: "#{'pointer-events: none; color: gray' if @posts.size < 15}" %>
 			</nav>
 		</div>
 	</div>

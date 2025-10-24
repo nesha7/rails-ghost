@@ -29,7 +29,7 @@ class GhostClient
   def get_post(path)
     begin
       resp = HTTParty.get(
-        "#{host_url}/content/posts/slug/#{path.sub(/^\/(blog|post)\//, '')}?key=#{api_key}&include=authors,tags"
+        "#{host_url}/content/posts/slug/#{path.sub(/^\/blog\//, '')}?key=#{api_key}&include=authors,tags"
       )
 
       JSON.parse(resp.body)['posts'].first
