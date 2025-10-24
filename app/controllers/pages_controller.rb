@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-	before_action :resolve_app
 	before_action :set_settings
 
 	def index

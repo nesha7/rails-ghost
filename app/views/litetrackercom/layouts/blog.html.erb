@@ -33,12 +33,12 @@
         </span>
       </a> 
 
-      <%= render 'litetracker/layouts/partials/header_ghost' %>
+      <%= render 'litetrackercom/layouts/partials/header_ghost' %>
       <main id="main" tabindex="-1" class="flex-none outline-none"> 
         <%= yield %>
       </main>
 
-      <%= render 'litetracker/layouts/partials/footer_ghost' %>
+      <%= render 'litetrackercom/layouts/partials/footer_ghost' %>
     </div>
     <%= raw @settings['codeinjection_foot'] %>
     <%= raw @post['codeinjection_foot'] if @post.present? %>

@@ -413,9 +413,9 @@
         </div>
       </div><!-- /.row -->
       <div class="row">
-        <%= render 'kolosek/pages/partials/post_card', post: @fatured %>
+        <%= render 'kolosekcom/pages/partials/post_card', post: @fatured %>
         <% @posts.first(5).each do |post| %>
-          <%= render 'kolosek/pages/partials/post_card', post: post %>
+          <%= render 'kolosekcom/pages/partials/post_card', post: post %>
         <% end %>
       </div>
     </div><!-- /.container -->

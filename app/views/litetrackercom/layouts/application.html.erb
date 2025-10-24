@@ -134,14 +134,14 @@
         <div style="background-color: white;">
           <%= render 'phrasing/initializer' %>
         </div>
-        <%= render 'litetracker/layouts/partials/header' %>
+        <%= render 'litetrackercom/layouts/partials/header' %>
         <%= yield %>
-        <%= content_for?(:footer) ? yield(:footer) : render('litetracker/layouts/partials/footer') %>
+        <%= content_for?(:footer) ? yield(:footer) : render('litetrackercom/layouts/partials/footer') %>
       </div>
     </div>
     <%= raw @settings['codeinjection_foot'] %>
 
-    <%= content_for?(:cal_script) ? yield(:cal_script) : render('litetracker/scripts/cal_litetracker_script') %>
+    <%= content_for?(:cal_script) ? yield(:cal_script) : render('litetrackercom/scripts/cal_litetracker_script') %>
 
     <%= raw @footer_script if @footer_script.present? %>
   </body>
