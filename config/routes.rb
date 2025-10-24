@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   patch '/phrasing/:id', to: 'phrasing#update'
   delete '/phrasing/:id/destroy', to: 'phrasing#destroy'
   
-  get '/posts', to: 'blogs#index'
+  get '/blog', to: 'blogs#index'
   get '/blog/:slug', to: 'blogs#show'
   get '/sitemap.xml.gz', to: 'sitemaps#show', format: :xml
   get '/robots.txt', to: 'robots#show'

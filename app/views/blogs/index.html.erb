@@ -75,8 +75,8 @@
 
 		<div align="center" style="padding-bottom: 50px;">
 	    <nav class="pagination" role="navigation" style="display: block">
-	    	<%= link_to 'Previous', posts_path(page: (params[:page] || 1).to_i - 1), class: 'newer-posts text-lg font-medium mr-2', style: "#{'pointer-events: none; color: gray' if params[:page].nil?}" %>
-	    	<%= link_to 'Next', posts_path(page: (params[:page] || 1).to_i + 1), class: 'older-posts text-lg font-medium ml-2', style: "#{'pointer-events: none; color: gray' if @posts.size < 15}" %>
+	    	<%= link_to 'Previous', blog_path(page: (params[:page] || 1).to_i - 1), class: 'newer-posts text-lg font-medium mr-2', style: "#{'pointer-events: none; color: gray' if params[:page].nil?}" %>
+	    	<%= link_to 'Next', blog_path(page: (params[:page] || 1).to_i + 1), class: 'older-posts text-lg font-medium ml-2', style: "#{'pointer-events: none; color: gray' if @posts.size < 15}" %>
 			</nav>
 		</div>
 	</div>
