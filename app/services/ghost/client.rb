@@ -1,6 +1,5 @@
 module Ghost
   class Client
-    attr_accessor :ghost_url, :ghost_content_api
 
     def get_data(page_type, params = {})
       begin
