@@ -111,6 +111,16 @@
         gap: 20px;
         animation: scrollUp 12s linear infinite;
       }
+      
+      .fade-edges {
+        -webkit-mask-image:
+          linear-gradient(to top, transparent 0%, white 2%),
+          linear-gradient(to bottom, transparent 0%, white 2%),
+          linear-gradient(to left, transparent 0%, white 2%),
+          linear-gradient(to right, transparent 0%, white 2%);
+        -webkit-mask-composite: source-in;
+        mask-composite: intersect;
+      }
     </style>
     <style>
       html {
