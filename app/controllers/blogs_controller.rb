@@ -8,6 +8,10 @@ class BlogsController < ApplicationController
 
 	def show
 		@post = ghost_client.get_data(:post, path: request.path)
+
+		if blog_post_override_exists?
+			render "#{app_name}/blogs/show"
+		end
 	end
 
 	private
@@ -15,4 +19,9 @@ class BlogsController < ApplicationController
 	def resolve_layout
 		layout_exists?(:blog) ? "#{app_name}/layouts/blog" : "#{app_name}/layouts/application"
 	end
+	
+	def blog_post_override_exists?
+	  lookup_context.template_exists?("#{app_name}/blogs/show", [], false)
+	end
+
 end

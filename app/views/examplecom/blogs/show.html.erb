@@ -1,0 +1,50 @@
+<div class="outer xl:outer-xl post tag-hash-blog-grid <%= @post['feature_image'].present? ? '' : 'no-image' %>">
+  <article class="inner">
+    <div data-hero="" class="text-lg max-w-none py-16 sm:py-20 md:py-28 mx-auto sm:text-center">
+    <a href="#" class="block text-accent font-semibold mt-0 mb-1 no-underline hover:opacity-85">
+      <%= @post['primary_tag'].present? ? @post['primary_tag']['name'] : '' %>
+    </a>
+
+    <h1 class="my-0 mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-gray-200">
+      <%= @post['title'] %>
+    </h1>    
+
+    <p class="mt-6 text-base text-gray-400 dark:text-gray-500">
+      <time class="capitalize" datetime="2024-02-20"><%= @post['created_at'].to_datetime.strftime("%B %d, %Y") %></time>
+
+      <span class="mx-1.5 opacity-80">—</span>
+      <% @post['authors'].each_with_index do |author, index| %>
+        <a href="<%=  author['url'] %>" class="no-underline font-semibold text-inherit"><%= author['name'] %></a><%= ', ' if index < @post['authors'].size - 1 %>
+      <% end %>
+    </p>    
+
+    <% if @post['feature_image'].present? %>
+      <figure class="max-w-[1200px] mx-auto mt-10 xl:mt-16 has-links ">
+          <div class="relative rounded-md lg:rounded-xl overflow-hidden bg-gray-50 dark:bg-gray-800 
+                      after:absolute after:top-0 after:left-0 after:w-full after:h-full after:ring-1 after:ring-inset after:ring-gray-900/5 dark:after:ring-gray-50/5 after:rounded-md lg:after:rounded-xl 
+                          aspect-w-16 aspect-h-9 
+                      ">
+              <% if @post['feature_image'].present? %>
+                <img class="!m-0 object-cover lazyautosizes ls-is-cached lazyloaded" data-sizes="auto" alt="<%= @post['title'] %>" src="<%= @post['feature_image'] %>" sizes="541px">
+              <% else %>
+                <%= image_tag 'litetracker/lt-black-square.png', class: "!m-0 object-cover z-10 hover:scale-105 lazyautosizes ls-is-cached lazyloaded", sizes: "361px" %>
+              <% end %>
+          </div>
+      </figure>
+    <% end %>
+    </div>
+    <div class="">
+      <div class="w-full max-w-3xl mx-auto ">
+        <div data-toc-src="">
+          <h2 id="___TOCBOT___" class="sr-only m-0">
+              <span aria-hidden="true"><%= @post['title'] %></span>
+          </h2>  
+                              
+          <div class="content lg:content-lg mb-16 sm:mb-20 md:mb-28  has-full has-wide ">
+            <%= raw @post['html'] %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
