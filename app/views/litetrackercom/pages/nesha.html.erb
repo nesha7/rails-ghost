@@ -1,3 +1,5 @@
+<% content_for :title, "#{resolve_title_metadata(request.path)}" %>
+
 <div class="bg-white text-gray-800 relative isolate antialiased min-h-screen">
   <div class="hidden pointer-events-none absolute inset-0 -z-10 overflow-hidden">
     <div class="h-[60vh] w-[60vh] rounded-full bg-gradient-to-br absolute -top-32 -left-32 from-neutral-200 via-neutral-100 to-neutral-300 opacity-20 blur-2xl"></div>

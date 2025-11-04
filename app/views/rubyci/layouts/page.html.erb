@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="<%= @settings['lang'] %>" class="group/html min-h-screen has-inline-code-block light has-gray-scale-Slate">
+<html lang="<%= @settings['lang'] %>" class="group/html min-h-screen has-inline-code-block dark has-gray-scale-Slate">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title><%= @post.present? ? (@post['meta_title'].present? ? @post['meta_title'] : @post['title']) : 'LiteTracker | Agile software development tool' %></title>
-    <meta name="description" content="<%= @post.present? ? @post['meta_description'] : 'Blog page' %>">
+    <title>
+      <%= content_for?(:title) ? yield(:title) : "Ruby.ci fastest Ruby on Rails CI in cloud" %>
+    </title>
+    <meta name="description" content="<%= @page.present? ? @page['meta_description'] : '' %>">
     <meta name="keywords" content="ruby, continuous integration, automated tests">
-    <% if @post.present? %>
-      <meta name="canonical"  content="<%= @post['canonical_url'] %>">
-    <% end %>
+    <meta name="canonical"  content="<%= @page['canonical_url'] %>">
 
-    <%= favicon_link_tag 'litetracker/favicon.ico' %>
+    <%= favicon_link_tag 'favicon.svg' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag '/css/ghost.min.css', media: 'all', "data-turbo-track": "reload" %>
 
     <%= raw @settings['codeinjection_head'] %>
-    <%= raw @post['codeinjection_head'] if @post.present? %>
-    <%= raw @header_script if @header_script.present? %>
+    <%= raw @page['codeinjection_head'] if @page.present? %>
+    <style>
+      .kg-btn-accent {
+        background-color: #ff0095;
+        display: inline-block;
+        width: 100%;
+        text-decoration: none !important;
+      }
+    </style>
   </head>
 
   <body class="page-template page-blog tag-hash-blog-grid min-h-screen flex flex-col antialiased overflow-x-hidden text-gray-900 bg-white dark:text-gray-400 dark:bg-gray-900 [&amp;.has-modal]:h-screen [&amp;.has-modal]:overflow-hidden sal-disabled">
+    <%= render 'rubyci/layouts/partials/scripts_body' %>
     <div class="absolute right-0 top-0 -z-10 overflow-hidden">
       <div class="relative w-[600px] h-[600px] -translate-y-2/3 translate-x-2/3 lg:-translate-y-1/2 lg:translate-x-1/2 bg-gradient-to-bl from-accent to-transparent rounded-full blur-[100px] opacity-50"></div>
     </div>
@@ -33,15 +41,14 @@
         </span>
       </a> 
 
-      <%= render 'litetrackercom/layouts/partials/header_ghost' %>
+      <%= render 'rubyci/layouts/partials/header_ghost' %>
       <main id="main" tabindex="-1" class="flex-none outline-none"> 
         <%= yield %>
       </main>
 
-      <%= render 'litetrackercom/layouts/partials/footer_ghost' %>
+      <%= render 'rubyci/layouts/partials/footer_ghost' %>
     </div>
     <%= raw @settings['codeinjection_foot'] %>
-    <%= raw @post['codeinjection_foot'] if @post.present? %>
-    <%= raw @footer_script if @footer_script.present? %>
+    <%= raw @page['codeinjection_foot'] if @page.present? %>
   </body>
 </html>

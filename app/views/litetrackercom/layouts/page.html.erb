@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title><%= @post.present? ? (@post['meta_title'].present? ? @post['meta_title'] : @post['title']) : 'LiteTracker | Agile software development tool' %></title>
-    <meta name="description" content="<%= @post.present? ? @post['meta_description'] : 'Blog page' %>">
+    <title>
+      <%= content_for?(:title) ? yield(:title) : "LiteTracker | Agile software development tool" %>
+    </title>
+    <meta name="description" content="<%= @page.present? ? @page['meta_description'] : 'Blog page' %>">
     <meta name="keywords" content="ruby, continuous integration, automated tests">
-    <% if @post.present? %>
-      <meta name="canonical"  content="<%= @post['canonical_url'] %>">
+    <% if @page.present? %>
+      <meta name="canonical"  content="<%= @page['canonical_url'] %>">
     <% end %>
 
     <%= favicon_link_tag 'litetracker/favicon.ico' %>
@@ -17,7 +19,7 @@
     <%= stylesheet_link_tag '/css/ghost.min.css', media: 'all', "data-turbo-track": "reload" %>
 
     <%= raw @settings['codeinjection_head'] %>
-    <%= raw @post['codeinjection_head'] if @post.present? %>
+    <%= raw @page['codeinjection_head'] if @page.present? %>
     <%= raw @header_script if @header_script.present? %>
   </head>
 
@@ -41,7 +43,7 @@
       <%= render 'litetrackercom/layouts/partials/footer_ghost' %>
     </div>
     <%= raw @settings['codeinjection_foot'] %>
-    <%= raw @post['codeinjection_foot'] if @post.present? %>
+    <%= raw @page['codeinjection_foot'] if @page.present? %>
     <%= raw @footer_script if @footer_script.present? %>
   </body>
 </html>

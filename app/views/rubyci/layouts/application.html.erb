@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="<%= @settings['meta_description'].present? ? @settings['meta_description'] : 'Reduce Ruby Dev Costs by 80% with 256x faster automated tests and improved performance workflow' %>">
     <meta name="keywords" content="ruby, continuous integration, automated tests">
-    <title><%= @settings['meta_title'].present? ? @settings['meta_title'] : 'Ruby.ci fastest Ruby on Rails CI in cloud' %></title>
+    <title>
+      <%= content_for?(:title) ? yield(:title) : "Ruby.ci fastest Ruby on Rails CI in cloud" %>
+    </title>
 
     <%= favicon_link_tag 'logo-linear.svg' %>
     <%= csrf_meta_tags %>

@@ -1,0 +1,39 @@
+<div class="max-w-5xl mx-auto mt-10">
+  <!-- Page Header -->
+  <div class="flex items-center justify-between mb-6">
+    <h1 class="text-2xl font-bold text-gray-800">Page Metadata</h1>
+    <%= link_to "New Page Metadata", new_admin_page_metadatum_path,
+                class: "bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500" %>
+  </div>
+
+  <div class="overflow-x-auto bg-white shadow rounded-lg">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Slug</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Meta Title</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+          <th class="px-6 py-3"></th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <% @page_metadata.each do |meta| %>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-gray-700"><%= meta.slug %></td>
+            <td class="px-6 py-4 whitespace-nowrap text-gray-700"><%= meta.meta_title %></td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <%= link_to "Edit", edit_admin_page_metadatum_path(meta),
+                          class: "text-white bg-gray-600 px-3 py-1 rounded hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500" %>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <%= button_to "Delete", admin_page_metadatum_path(meta),
+                            method: :delete,
+                            data: { confirm: "Are you sure?" },
+                            class: "text-red-600 underline bg-transparent border-0 p-0 hover:text-red-800 cursor-pointer" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

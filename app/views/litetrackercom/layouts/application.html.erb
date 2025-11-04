@@ -3,7 +3,9 @@
    <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= @settings['meta_title'].present? ? @settings['meta_title'] : 'LiteTracker | Agile software development tool' %></title>
+    <title>
+      <%= content_for?(:title) ? yield(:title) : "LiteTracker | Agile software development tool" %>
+    </title>
     <%= csrf_meta_tags %>
     <meta name="description" content="Lite Tracker is the agile project management tool for companies around the world for real-time collaboration around a shared dashboard and snappy user experience. ">
     <%= favicon_link_tag 'litetracker/favicon.ico' %>

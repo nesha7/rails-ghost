@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title><%= @post.present? ? @post['meta_title'] : 'Kolosek | Ruby on Rails development company' %></title>
+    <title><%= @post.present? ? (@post['meta_title'].present? ? @post['meta_title'] : @post['title']) : 'Kolosek | Ruby on Rails development company' %></title>
     <meta name="description" content="<%= @post.present? ? @post['meta_description'] : 'Blog page' %>">
     <meta name="keywords" content="ruby, continuous integration, automated tests">
 

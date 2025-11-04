@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="<%= @settings['meta_description'].present? ? @settings['meta_description'] : 'Software development company that specializes in designing and developing custom web and mobile applications, and creating beautiful UX designs' %>">
     <meta name="keywords" content="web development, mobile development, UX designs, quality code">
-    <title><%= @settings['meta_title'].present? ? @settings['meta_title'] : 'Kolosek | Ruby on Rails development company' %></title>
+    <title>
+      <%= content_for?(:title) ? yield(:title) : "Kolosek | Ruby on Rails development company" %>
+    </title>
 
     <%= favicon_link_tag 'kolosek/favicon.svg' %>
     <%= csrf_meta_tags %>

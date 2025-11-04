@@ -1,0 +1,33 @@
+<%= form_with(model: [:admin, @page_metadata], 
+              url: @page_metadata.persisted? ? admin_page_metadatum_path(@page_metadata) : admin_page_metadata_path, 
+              local: true,
+              class: "max-w-lg mx-auto p-6 bg-white rounded shadow") do |f| %>
+
+  <% if @page_metadata.errors.any? %>
+    <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded">
+      <h4 class="font-semibold mb-2">
+        <%= pluralize(@page_metadata.errors.count, "error") %> prohibited this record from being saved:
+      </h4>
+      <ul class="list-disc list-inside">
+        <% @page_metadata.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-4">
+    <%= f.label :slug, class: "block text-gray-700 font-medium mb-1" %>
+    <%= f.text_field :slug, class: "w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" %>
+  </div>
+
+  <div class="mb-4">
+    <%= f.label :meta_title, class: "block text-gray-700 font-medium mb-1" %>
+    <%= f.text_field :meta_title, class: "w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" %>
+  </div>
+
+  <div class="mt-6">
+    <%= f.submit "Save", class: "bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500" %>
+  </div>
+
+<% end %>

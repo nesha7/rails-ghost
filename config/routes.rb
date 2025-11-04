@@ -10,6 +10,10 @@ Rails.application.routes.draw do
     get  'admin/scripts',       to: 'scripts#index',  as: :scripts
     patch 'admin/scripts/update', to: 'scripts#update', as: :update_script
   end
+
+  namespace :admin do
+    resources :page_metadata, except: :show
+  end
   
   resources :files, only: [:show], param: :file_name
 

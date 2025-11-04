@@ -10,9 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_10_23_113828) do
+ActiveRecord::Schema[7.1].define(version: 2025_11_04_083716) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "page_metadata", force: :cascade do |t|
+    t.string "slug"
+    t.string "meta_title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "phrasing_phrase_versions", force: :cascade do |t|
     t.integer "phrasing_phrase_id"
