@@ -42,7 +42,10 @@
           <p class="mt-4 text-sm/6 text-gray-600">Get started for free with essential features and resources.</p>
           <p class="mt-6 flex items-baseline gap-x-1">
             <!-- Price, update based on frequency toggle state -->
-            <span class="text-2xl font-semibold tracking-tight text-gray-900" data-price-monthly="$0" data-price-annually="$0"></span>
+            <span class="price-container text-2xl font-semibold tracking-tight text-gray-900">
+              <span class="price-monthly hidden"><%= safe_phrase('litetracker_pricing-free-month', '$0') %></span>
+              <span class="price-annually"><%= safe_phrase('litetracker_pricing-free-year', '$0') %></span>
+            </span>
             <!-- Payment frequency, update based on frequency toggle state -->
             <span class="text-sm/6 font-semibold text-gray-600">/mo</span>
           </p>
@@ -104,11 +107,17 @@
           <p class="mt-4 text-sm/6 text-gray-600">For growing businesses, expanding companies, and ambitious startups.</p>
           <p class="mt-6 flex items-baseline gap-x-1">
             <!-- Price, update based on frequency toggle state -->
-            <span class="text-2xl font-semibold tracking-tight text-gray-900" data-price-monthly="<%= safe_phrase('litetracker_pricing-basic-month', '$14') %>" data-price-annually="<%= safe_phrase('litetracker_pricing-basic-year', '$10') %>"></span>
+            <span class="price-container text-2xl font-semibold tracking-tight text-gray-900">
+              <span class="price-monthly hidden"><%= safe_phrase('litetracker_pricing-basic-month', '$14') %></span>
+              <span class="price-annually"><%= safe_phrase('litetracker_pricing-basic-year', '$10') %></span>
+            </span>
             <!-- Payment frequency, update based on frequency toggle state -->
             <span class="text-sm/6 font-semibold text-gray-600">/seat/mo</span>
           </p>
-          <p class="my-2 text-sm" data-price-monthly="Billed monthly*" data-price-annually="Billed annually*"></p>
+          <p class="price-container my-2 text-sm">
+            <span class="price-monthly hidden"><%= safe_phrase('litetracker_pricing-basic-billed-month', 'Billed monthly*') %></span>
+            <span class="price-annually"><%= safe_phrase('litetracker_pricing-basic-billed-annual', 'Billed annually*') %></span>
+          </p>
           <div class="h-px bg-[#E6E6EB] mt-8"></div>
           <ul role="list" class="mt-8 space-y-3 text-sm/6 text-gray-600">
             <li class="flex gap-x-3">
@@ -253,7 +262,7 @@
               <div class="flex flex-col items-center justify-center gap-2 w-full">
                 <h6 class="font-medium text-xl">Free</h6>
                 <div class="flex items-center justify-center gap-1 w-full text-lg">
-                  <p class="font-medium">0$</p>
+                  <p class="font-medium"><%= safe_phrase('litetracker_pricing-table-free', '$0') %></p>
                   <p class="text-gray-600">/mo</p>
                 </div>
               </div>
@@ -270,7 +279,7 @@
               <div class="flex flex-col items-center justify-center gap-2 w-full">
                 <h6 class="font-medium text-xl">Basic</h6>
                 <div class="flex items-center justify-center gap-1 w-full text-lg">
-                  <p class="font-medium">11.6$</p>
+                  <p class="font-medium"><%= safe_phrase('litetracker_pricing-table-basic', '$10') %></p>
                   <p class="text-gray-600">/mo</p>
                 </div>
               </div>
@@ -585,16 +594,22 @@
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const frequencyRadios = document.querySelectorAll('input[name="frequency"]');
-    const priceElements = document.querySelectorAll('[data-price-monthly]');
+    const priceContainers = document.querySelectorAll('.price-container');
 
     function updatePrices() {
       const selectedFrequency = Array.from(frequencyRadios).find(radio => radio.checked).value;
 
-      priceElements.forEach(element => {
-        const monthlyPrice = element.getAttribute('data-price-monthly');
-        const annualPrice = element.getAttribute('data-price-annually');
+      priceContainers.forEach(container => {
+        const monthlySpan = container.querySelector('.price-monthly');
+        const annualSpan = container.querySelector('.price-annually');
 
-        element.textContent = selectedFrequency === 'monthly' ? monthlyPrice : annualPrice;
+        if (selectedFrequency === 'monthly') {
+          monthlySpan.classList.remove('hidden');
+          annualSpan.classList.add('hidden');
+        } else {
+          monthlySpan.classList.add('hidden');
+          annualSpan.classList.remove('hidden');
+        }
 
         // const frequencyText = element.nextElementSibling;
         // frequencyText.textContent = selectedFrequency === 'monthly' ? '/seat/mo' : '/year';
