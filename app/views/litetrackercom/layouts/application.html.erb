@@ -75,6 +75,16 @@
             transform: translateX(-2434px);
           }
         }
+
+        @keyframes nodePulse {
+          0%, 100% { r: 2; opacity: 1; }
+          50% { r: 3; opacity: 0.6; }
+        }
+
+        @keyframes lineDraw {
+          0% { stroke-dasharray: 0 100; opacity: 0.3; }
+          100% { stroke-dasharray: 100 0; opacity: 1; }
+        }
       }
 
       @utility text-subheading {
@@ -122,6 +132,27 @@
           linear-gradient(to right, transparent 0%, white 2%);
         -webkit-mask-composite: source-in;
         mask-composite: intersect;
+      }
+
+      .node {
+        stroke: currentColor;
+        stroke-width: 1.5;
+        fill: none;
+        animation: nodePulse 2s ease-in-out infinite;
+        transform-origin: center;
+      }
+
+      .line {
+        stroke: currentColor;
+        stroke-width: 1.5;
+        fill: none;
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        animation: lineDraw 1.8s ease forwards;
+      }
+      
+      .line-delayed {
+        animation-delay: 0.3s;
       }
     </style>
     <style>

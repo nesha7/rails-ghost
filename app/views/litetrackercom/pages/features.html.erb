@@ -1,0 +1,231 @@
+<% content_for :title, "#{resolve_title_metadata(request.path)}" %>
+
+<section id="features-hero">
+  <div class="relative h-134 lg:mt-20">
+    <%= image_tag 'litetracker/features-hero.png', class: "absolute inset-0 -z-10 size-full object-cover opacity-70", alt: '' %>
+    <div class="relative mx-auto max-w-4xl py-16 sm:py-24 flex items-center flex-col justify-start gap-y-24 w-full">
+      <div class="mx-auto max-w-2xl flex flex-col gap-y-6 justify-center w-full text-center">
+        <div class="flex items-center justify-center text-white text-xs">
+          <svg class="h-4 w-4"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <p class="pl-1 font-bold">Features</p>
+        </div>
+        <h3 class="text-heading text-white">
+          <%= safe_phrase("litetracker_features-hero-header", "Features") %>
+        </h3>
+        <p class="text-base font-normal text-white sm:text-lg/8"><%= safe_phrase("litetracker_features-hero-subheader", "A single view of all your priorities keeps your team on the same page so you can smartly manage projects") %></p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="stories-define" class="relative isolate overflow-hidden">
+  <div class="relative mx-auto max-w-4xl py-16 sm:py-24 flex items-center flex-col justify-start gap-y-24 w-full">
+    <div class="mx-auto max-w-2xl flex flex-col gap-y-6 justify-center w-full text-center">
+      <h3 class="text-heading">
+        <%= safe_phrase("litetracker_features-stories-define-header", "Stories define your project") %>
+      </h3>
+      <p class="text-base font-normal text-gray-500 sm:text-lg/8"><%= safe_phrase("litetracker_features-stories-define-subheader", "Every project starts with a story, no matter what you're building. Tracker helps your team better develop and keep track of them while they progress from start to delivered.") %></p>
+    </div>
+  </div>
+  <div class="group mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:px-8">
+    <div class="mx-auto max-w-100 shrink-0 flex flex-col lg:mx-0">
+      <input type="radio" id="carousel-start" name="selected_feature" class="peer/carousel-start carousel-start sr-only" checked>
+      <label for="carousel-start" class="flex items-start flex-col gap-2 rounded-lg cursor-pointer py-4 px-5 mt-6 text-subheading not-peer-checked/carousel-start:hover:bg-[#f9f9f9] peer-checked/carousel-start:bg-[#eaf6ff]">
+        <p class="font-semibold"><%= safe_phrase("litetracker_features-stories-define-start-subheader", "Start with a good story") %></p>
+        <p>
+          <%= safe_phrase("litetracker_features-stories-define-start-content", "A story is a small, actionable bit of work that's either a placeholder for a future conversation or a reflection of one that already happened. Outlining what a user needs helps you focus on the what, not the how.") %>
+        </p>
+      </label>
+      <input type="radio" id="carousel-define" name="selected_feature" class="peer/carousel-define carousel-define sr-only">
+      <label for="carousel-define" class="flex items-start flex-col gap-2 rounded-lg cursor-pointer py-4 px-5 mt-6 text-subheading not-peer-checked/carousel-define:hover:bg-[#f9f9f9] peer-checked/carousel-define:bg-[#eaf6ff]">
+        <p class="font-semibold"><%= safe_phrase("litetracker_features-stories-define-define-subheader", "Define the story") %></p>
+        <p>
+          <%= safe_phrase("litetracker_features-stories-define-define-content", "Select among features, bugs, and chores to strike a healthy balance between building new features, staying ahead of technical debt, and keeping the bugs from piling up.") %>
+        </p>
+      </label>
+      <input type="radio" id="carousel-estimate" name="selected_feature" class="peer/carousel-estimate carousel-estimate sr-only">
+      <label for="carousel-estimate" class="flex items-start flex-col gap-2 rounded-lg cursor-pointer py-4 px-5 mt-6 text-subheading not-peer-checked/carousel-estimate:hover:bg-[#f9f9f9] peer-checked/carousel-estimate:bg-[#eaf6ff]">
+        <p class="font-semibold"><%= safe_phrase("litetracker_features-stories-define-estimate-subheader", "Estimate, then prioritize") %></p>
+        <p>
+          <%= safe_phrase("litetracker_features-stories-define-estimate-content", "Writing the story is just the beginning—now you get to rap about it. Estimate as a team to uncover the story's complexity. Choose among several point scales, then drag-and-drop to prioritize by iteration.") %>
+        </p>
+      </label>
+    </div>
+    <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-15 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none">
+      <div class="max-w-3xl flex items-center sm:max-w-5xl lg:max-w-none block">
+        <%= image_tag 'litetracker/carousel-start.svg', class: "lg:h-180 rounded-md hidden group-has-[.carousel-start:checked]:block", alt: '' %>
+        <%= image_tag 'litetracker/carousel-define.svg', class: "lg:h-180 rounded-md hidden group-has-[.carousel-define:checked]:block", alt: '' %>
+        <%= image_tag 'litetracker/carousel-estimate.svg', class: "lg:h-180 rounded-md hidden group-has-[.carousel-estimate:checked]:block", alt: '' %>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="automatic-planning" class="relative isolate overflow-hidden">
+  <div class="relative mx-auto max-w-4xl py-16 sm:py-24 flex items-center flex-col justify-start gap-y-24 w-full">
+    <div class="mx-auto max-w-2xl flex flex-col gap-y-6 justify-center w-full text-center">
+      <h3 class="text-heading">
+        <%= safe_phrase("litetracker_features-automatic-planning-header", "Automatic planning keeps your team in a rhythm") %>
+      </h3>
+      <p class="text-base font-normal text-gray-500 sm:text-lg/8"><%= safe_phrase("litetracker_features-automatic-planning-subheader", "Get predictable and stay that way: Say goodbye to managing timelines and meeting unrealistic expectations, and let velocity do the planning.") %></p>
+    </div>
+  </div>
+  <div class="group mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:px-8">
+    <div class="mx-auto max-w-100 shrink-0 flex flex-col lg:mx-0">
+      <label for="carousel-start" class="flex items-start flex-col gap-2 rounded-lg cursor-pointer py-4 px-5 mt-6 text-subheading">
+        <p class="font-semibold"><%= safe_phrase("litetracker_features-automatic-planning-iterations-subheader", "Emergent iterations") %></p>
+        <p>
+          <%= safe_phrase("litetracker_features-automatic-planning-iterations-content", "Tracker calculates your team's velocity based on the average number of story points completed in recent iterations, so your past work provides an honest view of your team's future.") %>
+        </p>
+      </label>
+      <label for="carousel-define" class="flex items-start flex-col gap-2 rounded-lg cursor-pointer py-4 px-5 mt-6 text-subheading">
+        <p class="font-semibold"><%= safe_phrase("litetracker_features-automatic-planning-progress-subheader", "Steady progress") %></p>
+        <p>
+          <%= safe_phrase("litetracker_features-automatic-planning-progress-content", "Tracker encourages a level of consistency that gets teams into a healthy rhythm. With a more sustainable pace, your team can deliver more features more often and keep the feedback loop spinning.") %>
+        </p>
+      </label>
+    </div>
+    <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-15 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none">
+      <div class="max-w-3xl flex items-center sm:max-w-5xl lg:max-w-none block">
+        <%= image_tag 'litetracker/example-dashboard.png', class: "lg:h-180 rounded-md", alt: '' %>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="analytics" class="relative isolate overflow-hidden">
+  <div class="relative mx-auto max-w-4xl py-16 sm:py-24 flex items-center flex-col justify-start gap-y-24 w-full">
+    <div class="mx-auto max-w-2xl flex flex-col gap-y-6 justify-center w-full text-center">
+      <h3 class="text-heading">
+        <%= safe_phrase("litetracker_features-analytics-header", "Analytics show the forest and the trees") %>
+      </h3>
+      <p class="text-base font-normal text-gray-500 sm:text-lg/8"><%= safe_phrase("litetracker_features-analytics-subheader", "Gauge how well your team is functioning: Analytics illustrate overall project health through both the broad trends and the nitty-gritty details.") %></p>
+    </div>
+  </div>
+  <div class="group mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:px-8">
+    <div class="mx-auto max-w-100 shrink-0 flex flex-col lg:mx-0">
+      <label for="carousel-start" class="flex items-start flex-col gap-2 rounded-lg cursor-pointer py-4 px-5 mt-6 text-subheading">
+        <p class="font-semibold"><%= safe_phrase("litetracker_features-analytics-visual-subheader", "Visual representation of team health") %></p>
+        <p>
+          <%= safe_phrase("litetracker_features-analytics-visual-content", "Instantly access a bird's-eye-view of how well your team's performing. Scan the Project Overview page to identify high-level trends or fluctuations that reflect your team's reality (feat. Burnup, Cumulative Flow, and Cycle Time reports).") %>
+        </p>
+      </label>
+      <label for="carousel-define" class="flex items-start flex-col gap-2 rounded-lg cursor-pointer py-4 px-5 mt-6 text-subheading">
+        <p class="font-semibold"><%= safe_phrase("litetracker_features-analytics-microscope-subheader", "Microscope for your projects") %></p>
+        <p>
+          <%= safe_phrase("litetracker_features-analytics-microscope-content", "Click on any of the reports to drill down for a closer look at a project health by iterations, epics, releases, and more. Get the specific data your team needs to diagnose and eliminate bottlenecks at the cellular level.") %>
+        </p>
+      </label>
+    </div>
+    <div class="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-15 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none">
+      <div class="max-w-3xl flex items-center sm:max-w-5xl lg:max-w-none block">
+        <%= image_tag 'litetracker/example-analytics.png', class: "lg:h-180 rounded-md", alt: '' %>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="more-features" class="relative isolate overflow-hidden">
+  <div class="relative mx-auto max-w-4xl py-16 sm:py-24 flex items-center flex-col justify-start gap-y-24 w-full">
+    <div class="mx-auto max-w-3xl flex flex-col gap-y-6 justify-center w-full text-center">
+      <div class="flex items-center justify-center text-[#3472a4] text-xs">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 animate-pulse">
+          <circle class="node" cx="5" cy="12" r="2"/>
+          <circle class="node" cx="19" cy="5" r="2"/>
+          <circle class="node" cx="19" cy="19" r="2"/>
+          <path class="line" d="M7 12h10" />
+          <path class="line line-delayed" d="M17.5 6.5l-8 5" />
+          <path class="line line-delayed" d="M17.5 17.5l-8-5" />
+        </svg>
+        <p class="pl-1 font-bold">More features</p>
+      </div>
+      <h3 class="text-heading">
+        <%= safe_phrase("litetracker_features-more-features-header", "More features to help you deliver") %>
+      </h3>
+      <p class="text-base font-normal text-gray-500 sm:text-lg/8"><%= safe_phrase("litetracker_features-more-features-subheader", "Go cross-functional: a litany of features—including story blockers, a powerful and easy-to-use API, and a new GitHub integration—provide everything you need to ship your best product.") %></p>
+    </div>
+  </div>
+  <div class="mx-auto max-w-6xl px-6 lg:flex lg:items-center lg:px-8">
+    <div class="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 pb-16">
+      <div class="feature-container flex flex-col gap-5 px-4 pb-6 text-center">
+        <div class="flex items-center justify-center">
+          <%= image_tag 'litetracker/feature-bell.svg', class: "w-24", alt: '' %>
+        </div>
+        <p class="text-base text-light-gray font-bold"><%= safe_phrase("litetracker_features-more-features-notifications-subheader", "Notifications") %></p>
+        <p class="text-base text-light-gray font-normal">
+          <%= safe_phrase("litetracker_features-more-features-notifications-content", "Don't miss a thing: configure notifications to get the updates and messages you need, when you want them, at your desk or on the move.") %>
+        </p>
+      </div>
+      <div class="feature-container flex flex-col gap-5 px-4 pb-6 text-center">
+        <div class="flex items-center justify-center">
+          <%= image_tag 'litetracker/feature-mentions.svg', class: "w-24", alt: '' %>
+        </div>
+        <p class="text-base text-light-gray font-bold"><%= safe_phrase("litetracker_features-more-features-mentions-subheader", "Mentions and Following") %></p>
+        <p class="text-base text-light-gray font-normal">
+          <%= safe_phrase("litetracker_features-more-features-mentions-content", "User mentions are where it's @: bring people into story conversations with simple @mentions, and follow stories you're involved with or interested in.") %>
+        </p>
+      </div>
+      <div class="feature-container flex flex-col gap-5 px-4 pb-6 text-center">
+        <div class="flex items-center justify-center">
+          <%= image_tag 'litetracker/feature-search.svg', class: "w-24", alt: '' %>
+        </div>
+        <p class="text-base text-light-gray font-bold"><%= safe_phrase("litetracker_features-more-features-search-subheader", "Search") %></p>
+        <p class="text-base text-light-gray font-normal">
+          <%= safe_phrase("litetracker_features-more-features-search-content", "Find what you need: powerful search syntax supports nested Boolean expressions. Save common searches for later, or share them with the team.") %>
+        </p>
+      </div>
+      <div class="feature-container flex flex-col gap-5 px-4 pb-6 text-center">
+        <div class="flex items-center justify-center">
+          <%= image_tag 'litetracker/feature-files.svg', class: "w-24", alt: '' %>
+        </div>
+        <p class="text-base text-light-gray font-bold"><%= safe_phrase("litetracker_features-more-features-files-subheader", "File Sharing") %></p>
+        <p class="text-base text-light-gray font-normal">
+          <%= safe_phrase("litetracker_features-more-features-files-content", "Enhance your stories: drag-and-drop mock-ups, presentations, and other files from your computer, or attach them from Google Drive.") %>
+        </p>
+      </div>
+      <div class="feature-container flex flex-col gap-5 px-4 pb-6 text-center">
+        <div class="flex items-center justify-center">
+          <%= image_tag 'litetracker/feature-tasks.svg', class: "w-24", alt: '' %>
+        </div>
+        <p class="text-base text-light-gray font-bold"><%= safe_phrase("litetracker_features-more-features-tasks-subheader", "Tasks") %></p>
+        <p class="text-base text-light-gray font-normal">
+          <%= safe_phrase("litetracker_features-more-features-tasks-content", "Make a big to-do (or a small one): keep your story duties in line with a simple checklist and revel in the joy of checking them off the list.") %>
+        </p>
+      </div>
+      <div class="feature-container flex flex-col gap-5 px-4 pb-6 text-center">
+        <div class="flex items-center justify-center">
+          <%= image_tag 'litetracker/feature-labels.svg', class: "w-24", alt: '' %>
+        </div>
+        <p class="text-base text-light-gray font-bold"><%= safe_phrase("litetracker_features-more-features-labels-subheader", "Labels") %></p>
+        <p class="text-base text-light-gray font-normal">
+          <%= safe_phrase("litetracker_features-more-features-labels-content", "Put a label on it: organize and monitor stories with searchable labels to make your workflow more visible and call out stories that deserve attention.") %>
+        </p>
+      </div>
+      <div class="feature-container flex flex-col gap-5 px-4 pb-6 text-center">
+        <div class="flex items-center justify-center">
+          <%= image_tag 'litetracker/feature-blockers.svg', class: "w-24", alt: '' %>
+        </div>
+        <p class="text-base text-light-gray font-bold"><%= safe_phrase("litetracker_features-more-features-blockers-subheader", "Story Blockers") %></p>
+        <p class="text-base text-light-gray font-normal">
+          <%= safe_phrase("litetracker_features-more-features-blockers-content", "Watch out for roadblocks: Story blockers help make project impediments highly visible so your team can collaborate to resolve them.") %>
+        </p>
+      </div>
+      <div class="feature-container flex flex-col gap-5 px-4 pb-6 text-center">
+        <div class="flex items-center justify-center">
+          <%= image_tag 'litetracker/feature-api.svg', class: "w-24", alt: '' %>
+        </div>
+        <p class="text-base text-light-gray font-bold"><%= safe_phrase("litetracker_features-more-features-api-subheader", "API") %></p>
+        <p class="text-base text-light-gray font-normal">
+          <%= safe_phrase("litetracker_features-more-features-api-content", "Build the perfect beast: Tracker's functionality is exposed via the REST API, allowing you to create a variety of tools and integrations.") %>
+        </p>
+      </div>
+      <div class="feature-container flex flex-col gap-5 px-4 pb-6 text-center">
+        <div class="flex items-center justify-center">
+          <%= image_tag 'litetracker/feature-history.svg', class: "w-24", alt: '' %>
+        </div>
+        <p class="text-base text-light-gray font-bold"><%= safe_phrase("litetracker_features-more-features-history-subheader", "Project History") %></p>
+        <p class="text-base text-light-gray font-normal">
+          <%= safe_phrase("litetracker_features-more-features-history-content", "Follow the breadcrumb trail: view everything that's happened in a project from day one to see how code changes are mapped to product decisions.") %>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
