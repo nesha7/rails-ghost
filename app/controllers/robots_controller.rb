@@ -6,12 +6,12 @@ class RobotsController < ApplicationController
     content = if Dir.exist?(path)
                 <<~ROBOTS
                   User-agent: *
-                  Disallow:
+                  Allow:
 
                   Sitemap: https://#{request.host}/sitemap.xml.gz
                 ROBOTS
               else
-                "User-agent: *\nDisallow: /"
+                "User-agent: *\Allow: /"
               end
 
     render plain: content, content_type: 'text/plain'
