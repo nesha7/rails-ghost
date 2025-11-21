@@ -18,10 +18,8 @@
           <a href="/about" class="text-sm/6 font-semibold text-gray-900">About</a>
           <a href="/pricing" class="text-sm/6 font-semibold text-gray-900">Pricing</a>
           <a href="/features" class="text-sm/6 font-semibold text-gray-900">Features</a>
-          <a href="/integrations" class="text-sm/6 font-semibold text-gray-900">Integrations</a>
           <a href="/blog?page=1" class="text-sm/6 font-semibold text-gray-900">Blog</a>
           <a href="https://litetracker.featurebase.app/roadmap" class="text-sm/6 font-semibold text-gray-900">Changelog</a>
-          <a href="#" data-cal-link="neshaz/litetracker" data-cal-namespace="litetracker" data-cal-config='{"layout":"month_view"}' class="text-sm/6 font-semibold text-gray-900">Discounts</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="text-sm/6 font-semibold text-gray-900">Sign up/Sign in <span aria-hidden="true">&rarr;</span></a>
@@ -52,10 +50,8 @@
                     <a href="/about" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">About</a>
                     <a href="/pricing" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Pricing</a>
                     <a href="/features" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-                    <a href="/integrations" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Integrations</a>
                     <a href="/blog?page=1" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Blog</a>
                     <a href="https://litetracker.featurebase.app/roadmap" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Changelog</a>
-                    <a href="#" data-cal-link="neshaz/litetracker" data-cal-namespace="litetracker" data-cal-config='{"layout":"month_view"}' class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Discounts</a>
                   </div>
                   <div class="py-6">
                     <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Sign up/Sign in</a>
@@ -66,4 +62,12 @@
           </div>
         </dialog>
       </el-dialog>
+      <div class="w-full mx-auto flex items-center justify-center px-6 py-1 shadow bg-[#FFE269] !bg-slate-800 text-slate-900 !text-white h-7">
+        <div class="text-md font-medium">
+          <span><%= safe_phrase('litetracker_banner-text', 'Register now with coupon code NOV25 and get 20% off.') %></span>
+          
+            <%= link_to('link text', '#', class: 'text-[#0957a4] !text-white font-semibold hover:underline hidden') %>
+          
+        </div>
+      </div>
     </header>
