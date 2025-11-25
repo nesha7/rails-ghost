@@ -7,9 +7,9 @@
       <%= @post['primary_tag'].present? ? @post['primary_tag']['name'] : '' %>
     </a>
 
-    <div class="my-0 mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-gray-200">
+    <h1 class="my-0 mx-auto max-w-4xl text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-gray-200">
       <%= @post['title'] %>
-    </div>    
+    </h1>    
 
     <p class="mt-6 text-base text-gray-400 dark:text-gray-500">
       <time class="capitalize" datetime="2024-02-20"><%= @post['created_at'].to_datetime.strftime("%B %d, %Y") %></time>

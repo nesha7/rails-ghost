@@ -9,9 +9,9 @@
     <div class="mt-10">
       <div class="w-full max-w-2xl mx-auto" style="min-height: 600px;">
         <div>
-          <div class="page-title" style="display: block; margin: 0 0 1rem; padding: 0 0 4px; color: #15171a;font-size: 3rem; letter-spacing: -.017em; line-height: 1.1em; font-weight: 700;">
+          <h1 class="page-title" style="display: block; margin: 0 0 1rem; padding: 0 0 4px; color: #15171a;font-size: 3rem; letter-spacing: -.017em; line-height: 1.1em; font-weight: 700;">
             <%= @page['title'] %>
-          </div>  
+          </h1>  
 
           <div class="content lg:content-lg mb-16 sm:mb-20 md:mb-28 has-full has-wide ">
             <%= raw fix_missing_img_alts(@page['html'], "#{@app} image") %>
