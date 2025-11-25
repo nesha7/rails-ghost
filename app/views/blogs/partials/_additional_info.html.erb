@@ -1,0 +1,10 @@
+<div class="w-full max-w-3xl mx-auto mb-10 bg-grey/10 rounded-lg" style="background-color: #abb4be1a;">
+	<div class="flex flex-col py-6 mx-6 w-full" style="gap: 2.4rem;">
+		<div class="text-grey-900 text-lg text-left" style="margin: 0 2.4rem;">
+			<%= safe_phrase("#{@post['title'].parameterize(separator: "_")}_text", "Get $100 free credits on LiteTracker when signup") %>
+		</div>
+		<div class="text-grey-900 text-lg font-medium" style="margin: 0 2.4rem;">
+			<%= link_to safe_phrase("#{@post['title'].parameterize(separator: "_")}_link", "Learn More"), app_login_url_with_utm(handle_host_url(@app), additional: { ref: "blog.litetracker.com" }), class: 'text-white rounded-md px-5 py-2', style: 'background-color: black;' %>
+		</div>
+	</div>
+</div>

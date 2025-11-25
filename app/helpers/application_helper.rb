@@ -17,7 +17,7 @@ module ApplicationHelper
 	  doc.to_html
 	end
 
-	def app_login_url_with_utm(base_url)
+	def app_login_url_with_utm(base_url, additional: {})
 	  utm_params = {
 	    utm_source:   session[:utm_source],
 	    utm_medium:   session[:utm_medium],
@@ -26,8 +26,22 @@ module ApplicationHelper
 	    utm_campaign: session[:utm_campaign]
 	  }.compact_blank
 
+	  # Merge in additional parameters
+	  query_params = utm_params.merge(additional.compact_blank)
+
 	  uri = URI(base_url)
-	  uri.query = utm_params.to_query if utm_params.any?
+	  uri.query = query_params.to_query if query_params.any?
 	  uri.to_s
+	end
+
+	def handle_host_url(app)
+		case app
+		when 'litetrackercom'
+			'https://app.litetracker.com'
+		when 'kolosekcom'
+			'https://kolosek.com'
+		when 'rubyci'
+			'https://ruby.ci'
+		end
 	end
 end

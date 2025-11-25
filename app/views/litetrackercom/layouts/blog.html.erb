@@ -19,6 +19,11 @@
     <%= raw @settings['codeinjection_head'] %>
     <%= raw @post['codeinjection_head'] if @post.present? %>
     <%= raw @header_script if @header_script.present? %>
+
+    <% if current_user.present? && current_user.admin? %>
+      <%= javascript_include_tag "phrasing", defer: true %>
+      <%= stylesheet_link_tag "application" %>
+    <% end %>
   </head>
 
   <body class="page-template page-blog tag-hash-blog-grid min-h-screen flex flex-col antialiased overflow-x-hidden text-gray-900 bg-white dark:text-gray-400 dark:bg-gray-900 [&amp;.has-modal]:h-screen [&amp;.has-modal]:overflow-hidden sal-disabled">
@@ -32,6 +37,9 @@
             Skip to main content
         </span>
       </a> 
+      <div style="background-color: white;">
+        <%= render 'phrasing/initializer' %>
+      </div>
 
       <%= render 'litetrackercom/layouts/partials/header_ghost' %>
       <main id="main" tabindex="-1" class="flex-none outline-none"> 
