@@ -1,0 +1,24 @@
+<script type="text/javascript">
+  (function() {
+    const utm = JSON.parse(document.querySelector('meta[name="utm-data"]').content || '{}')
+    const utmQuery = new URLSearchParams(utm).toString()
+
+    if (!utmQuery) return;
+
+    document.querySelectorAll('a').forEach(a => {
+      const href = a.getAttribute('href');
+
+      // only internal relative links
+      if (!href || href.startsWith('http')) return;
+      if (href.startsWith('#')) return;
+
+      const url = new URL(href, window.location.origin);
+      utmQuery.split("&").forEach(pair => {
+        const [k, v] = pair.split("=");
+        url.searchParams.set(k, v);
+      });
+
+      a.setAttribute('href', url.pathname + "?" + url.searchParams.toString());
+    });
+  })();
+</script>

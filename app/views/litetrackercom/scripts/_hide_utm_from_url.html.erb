@@ -1,0 +1,18 @@
+<script type="text/javascript">
+  (function() {
+    const url = new URL(window.location.href);
+    let changed = false;
+
+    // remove only utm parameters
+    for (const key of [...url.searchParams.keys()]) {
+      if (key.startsWith("utm_")) {
+        url.searchParams.delete(key);
+        changed = true;
+      }
+    }
+
+    if (changed) {
+      window.history.replaceState({}, "", url.pathname + (url.search ? "?" + url.searchParams.toString() : ""));
+    }
+  })();
+</script>

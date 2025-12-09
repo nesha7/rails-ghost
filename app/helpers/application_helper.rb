@@ -17,17 +17,19 @@ module ApplicationHelper
 	  doc.to_html
 	end
 
-	def app_login_url_with_utm(base_url, additional: {})
-	  utm_params = {
-	    utm_source:   session[:utm_source],
-	    utm_medium:   session[:utm_medium],
-	    utm_term:     session[:utm_term],
-	    utm_content:  session[:utm_content],
-	    utm_campaign: session[:utm_campaign]
-	  }.compact_blank
+	def stored_utm_data
+		session.to_h.slice(
+			"utm_source",
+			"utm_medium",
+			"utm_term",
+			"utm_content",
+			"utm_campaign"
+		).compact_blank
+	end
 
+	def app_login_url_with_utm(base_url, additional: {})
 	  # Merge in additional parameters
-	  query_params = utm_params.merge(additional.compact_blank)
+	  query_params = stored_utm_data.merge(additional.compact_blank)
 
 	  uri = URI(base_url)
 	  uri.query = query_params.to_query if query_params.any?
