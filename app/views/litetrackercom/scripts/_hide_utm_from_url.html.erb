@@ -5,7 +5,7 @@
 
     // remove only utm parameters
     for (const key of [...url.searchParams.keys()]) {
-      if (key.startsWith("utm_")) {
+      if (key.startsWith("utm_") || key === "ref") {
         url.searchParams.delete(key);
         changed = true;
       }

@@ -23,7 +23,8 @@ module ApplicationHelper
 			"utm_medium",
 			"utm_term",
 			"utm_content",
-			"utm_campaign"
+			"utm_campaign",
+			"ref"
 		).compact_blank
 	end
 
