@@ -1,18 +1,20 @@
 <script type="text/javascript">
-  (function() {
-    const url = new URL(window.location.href);
-    let changed = false;
+  setTimeout(function() {
+    (function() {
+      const url = new URL(window.location.href);
+      let changed = false;
 
-    // remove only utm parameters
-    for (const key of [...url.searchParams.keys()]) {
-      if (key.startsWith("utm_") || key === "ref") {
-        url.searchParams.delete(key);
-        changed = true;
+      // remove only utm parameters
+      for (const key of [...url.searchParams.keys()]) {
+        if (key.startsWith("utm_") || key === "ref") {
+          url.searchParams.delete(key);
+          changed = true;
+        }
       }
-    }
 
-    if (changed) {
-      window.history.replaceState({}, "", url.pathname + (url.search ? "?" + url.searchParams.toString() : ""));
-    }
-  })();
+      if (changed) {
+        window.history.replaceState({}, "", url.pathname + (url.search ? "?" + url.searchParams.toString() : ""));
+      }
+    })();
+  }, 600); // delay to wait Umami read UTMs
 </script>
