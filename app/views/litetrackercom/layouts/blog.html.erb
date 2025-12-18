@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="<%= @settings['lang'] %>" class="group/html min-h-screen has-inline-code-block light has-gray-scale-Slate">
+<html lang="<%= @settings['lang'] %>" class="group/html min-h-screen has-inline-code-block light has-gray-scale-Slate no-scrollbar">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title><%= @post.present? ? (@post['meta_title'].present? ? @post['meta_title'] : @post['title']) : 'LiteTracker | Agile software development tool' %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : 'Blog page' %>">
-    <meta name="keywords" content="ruby, continuous integration, automated tests">
+    <meta name="keywords" content="LiteTracker, agile project management, project tracking tool, scrum tool, kanban board, sprint planning, agile software development, Pivotal Tracker alternative">
     <% if @post.present? %>
       <meta name="canonical"  content="<%= @post['canonical_url'] %>">
     <% end %>
@@ -33,6 +33,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module" async></script>
 
     <%= stylesheet_link_tag '/css/ghost.min.css', media: 'all', "data-turbo-track": "reload" %>
+    <style>
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+    </style>
 
     <%= raw @settings['codeinjection_head'] %>
     <%= raw @post['codeinjection_head'] if @post.present? %>

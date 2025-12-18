@@ -5,11 +5,14 @@ class PagesController < ApplicationController
 
 	def index
 		@posts = ghost_client.get_data(:posts, page: params[:page] || 1)
+		@hide_banner = true
 
 		render "#{app_name}/pages/index", layout: "#{app_name}/layouts/application"
 	end
 
 	def show
+		@hide_banner = true
+
 		if page_exists?(request.path)
 		  render "#{app_name}/pages#{request.path}"
 		else
