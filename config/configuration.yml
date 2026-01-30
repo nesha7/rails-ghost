@@ -6,16 +6,16 @@ default: &default
   domains:
     # Add domain-specific Ghost API configuration here
     # Format: domain_without_dots: { host: ghost_blog_url, key: api_key }
-    litetracker.com:
+    litetrackercom:
       host: https://blog.litetracker.com
       key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_LITETRACKER") { '' } %>
-    kolosek.com:
+    kolosekcom:
       host: https://blog.kolosek.com
       key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_KOLOSEK") { '' } %>
-    ruby.ci:
+    rubyci:
       host: https://blog.ruby.ci
       key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_RUBYCI") { '' } %>
-    fast.ci:
+    fastci:
       host: https://blog.fast.ci
       key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_FASTCI") { '' } %>
 
