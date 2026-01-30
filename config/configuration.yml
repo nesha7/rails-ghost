@@ -10,6 +10,8 @@ default: &default
     # examplecom: your_api_key_here
     litetrackercom: <%= ENV.fetch("GHOST_CONTENT_API_KEY_LITETRACKER") { '' } %>
     kolosekcom: <%= ENV.fetch("GHOST_CONTENT_API_KEY_KOLOSEK") { '' } %>
+    rubyci: <%= ENV.fetch("GHOST_CONTENT_API_KEY_RUBYCI") { '' } %>
+    fastci: <%= ENV.fetch("GHOST_CONTENT_API_KEY_FASTCI") { '' } %>
 
 
 test:
