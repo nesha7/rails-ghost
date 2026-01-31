@@ -4,7 +4,7 @@
   <%= render 'litetrackercom/scripts/yt_script' %>
 <% end %>
 <main>
-  <section id="hero-section" class="relative px-6 pt-14 lg:px-8 opacity-0 animate-fade-in">
+  <section id="hero-section" class="relative px-6 pt-14 lg:px-8">
     <div class="mx-auto max-w-4xl py-16 sm:pt-24">
       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
         <div class="animate-background rounded-full bg-gradient-to-r from-green-300 via-blue-600 to-red-300 bg-[length:_400%_400%] px-px py-1 [animation-duration:_6s]">
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="text-center">
-        <h1 class="text-5xl font-medium tracking-tight text-balance text-gray-900 sm:text-7xl">
+        <h1 class="text-5xl font-medium tracking-tight text-balance text-gray-900 sm:text-7xl animate-blur-to-focus">
           <%= safe_phrase('litetracker_hero-header', 'The most complete Pivotal Tracker successor*') %></h1>
         <p class="mt-8 mx-auto max-w-2xl text-subheading"><%= safe_phrase('litetracker_hero-subheader', 'Packed with features we all love. Easy 1 minute transfer and complementary onboarding when you book a call.') %></p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
@@ -49,26 +49,26 @@
           <svg class="h-4 w-4"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
           </svg>
-          <p class="pl-1 font-bold">Seamless collaboration</p>
+          <p class="pl-1 font-bold">Pivotal Tracker Features</p>
         </div>
         <h3 class="text-heading">
-          <%= safe_phrase('litetracker_seamless-header', 'Most Features We Loved in Pivotal Tracker') %>
+          <%= safe_phrase('litetracker_seamless-header', 'All the Features We Loved in Pivotal Tracker') %>
         </h3>
-        <p class="text-subheading"><%= safe_phrase('litetracker_seamless-subheader', 'Features') %></p>
+        <p class="text-subheading"><%= safe_phrase('litetracker_seamless-subheader', 'Everything you need to manage agile projects, just like you did in Pivotal Tracker') %></p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 justify-center gap-10">
-        <!-- card 1 -->
+        <!-- Velocity Tracking -->
         <div class="w-full">
           <div class="flex flex-col gap-y-8">
-            <div class="rounded-xl shadow-xl bg-white h-100">
-              <%= image_tag 'litetracker/feature-story-details.webp', class: "rounded-xl w-full h-full object-center object-contain", alt: '' %>
+            <div class="rounded-xl shadow-xl bg-white h-100 overflow-hidden">
+              <%= image_tag 'litetracker/example-analytics.png', class: "rounded-xl w-full h-full object-left object-cover", alt: 'Velocity Tracking' %>
             </div>
             <div class="flex flex-col gap-4 w-full text-sm">
               <div class="flex flex-col gap-2">
-                <p class="text-[#020a0f] font-medium">Story details</p>
-                <p class="text-[#47474f] font-normal">Manage requesters, owners, reviews. Chnage story type and add points on the fly.</p>
+                <p class="text-[#020a0f] font-medium">Velocity Tracking</p>
+                <p class="text-[#47474f] font-normal">Automatic velocity calculation based on completed story points. Track your team's rolling average over iterations.</p>
               </div>
-              <a href="/pricing" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
+              <a href="/features" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
                 <span>Learn more</span>
                 <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -78,18 +78,18 @@
             </div>
           </div>
         </div>
-        <!-- card 2 -->
+        <!-- Story Points -->
         <div class="w-full">
           <div class="flex flex-col gap-y-8">
-            <div class="rounded-xl shadow-xl bg-white h-100">
-              <%= image_tag 'litetracker/feature-manage-stories.webp', class: "rounded-xl w-full h-full object-center object-contain", alt: '' %>
+            <div class="rounded-xl shadow-xl bg-white h-100 overflow-hidden">
+              <%= image_tag 'litetracker/carousel-estimate.svg', class: "rounded-xl w-full h-full object-left object-cover", alt: 'Story Points' %>
             </div>
             <div class="flex flex-col gap-4 w-full text-sm">
               <div class="flex flex-col gap-2">
-                <p class="text-[#020a0f] font-medium">Manage stories</p>
-                <p class="text-[#47474f] font-normal">The backlog contains prioritized tasks, while the icebox is used for ideas or tasks that are not currently a priority.</p>
+                <p class="text-[#020a0f] font-medium">Story Points</p>
+                <p class="text-[#47474f] font-normal">Estimate effort using the Fibonacci scale (0, 1, 2, 3, 5, 8). Quick point assignment directly from story cards.</p>
               </div>
-              <a href="/pricing" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
+              <a href="/features" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
                 <span>Learn more</span>
                 <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -99,18 +99,144 @@
             </div>
           </div>
         </div>
-        <!-- card 3 -->
+        <!-- Iteration Planning -->
         <div class="w-full">
           <div class="flex flex-col gap-y-8">
-            <div class="rounded-xl shadow-xl bg-white h-100">
-              <%= image_tag 'litetracker/feature-instant-feedback.webp', class: "rounded-xl w-full h-full object-center object-contain", alt: '' %>
+            <div class="rounded-xl shadow-xl bg-white h-100 overflow-hidden">
+              <%= image_tag 'litetracker/iteration-planning.webp', class: "rounded-xl w-full h-full object-left object-cover", alt: 'Iteration Planning' %>
             </div>
             <div class="flex flex-col gap-4 w-full text-sm">
               <div class="flex flex-col gap-2">
-                <p class="text-[#020a0f] font-medium">Instant feedback</p>
-                <p class="text-[#47474f] font-normal">Get notifications as soon as they occur. In email and in-app notifications.</p>
+                <p class="text-[#020a0f] font-medium">Iteration Planning</p>
+                <p class="text-[#47474f] font-normal">Organize work into time-boxed iterations. Automatic sprint backlog management based on velocity.</p>
               </div>
-              <a href="/pricing" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
+              <a href="/features" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
+                <span>Learn more</span>
+                <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Accept/Reject Workflow -->
+        <div class="w-full">
+          <div class="flex flex-col gap-y-8">
+            <div class="rounded-xl shadow-xl bg-white h-100 overflow-hidden">
+              <%= image_tag 'litetracker/carousel-start.svg', class: "rounded-xl w-full h-full object-left object-cover", alt: 'Accept/Reject Workflow' %>
+            </div>
+            <div class="flex flex-col gap-4 w-full text-sm">
+              <div class="flex flex-col gap-2">
+                <p class="text-[#020a0f] font-medium">Accept/Reject Workflow</p>
+                <p class="text-[#47474f] font-normal">Story states flow from Started to Finished to Delivered. Stakeholders can Accept or Reject completed work.</p>
+              </div>
+              <a href="/features" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
+                <span>Learn more</span>
+                <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Epics -->
+        <div class="w-full">
+          <div class="flex flex-col gap-y-8">
+            <div class="rounded-xl shadow-xl bg-white h-100 overflow-hidden">
+              <%= image_tag 'litetracker/features-epics.webp', class: "rounded-xl w-full h-full object-left object-cover", alt: 'Epics' %>
+            </div>
+            <div class="flex flex-col gap-4 w-full text-sm">
+              <div class="flex flex-col gap-2">
+                <p class="text-[#020a0f] font-medium">Epics</p>
+                <p class="text-[#47474f] font-normal">Group related stories into epics for larger initiatives. Track progress across multiple stories at a glance.</p>
+              </div>
+              <a href="/features" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
+                <span>Learn more</span>
+                <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Labels & Filtering -->
+        <div class="w-full">
+          <div class="flex flex-col gap-y-8">
+            <div class="rounded-xl shadow-xl bg-white h-100 overflow-hidden">
+              <%= image_tag 'litetracker/feature-labels.svg', class: "rounded-xl w-full h-full object-left object-cover", alt: 'Labels and Filtering' %>
+            </div>
+            <div class="flex flex-col gap-4 w-full text-sm">
+              <div class="flex flex-col gap-2">
+                <p class="text-[#020a0f] font-medium">Labels & Filtering</p>
+                <p class="text-[#47474f] font-normal">Organize stories with custom labels. Powerful search and filtering to find exactly what you need.</p>
+              </div>
+              <a href="/features" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
+                <span>Learn more</span>
+                <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Activity Feed -->
+        <div class="w-full">
+          <div class="flex flex-col gap-y-8">
+            <div class="rounded-xl shadow-xl bg-white h-100 overflow-hidden">
+              <%= image_tag 'litetracker/feature-history.svg', class: "rounded-xl w-full h-full object-left object-cover", alt: 'Activity Feed' %>
+            </div>
+            <div class="flex flex-col gap-4 w-full text-sm">
+              <div class="flex flex-col gap-2">
+                <p class="text-[#020a0f] font-medium">Activity Feed</p>
+                <p class="text-[#47474f] font-normal">Real-time activity stream showing all project changes. Stay informed about what your team is working on.</p>
+              </div>
+              <a href="/features" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
+                <span>Learn more</span>
+                <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Blockers -->
+        <div class="w-full">
+          <div class="flex flex-col gap-y-8">
+            <div class="rounded-xl shadow-xl bg-white h-100 overflow-hidden">
+              <%= image_tag 'litetracker/feature-blockers.svg', class: "rounded-xl w-full h-full object-left object-cover", alt: 'Blockers' %>
+            </div>
+            <div class="flex flex-col gap-4 w-full text-sm">
+              <div class="flex flex-col gap-2">
+                <p class="text-[#020a0f] font-medium">Blockers</p>
+                <p class="text-[#47474f] font-normal">Flag stories that are blocked and track dependencies. Quickly identify and resolve impediments.</p>
+              </div>
+              <a href="/features" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
+                <span>Learn more</span>
+                <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project Analytics -->
+        <div class="w-full">
+          <div class="flex flex-col gap-y-8">
+            <div class="rounded-xl shadow-xl bg-white h-100 overflow-hidden">
+              <%= image_tag 'litetracker/example-analytics.png', class: "rounded-xl w-full h-full object-left object-cover", alt: 'Project Analytics' %>
+            </div>
+            <div class="flex flex-col gap-4 w-full text-sm">
+              <div class="flex flex-col gap-2">
+                <p class="text-[#020a0f] font-medium">Project Analytics</p>
+                <p class="text-[#47474f] font-normal">Burndown charts, velocity trends, and cycle time metrics. Data-driven insights to improve your process.</p>
+              </div>
+              <a href="/features" class="flex items-center text-black font-semibold" data-umami-event="learn-more" data-umami-event-section="features">
                 <span>Learn more</span>
                 <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -139,17 +265,27 @@
                   <line x1="4" y1="11" x2="20" y2="11" />
                   <rect x="8" y="15" width="2" height="2" />
                 </svg>
-                Manage your Epics
+                Epics
               </p>
-              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_epics-header', 'Effective Planning') %></p>
-              <ol class="space-y-3">
-                <li class="text-subheading flex items-start">
-                  <%= safe_phrase('litetracker_epics-content', 'Built-in velocity tracking was a favorite, using Fibonacci-scale story points to calculate team capacity as a rolling average (e.g., over the last four sprints).') %>
+              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_epics-header', 'Group Stories Into Larger Initiatives') %></p>
+              <p class="text-subheading">Epics let you organize related stories under a single theme or feature. Track progress across multiple stories and see completion at a glance.</p>
+              <ul class="space-y-3 text-subheading">
+                <li class="flex items-start">
+                  <span class="text-orange mr-2">•</span>
+                  Visual progress tracking
                 </li>
-              </ol>
+                <li class="flex items-start">
+                  <span class="text-orange mr-2">•</span>
+                  Filter backlog by epic
+                </li>
+                <li class="flex items-start">
+                  <span class="text-orange mr-2">•</span>
+                  Epic states: drafting, in progress, done
+                </li>
+              </ul>
             </div>
             <div class="h-11 w-fit">
-              <a href="/pricing" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
+              <a href="/features" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
                 <span><%= safe_phrase('litetracker_btn-learn_more', 'Learn more') %></span>
                 <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -184,17 +320,27 @@
                   <rect x="15" y="4" width="6" height="16" rx="1" />
                   <line x1="4" y1="20" x2="18" y2="20" />
                 </svg>
-                Easy notification
+                Notifications
               </p>
-              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_notifications-header', 'Collaboration and Team Alignment') %></p>
-              <ol class="space-y-3">
-                <li class="text-subheading flex items-start">
-                  <%= safe_phrase('litetracker_notifications-content', 'Bringing distributed teams together for real-time visibility, priority agreement, and focused collaboration') %>
+              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_notifications-header', 'Stay in Sync') %></p>
+              <p class="text-subheading">Stay informed with real-time notifications. Get alerted when stories change state, receive comments, or when teammates @mention you.</p>
+              <ul class="space-y-3 text-subheading">
+                <li class="flex items-start">
+                  <span class="text-purple mr-2">•</span>
+                  Email digests or real-time alerts
                 </li>
-              </ol>
+                <li class="flex items-start">
+                  <span class="text-purple mr-2">•</span>
+                  @mentions for teammates
+                </li>
+                <li class="flex items-start">
+                  <span class="text-purple mr-2">•</span>
+                  Live activity stream
+                </li>
+              </ul>
             </div>
             <div class="h-11 w-fit">
-              <a href="/pricing" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
+              <a href="/features" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
                 <span><%= safe_phrase('litetracker_btn-learn_more', 'Learn more') %></span>
                 <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -241,7 +387,7 @@
               <line x1="4" y1="11" x2="20" y2="11" />
               <rect x="8" y="15" width="2" height="2" />
             </svg>
-            <span>Iteration Planning</span>
+            <span>Velocity & Iterations</span>
           </label>
           <input type="radio" id="easy-organization" name="selected_feature" class="peer/easy-organization easy-organization sr-only">
           <label for="easy-organization" class="w-full sm:w-0 flex items-center justify-start sm:justify-center flex-grow gap-2 h-12 p-4 cursor-pointer font-medium text-sm text-[#50565d] rounded-4xl peer-checked/easy-organization:border peer-checked/easy-organization:text-[#020a0f] peer-checked/easy-organization:bg-white peer-checked/easy-organization:border-[#E6E6EB]">
@@ -252,7 +398,7 @@
               <rect x="15" y="4" width="6" height="16" rx="1" />
               <line x1="4" y1="20" x2="18" y2="20" />
             </svg>
-            <span>Easy organization</span>
+            <span>Backlog & Icebox</span>
           </label>
           <input type="radio" id="seamless-integration" name="selected_feature" class="peer/seamless-integration seamless-integration sr-only">
           <label for="seamless-integration" class="w-full sm:w-0 flex items-center justify-start sm:justify-center flex-grow gap-2 h-12 p-4 cursor-pointer font-medium text-sm text-[#50565d] rounded-4xl peer-checked/seamless-integration:border peer-checked/seamless-integration:text-[#020a0f] peer-checked/seamless-integration:bg-white peer-checked/seamless-integration:border-[#E6E6EB]">
@@ -261,7 +407,7 @@
               <polyline points="2 17 12 22 22 17" />
               <polyline points="2 12 12 17 22 12" />
             </svg>
-            <span>Seamless integration</span>
+            <span>Source Control</span>
           </label>
           <input type="radio" id="snappy-ui" name="selected_feature" class="peer/snappy-ui snappy-ui sr-only">
           <label for="snappy-ui" class="w-full sm:w-0 flex items-center justify-start sm:justify-center flex-grow gap-2 h-12 p-4 cursor-pointer font-medium text-sm text-[#50565d] rounded-4xl peer-checked/snappy-ui:border peer-checked/snappy-ui:text-[#020a0f] peer-checked/snappy-ui:bg-white peer-checked/snappy-ui:border-[#E6E6EB]">
@@ -280,7 +426,7 @@
               <line x1="17" y1="17" x2="20" y2="17" />
               <line x1="20" y1="17" x2="20" y2="20" />
             </svg>
-            <span>Snappy UI</span>
+            <span>Story Workflow</span>
           </label>
         </div>
         <!-- iteration planning -->
@@ -296,17 +442,27 @@
                   <line x1="4" y1="11" x2="20" y2="11" />
                   <rect x="8" y="15" width="2" height="2" />
                 </svg>
-                Story-Based Iteration Planning
+                Velocity & Iterations
               </p>
-              <p class="text-lg font-medium tracking-tight text-black">Stay organized and on track</p>
-              <ol class="space-y-3">
-                <li class="text-subheading flex items-start">
-                  <%= safe_phrase('litetracker_feature-iteration-content', 'Organizes work around user stories, with automatic sprint backlog management. Praised for aligning with Agile methodologies and simplifying prioritization.') %>
+              <p class="text-lg font-medium tracking-tight text-black">Predictable delivery with automatic planning</p>
+              <p class="text-subheading">Plan your sprints with confidence using automatic velocity calculation. Your backlog fills itself based on your team's proven capacity.</p>
+              <ul class="space-y-2 text-subheading">
+                <li class="flex items-start">
+                  <span class="text-orange mr-2">•</span>
+                  Time-boxed iterations (1-4 weeks)
                 </li>
-              </ol>
+                <li class="flex items-start">
+                  <span class="text-orange mr-2">•</span>
+                  Rolling velocity average
+                </li>
+                <li class="flex items-start">
+                  <span class="text-orange mr-2">•</span>
+                  Burndown charts
+                </li>
+              </ul>
             </div>
             <div class="h-11 w-fit">
-              <a href="/pricing" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
+              <a href="/features" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
                 <span><%= safe_phrase('litetracker_btn-learn_more', 'Learn more') %></span>
                 <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -317,8 +473,8 @@
           </div>
           <div class="sm:px-6 lg:px-0">
             <div class="relative px-6 sm:mx-auto sm:max-w-2xl sm:pl-0 sm:pr-0 lg:mx-0 lg:max-w-none">
-              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl">
-                <%= image_tag 'litetracker/iteration-planning.webp', class: "w-full rounded-xl", alt: '' %>
+              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl aspect-[880/780] overflow-hidden">
+                <%= image_tag 'litetracker/iteration-planning.webp', class: "w-full h-full rounded-xl object-cover object-left", alt: '' %>
               </div>
             </div>
           </div>
@@ -336,17 +492,27 @@
                   <rect x="15" y="4" width="6" height="16" rx="1" />
                   <line x1="4" y1="20" x2="18" y2="20" />
                 </svg>
-                Epics and Labels
+                Backlog & Icebox
               </p>
-              <p class="text-lg font-medium tracking-tight text-black">Manage your epics and labels with ease</p>
-              <ol class="space-y-3">
-                <li class="text-subheading flex items-start">
-                  <%= safe_phrase('litetracker_feature-epics-labels-content', 'Create new epics and labels on the fly. Manage your stories in epics and achieve high velocity with organized work.') %>
+              <p class="text-lg font-medium tracking-tight text-black">Prioritize what matters, park the rest</p>
+              <p class="text-subheading">Keep your backlog focused on what's next. Use the Icebox to capture ideas without cluttering your priorities.</p>
+              <ul class="space-y-2 text-subheading">
+                <li class="flex items-start">
+                  <span class="text-purple mr-2">•</span>
+                  Drag-and-drop prioritization
                 </li>
-              </ol>
+                <li class="flex items-start">
+                  <span class="text-purple mr-2">•</span>
+                  Icebox for ideas
+                </li>
+                <li class="flex items-start">
+                  <span class="text-purple mr-2">•</span>
+                  Multi-select bulk actions
+                </li>
+              </ul>
             </div>
             <div class="h-11 w-fit">
-              <a href="/pricing" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
+              <a href="/features" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
                 <span><%= safe_phrase('litetracker_btn-learn_more', 'Learn more') %></span>
                 <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -357,8 +523,8 @@
           </div>
           <div class="sm:px-6 lg:px-0">
             <div class="relative px-6 sm:mx-auto sm:max-w-2xl sm:pl-0 sm:pr-0 lg:mx-0 lg:max-w-none">
-              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl">
-                <%= image_tag 'litetracker/features-epics.webp', class: "w-full rounded-xl", alt: '' %>
+              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl aspect-[880/780] overflow-hidden">
+                <%= image_tag 'litetracker/features-epics.webp', class: "w-full h-full rounded-xl object-cover object-left", alt: '' %>
               </div>
             </div>
           </div>
@@ -374,17 +540,27 @@
                   <polyline points="2 17 12 22 22 17" />
                   <polyline points="2 12 12 17 22 12" />
                 </svg>
-                Seamless integration
+                Source Control Integration
               </p>
-              <p class="text-lg font-medium tracking-tight text-black">Integrates with your favorite tools</p>
-              <ol class="space-y-3">
-                <li class="text-subheading flex items-start">
-                  <%= safe_phrase('litetracker_feature-integrations-content', 'Enhance productivity, streamline processes, and keep everything connected without disrupting your current setup.') %>
+              <p class="text-lg font-medium tracking-tight text-black">Connect your code to your stories</p>
+              <p class="text-subheading">Link commits and pull requests directly to stories. Reference a story ID in your commit message to automatically update its state.</p>
+              <ul class="space-y-2 text-subheading">
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  GitHub, GitLab, Gitea
                 </li>
-              </ol>
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Auto-update from commits
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Slack & webhook notifications
+                </li>
+              </ul>
             </div>
             <div class="h-11 w-fit">
-              <a href="/pricing" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
+              <a href="/features" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
                 <span><%= safe_phrase('litetracker_btn-learn_more', 'Learn more') %></span>
                 <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -422,17 +598,27 @@
                   <line x1="17" y1="17" x2="20" y2="17" />
                   <line x1="20" y1="17" x2="20" y2="20" />
                 </svg>
-                Snappy UI
+                Story Workflow
               </p>
-              <p class="text-lg font-medium tracking-tight text-black">The easy way to write and edit stories</p>
-              <ol class="space-y-3">
-                <li class="text-subheading flex items-start">
-                  <%= safe_phrase('litetracker_feature-snappyui-content', 'Featuring a clean, user-friendly interface, it helps you stay organized, prioritize effectively, and collaborate seamlessly with your team.') %>
+              <p class="text-lg font-medium tracking-tight text-black">The familiar Start → Finish → Deliver → Accept flow</p>
+              <p class="text-subheading">Move stories through the workflow you know and love. Stakeholders can Accept or Reject delivered work with feedback.</p>
+              <ul class="space-y-2 text-subheading">
+                <li class="flex items-start">
+                  <span class="text-blue-dark mr-2">•</span>
+                  Features, Bugs, Chores, Releases
                 </li>
-              </ol>
+                <li class="flex items-start">
+                  <span class="text-blue-dark mr-2">•</span>
+                  Accept/Reject with comments
+                </li>
+                <li class="flex items-start">
+                  <span class="text-blue-dark mr-2">•</span>
+                  Keyboard shortcuts
+                </li>
+              </ul>
             </div>
             <div class="h-11 w-fit">
-              <a href="/pricing" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
+              <a href="/features" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="features">
                 <span><%= safe_phrase('litetracker_btn-learn_more', 'Learn more') %></span>
                 <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -443,8 +629,8 @@
           </div>
           <div class="sm:px-6 lg:px-0">
             <div class="relative px-6 sm:mx-auto sm:max-w-2xl sm:pl-0 sm:pr-0 lg:mx-0 lg:max-w-none">
-              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl">
-                <%= image_tag 'litetracker/snappi-ui.webp', class: "w-full rounded-xl", alt: '' %>
+              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl aspect-[880/780] overflow-hidden">
+                <%= image_tag 'litetracker/snappi-ui.webp', class: "w-full h-full rounded-xl object-cover object-left", alt: '' %>
               </div>
             </div>
           </div>
@@ -467,12 +653,22 @@
                 </svg>
                 Integrations
               </p>
-              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_integrations-header', 'Integrates with your favorite tools') %></p>
-              <ol class="space-y-3">
-                <li class="text-subheading flex items-start">
-                  <%= safe_phrase('litetracker_integrations-content', 'Enhance productivity, streamline processes, and keep everything connected without disrupting.') %>
+              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_integrations-header', 'Connect Your Workflow') %></p>
+              <p class="text-subheading">Integrate with the tools your team already uses. Automate workflows with Zapier, sync with Slack, and connect to hundreds of apps.</p>
+              <ul class="space-y-3 text-subheading">
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Slack, GitHub, GitLab
                 </li>
-              </ol>
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Zapier automation
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Webhooks for custom integrations
+                </li>
+              </ul>
             </div>
             <div class="h-11 w-fit">
               <a href="/integrations" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="integrations">
@@ -628,14 +824,24 @@
                 <polyline points="7 11 12 16 17 11" />
                 <line x1="12" y1="4" x2="12" y2="16" />
               </svg>
-              Download apps
+              Mobile Apps
             </p>
-            <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_downloadapps-header', 'Designed to work seamlessly anywhere') %></p>
-            <ol class="space-y-3">
-              <li class="text-subheading flex items-start">
-                <%= safe_phrase('litetracker_downloadapps-content', 'Our app keeps you in touch and in control, giving you access to our services anytime, anywhere.') %>
+            <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_downloadapps-header', 'Work From Anywhere') %></p>
+            <p class="text-subheading">Stay productive on the go with native mobile apps. Update stories, check progress, and collaborate with your team from any device.</p>
+            <ul class="space-y-3 text-subheading">
+              <li class="flex items-start">
+                <span class="text-green-dark mr-2">•</span>
+                iOS and Android apps
               </li>
-            </ol>
+              <li class="flex items-start">
+                <span class="text-green-dark mr-2">•</span>
+                Real-time sync
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-dark mr-2">•</span>
+                Push notifications
+              </li>
+            </ul>
           </div>
           <div class="h-11 w-fit">
             <a href="/pricing" class="flex items-center opacity-100 justify-center rounded-xl h-full pr-4 pl-5 font-semibold text-white bg-black hover:bg-gray-800 shadow-[rgba(0,0,0,0.25)_0px_1px_4px_0px]" data-umami-event="cta-signup" data-umami-event-location="download-apps">
@@ -667,9 +873,9 @@
           </svg>
           <p class="pl-1 font-bold">Testimonials</p>
         </div>
-        <h3 class="text-heading"><%= safe_phrase('litetracker_testimonials-header', 'Trusted by established companies') %></h3>
+        <h3 class="text-heading"><%= safe_phrase('litetracker_testimonials-header', 'Loved by Pivotal Tracker Users') %></h3>
         <p class="text-base font-normal text-gray-500 sm:text-lg">
-          <%= safe_phrase('litetracker_testimonials-subheader', 'Find out why our solution is the top choice for PivotalTracker users') %>
+          <%= safe_phrase('litetracker_testimonials-subheader', 'Teams who switched from Pivotal Tracker share their experience') %>
         </p>
       </div>
       <div id="reviews" class="w-full">
@@ -719,7 +925,7 @@
           </div>
 
           <div class="break-inside-avoid p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10">
-            <p class="text-sm mb-8 text-[#47474f]">“The experience is really snappy. Very close to original Pivotal Tracker experience.”</p>
+            <p class="text-sm mb-8 text-[#47474f]">"The experience is really snappy. Very close to original Pivotal Tracker experience."</p>
             <div class="text-13 flex items-center gap-4">
               <span class="w-8 h-8 rounded-full flex items-center justify-center">
                 <svg class="w-full h-full rounded-full" xmlns="http://www.w3.org/2000/svg" width="126" height="126">
@@ -729,6 +935,116 @@
               <div>
                 <h6 class="font-medium text-gray-700">Ant Wilson</h6>
                 <p class="text-light-gray">Developer, Supadb</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10">
+            <p class="text-sm mb-8 text-[#47474f]">"Finally, a tool that understands how agile teams actually work. The velocity tracking is spot-on."</p>
+            <div class="text-13 flex items-center gap-4">
+              <span class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs font-medium">MR</span>
+              <div>
+                <h6 class="font-medium text-gray-700">[Your Name]</h6>
+                <p class="text-light-gray">Engineering Lead</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10">
+            <p class="text-sm mb-8 text-[#47474f]">"The migration from Pivotal Tracker was seamless. All our stories, epics, and history came over perfectly."</p>
+            <div class="text-13 flex items-center gap-4">
+              <span class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white text-xs font-medium">SK</span>
+              <div>
+                <h6 class="font-medium text-gray-700">[Your Name]</h6>
+                <p class="text-light-gray">Product Manager</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10">
+            <p class="text-sm mb-8 text-[#47474f]">"Love the keyboard shortcuts. I can manage my entire backlog without touching the mouse."</p>
+            <div class="text-13 flex items-center gap-4">
+              <span class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white text-xs font-medium">JL</span>
+              <div>
+                <h6 class="font-medium text-gray-700">[Your Name]</h6>
+                <p class="text-light-gray">Senior Developer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10">
+            <p class="text-sm mb-8 text-[#47474f]">"Our team was devastated when PT announced shutdown. LiteTracker saved our workflow."</p>
+            <div class="text-13 flex items-center gap-4">
+              <span class="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-white text-xs font-medium">AT</span>
+              <div>
+                <h6 class="font-medium text-gray-700">[Your Name]</h6>
+                <p class="text-light-gray">Scrum Master</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10">
+            <p class="text-sm mb-8 text-[#47474f]">"The icebox and backlog work exactly like I remember. No relearning needed."</p>
+            <div class="text-13 flex items-center gap-4">
+              <span class="w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center text-white text-xs font-medium">RB</span>
+              <div>
+                <h6 class="font-medium text-gray-700">[Your Name]</h6>
+                <p class="text-light-gray">Tech Lead</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10">
+            <p class="text-sm mb-8 text-[#47474f]">"GitHub integration works flawlessly. Story IDs in commits update automatically."</p>
+            <div class="text-13 flex items-center gap-4">
+              <span class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-white text-xs font-medium">DM</span>
+              <div>
+                <h6 class="font-medium text-gray-700">[Your Name]</h6>
+                <p class="text-light-gray">DevOps Engineer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10">
+            <p class="text-sm mb-8 text-[#47474f]">"Accept/Reject workflow keeps our QA process tight. Exactly what we needed."</p>
+            <div class="text-13 flex items-center gap-4">
+              <span class="w-8 h-8 rounded-full bg-teal-500 flex items-center justify-center text-white text-xs font-medium">CP</span>
+              <div>
+                <h6 class="font-medium text-gray-700">[Your Name]</h6>
+                <p class="text-light-gray">QA Manager</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10">
+            <p class="text-sm mb-8 text-[#47474f]">"The iteration planning with automatic velocity is something other tools just don't get right."</p>
+            <div class="text-13 flex items-center gap-4">
+              <span class="w-8 h-8 rounded-full bg-red-500 flex items-center justify-center text-white text-xs font-medium">NW</span>
+              <div>
+                <h6 class="font-medium text-gray-700">[Your Name]</h6>
+                <p class="text-light-gray">Agile Coach</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10">
+            <p class="text-sm mb-8 text-[#47474f]">"Simple, fast, and familiar. My team was productive from day one."</p>
+            <div class="text-13 flex items-center gap-4">
+              <span class="w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center text-white text-xs font-medium">EH</span>
+              <div>
+                <h6 class="font-medium text-gray-700">[Your Name]</h6>
+                <p class="text-light-gray">CTO, Startup</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="break-inside-avoid p-8 border border-gray-100 rounded-3xl bg-white shadow-2xl shadow-gray-600/10">
+            <p class="text-sm mb-8 text-[#47474f]">"Epics tracking gives us the visibility we need for roadmap planning. Great work!"</p>
+            <div class="text-13 flex items-center gap-4">
+              <span class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white text-xs font-medium">LK</span>
+              <div>
+                <h6 class="font-medium text-gray-700">[Your Name]</h6>
+                <p class="text-light-gray">VP of Engineering</p>
               </div>
             </div>
           </div>

@@ -96,6 +96,21 @@
           0% { stroke-dasharray: 0 100; opacity: 0.3; }
           100% { stroke-dasharray: 100 0; opacity: 1; }
         }
+
+        @keyframes blur-to-focus {
+          0% {
+            filter: blur(24px);
+            opacity: 0;
+          }
+          100% {
+            filter: blur(0);
+            opacity: 1;
+          }
+        }
+      }
+
+      @utility animate-blur-to-focus {
+        animation: blur-to-focus 1s ease-out forwards;
       }
 
       @utility text-subheading {
