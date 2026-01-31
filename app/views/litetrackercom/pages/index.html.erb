@@ -265,25 +265,22 @@
                   <line x1="4" y1="11" x2="20" y2="11" />
                   <rect x="8" y="15" width="2" height="2" />
                 </svg>
-                Manage your Epics
+                Epics
               </p>
-              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_epics-header', 'Organize Large Initiatives') %></p>
+              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_epics-header', 'Group Stories Into Larger Initiatives') %></p>
+              <p class="text-subheading">Epics let you organize related stories under a single theme or feature. Track progress across multiple stories and see completion at a glance.</p>
               <ul class="space-y-3 text-subheading">
                 <li class="flex items-start">
                   <span class="text-orange mr-2">•</span>
-                  Group related stories into epics for features, releases, or themes
+                  Visual progress tracking
                 </li>
                 <li class="flex items-start">
                   <span class="text-orange mr-2">•</span>
-                  Track progress with visual completion percentage across all stories
+                  Filter backlog by epic
                 </li>
                 <li class="flex items-start">
                   <span class="text-orange mr-2">•</span>
-                  Filter your backlog by epic to focus on specific initiatives
-                </li>
-                <li class="flex items-start">
-                  <span class="text-orange mr-2">•</span>
-                  Set epic states: drafting, in progress, or done
+                  Epic states: drafting, in progress, done
                 </li>
               </ul>
             </div>
@@ -323,25 +320,22 @@
                   <rect x="15" y="4" width="6" height="16" rx="1" />
                   <line x1="4" y1="20" x2="18" y2="20" />
                 </svg>
-                Stay in the Loop
+                Notifications
               </p>
-              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_notifications-header', 'Real-time Notifications') %></p>
+              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_notifications-header', 'Stay in Sync') %></p>
+              <p class="text-subheading">Stay informed with real-time notifications. Get alerted when stories change state, receive comments, or when teammates @mention you.</p>
               <ul class="space-y-3 text-subheading">
                 <li class="flex items-start">
                   <span class="text-purple mr-2">•</span>
-                  Get notified on story updates, comments, and state changes
+                  Email digests or real-time alerts
                 </li>
                 <li class="flex items-start">
                   <span class="text-purple mr-2">•</span>
-                  @mention team members to bring them into conversations
+                  @mentions for teammates
                 </li>
                 <li class="flex items-start">
                   <span class="text-purple mr-2">•</span>
-                  Choose email digests or real-time in-app notifications
-                </li>
-                <li class="flex items-start">
-                  <span class="text-purple mr-2">•</span>
-                  Live activity stream showing all project changes as they happen
+                  Live activity stream
                 </li>
               </ul>
             </div>
@@ -451,22 +445,19 @@
                 Velocity & Iterations
               </p>
               <p class="text-lg font-medium tracking-tight text-black">Predictable delivery with automatic planning</p>
+              <p class="text-subheading">Plan your sprints with confidence using automatic velocity calculation. Your backlog fills itself based on your team's proven capacity.</p>
               <ul class="space-y-2 text-subheading">
                 <li class="flex items-start">
                   <span class="text-orange mr-2">•</span>
-                  Time-boxed iterations (1-4 weeks) with automatic story allocation
+                  Time-boxed iterations (1-4 weeks)
                 </li>
                 <li class="flex items-start">
                   <span class="text-orange mr-2">•</span>
-                  Velocity calculated from accepted story points over rolling iterations
+                  Rolling velocity average
                 </li>
                 <li class="flex items-start">
                   <span class="text-orange mr-2">•</span>
-                  Backlog automatically fills based on your team's proven capacity
-                </li>
-                <li class="flex items-start">
-                  <span class="text-orange mr-2">•</span>
-                  Burndown charts and iteration analytics to track progress
+                  Burndown charts
                 </li>
               </ul>
             </div>
@@ -482,8 +473,8 @@
           </div>
           <div class="sm:px-6 lg:px-0">
             <div class="relative px-6 sm:mx-auto sm:max-w-2xl sm:pl-0 sm:pr-0 lg:mx-0 lg:max-w-none">
-              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl">
-                <%= image_tag 'litetracker/iteration-planning.webp', class: "w-full rounded-xl", alt: '' %>
+              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl aspect-[880/780] overflow-hidden">
+                <%= image_tag 'litetracker/iteration-planning.webp', class: "w-full h-full rounded-xl object-cover object-left", alt: '' %>
               </div>
             </div>
           </div>
@@ -504,22 +495,19 @@
                 Backlog & Icebox
               </p>
               <p class="text-lg font-medium tracking-tight text-black">Prioritize what matters, park the rest</p>
+              <p class="text-subheading">Keep your backlog focused on what's next. Use the Icebox to capture ideas without cluttering your priorities.</p>
               <ul class="space-y-2 text-subheading">
                 <li class="flex items-start">
                   <span class="text-purple mr-2">•</span>
-                  Prioritized backlog with drag-and-drop story ordering
+                  Drag-and-drop prioritization
                 </li>
                 <li class="flex items-start">
                   <span class="text-purple mr-2">•</span>
-                  Icebox for storing ideas and unprioritized stories
+                  Icebox for ideas
                 </li>
                 <li class="flex items-start">
                   <span class="text-purple mr-2">•</span>
-                  Current iteration panel shows exactly what's in progress
-                </li>
-                <li class="flex items-start">
-                  <span class="text-purple mr-2">•</span>
-                  Multi-select stories for bulk actions and quick reorganization
+                  Multi-select bulk actions
                 </li>
               </ul>
             </div>
@@ -535,8 +523,8 @@
           </div>
           <div class="sm:px-6 lg:px-0">
             <div class="relative px-6 sm:mx-auto sm:max-w-2xl sm:pl-0 sm:pr-0 lg:mx-0 lg:max-w-none">
-              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl">
-                <%= image_tag 'litetracker/features-epics.webp', class: "w-full rounded-xl", alt: '' %>
+              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl aspect-[880/780] overflow-hidden">
+                <%= image_tag 'litetracker/features-epics.webp', class: "w-full h-full rounded-xl object-cover object-left", alt: '' %>
               </div>
             </div>
           </div>
@@ -555,22 +543,19 @@
                 Source Control Integration
               </p>
               <p class="text-lg font-medium tracking-tight text-black">Connect your code to your stories</p>
+              <p class="text-subheading">Link commits and pull requests directly to stories. Reference a story ID in your commit message to automatically update its state.</p>
               <ul class="space-y-2 text-subheading">
                 <li class="flex items-start">
                   <span class="text-green-dark mr-2">•</span>
-                  GitHub, GitLab, and Gitea integration out of the box
+                  GitHub, GitLab, Gitea
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-dark mr-2">•</span>
-                  Reference story IDs in commits to auto-update story state
+                  Auto-update from commits
                 </li>
                 <li class="flex items-start">
                   <span class="text-green-dark mr-2">•</span>
-                  View branches and pull requests linked to each story
-                </li>
-                <li class="flex items-start">
-                  <span class="text-green-dark mr-2">•</span>
-                  Webhooks and Slack integration for team notifications
+                  Slack & webhook notifications
                 </li>
               </ul>
             </div>
@@ -616,22 +601,19 @@
                 Story Workflow
               </p>
               <p class="text-lg font-medium tracking-tight text-black">The familiar Start → Finish → Deliver → Accept flow</p>
+              <p class="text-subheading">Move stories through the workflow you know and love. Stakeholders can Accept or Reject delivered work with feedback.</p>
               <ul class="space-y-2 text-subheading">
                 <li class="flex items-start">
                   <span class="text-blue-dark mr-2">•</span>
-                  Story states: Unstarted → Started → Finished → Delivered → Accepted
+                  Features, Bugs, Chores, Releases
                 </li>
                 <li class="flex items-start">
                   <span class="text-blue-dark mr-2">•</span>
-                  Stakeholders can Accept or Reject delivered stories with comments
+                  Accept/Reject with comments
                 </li>
                 <li class="flex items-start">
                   <span class="text-blue-dark mr-2">•</span>
-                  Story types: Features, Bugs, Chores, and Releases
-                </li>
-                <li class="flex items-start">
-                  <span class="text-blue-dark mr-2">•</span>
-                  Keyboard shortcuts for power users to move fast
+                  Keyboard shortcuts
                 </li>
               </ul>
             </div>
@@ -647,8 +629,8 @@
           </div>
           <div class="sm:px-6 lg:px-0">
             <div class="relative px-6 sm:mx-auto sm:max-w-2xl sm:pl-0 sm:pr-0 lg:mx-0 lg:max-w-none">
-              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl">
-                <%= image_tag 'litetracker/snappi-ui.webp', class: "w-full rounded-xl", alt: '' %>
+              <div class="relative mx-auto w-full sm:mx-0 shadow-xl rounded-xl aspect-[880/780] overflow-hidden">
+                <%= image_tag 'litetracker/snappi-ui.webp', class: "w-full h-full rounded-xl object-cover object-left", alt: '' %>
               </div>
             </div>
           </div>
@@ -671,12 +653,22 @@
                 </svg>
                 Integrations
               </p>
-              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_integrations-header', 'Integrates with your favorite tools') %></p>
-              <ol class="space-y-3">
-                <li class="text-subheading flex items-start">
-                  <%= safe_phrase('litetracker_integrations-content', 'Enhance productivity, streamline processes, and keep everything connected without disrupting.') %>
+              <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_integrations-header', 'Connect Your Workflow') %></p>
+              <p class="text-subheading">Integrate with the tools your team already uses. Automate workflows with Zapier, sync with Slack, and connect to hundreds of apps.</p>
+              <ul class="space-y-3 text-subheading">
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Slack, GitHub, GitLab
                 </li>
-              </ol>
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Zapier automation
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Webhooks for custom integrations
+                </li>
+              </ul>
             </div>
             <div class="h-11 w-fit">
               <a href="/integrations" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="learn-more" data-umami-event-section="integrations">
@@ -832,14 +824,24 @@
                 <polyline points="7 11 12 16 17 11" />
                 <line x1="12" y1="4" x2="12" y2="16" />
               </svg>
-              Download apps
+              Mobile Apps
             </p>
-            <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_downloadapps-header', 'Designed to work seamlessly anywhere') %></p>
-            <ol class="space-y-3">
-              <li class="text-subheading flex items-start">
-                <%= safe_phrase('litetracker_downloadapps-content', 'Our app keeps you in touch and in control, giving you access to our services anytime, anywhere.') %>
+            <p class="text-heading tracking-tight text-black"><%= safe_phrase('litetracker_downloadapps-header', 'Work From Anywhere') %></p>
+            <p class="text-subheading">Stay productive on the go with native mobile apps. Update stories, check progress, and collaborate with your team from any device.</p>
+            <ul class="space-y-3 text-subheading">
+              <li class="flex items-start">
+                <span class="text-green-dark mr-2">•</span>
+                iOS and Android apps
               </li>
-            </ol>
+              <li class="flex items-start">
+                <span class="text-green-dark mr-2">•</span>
+                Real-time sync
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-dark mr-2">•</span>
+                Push notifications
+              </li>
+            </ul>
           </div>
           <div class="h-11 w-fit">
             <a href="/pricing" class="flex items-center opacity-100 justify-center rounded-xl h-full pr-4 pl-5 font-semibold text-white bg-black hover:bg-gray-800 shadow-[rgba(0,0,0,0.25)_0px_1px_4px_0px]" data-umami-event="cta-signup" data-umami-event-location="download-apps">
@@ -871,9 +873,9 @@
           </svg>
           <p class="pl-1 font-bold">Testimonials</p>
         </div>
-        <h3 class="text-heading"><%= safe_phrase('litetracker_testimonials-header', 'Trusted by established companies') %></h3>
+        <h3 class="text-heading"><%= safe_phrase('litetracker_testimonials-header', 'Loved by Pivotal Tracker Users') %></h3>
         <p class="text-base font-normal text-gray-500 sm:text-lg">
-          <%= safe_phrase('litetracker_testimonials-subheader', 'Find out why our solution is the top choice for PivotalTracker users') %>
+          <%= safe_phrase('litetracker_testimonials-subheader', 'Teams who switched from Pivotal Tracker share their experience') %>
         </p>
       </div>
       <div id="reviews" class="w-full">
