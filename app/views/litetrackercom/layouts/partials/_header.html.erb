@@ -21,8 +21,9 @@
           <a href="/blog?page=1" class="text-sm/6 font-semibold text-gray-900" data-umami-event="nav-click" data-umami-event-link="blog">Blog</a>
           <a href="https://litetracker.featurebase.app/roadmap" target="_blank" class="text-sm/6 font-semibold text-gray-900" data-umami-event="nav-click" data-umami-event-link="changelog">Changelog</a>
         </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="text-sm/6 font-semibold text-gray-900" data-umami-event="cta-signup" data-umami-event-location="header">Sign up/Sign in <span aria-hidden="true">&rarr;</span></a>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
+          <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="text-sm/6 font-semibold text-gray-900" data-umami-event="login-click">Log in</a>
+          <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="text-sm/6 font-semibold text-gray-900" data-umami-event="signup-click">Sign up <span aria-hidden="true">&rarr;</span></a>
         </div>
       </nav>
       <div class="bg-[#E6E6EB] h-px">
@@ -53,8 +54,9 @@
                     <a href="/blog?page=1" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" data-umami-event="nav-click" data-umami-event-link="blog">Blog</a>
                     <a href="https://litetracker.featurebase.app/roadmap" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" data-umami-event="nav-click" data-umami-event-link="changelog">Changelog</a>
                   </div>
-                  <div class="py-6">
-                    <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" data-umami-event="cta-signup" data-umami-event-location="mobile-menu">Sign up/Sign in</a>
+                  <div class="py-6 space-y-2">
+                    <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" data-umami-event="login-click">Log in</a>
+                    <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" data-umami-event="signup-click">Sign up</a>
                   </div>
                 </div>
               </div>

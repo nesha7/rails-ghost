@@ -12,7 +12,7 @@
       <!-- Badge -->
       <div class="hidden sm:flex sm:justify-center">
         <div class="animate-background rounded-full bg-gradient-to-r from-green-300 via-blue-600 to-red-300 bg-[length:_400%_400%] px-px py-1 [animation-duration:_6s]">
-          <a href="https://app.litetracker.com/" class="relative rounded-full bg-white px-3 py-1.5 text-sm/6 text-gray-600" data-umami-event="cta-signup" data-umami-event-location="hero-badge">
+          <a href="https://app.litetracker.com/" class="relative rounded-full bg-white px-3 py-1.5 text-sm/6 text-gray-600" data-umami-event="signup-click" data-umami-event-location="hero-badge">
             <span class="inline-flex items-center rounded-full bg-green-50 px-2 py-1 text-xs font-medium text-green-700 inset-ring inset-ring-green-600/20">NEW</span>
             <span class="pl-2"><%= safe_phrase('litetracker_hero-badge', 'Automatic import from Jira, Trello, and many more  (08/2025)') %></span>
           </a>
@@ -28,7 +28,7 @@
 
       <!-- CTA buttons -->
       <div class="flex items-center justify-center gap-x-6">
-        <a href="<%= app_login_url_with_utm('https://app.litetracker.com') %>" class="rounded-xl bg-black px-5 py-3 text-base font-semibold text-white shadow-xs hover:bg-black/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black/80" data-umami-event="cta-signup" data-umami-event-location="hero"><%= safe_phrase('litetracker_btn-get_started', 'Get started') %> &rightarrow;</a>
+        <a href="<%= app_login_url_with_utm('https://app.litetracker.com') %>" class="rounded-xl bg-black px-5 py-3 text-base font-semibold text-white shadow-xs hover:bg-black/80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black/80" data-umami-event="signup-click" data-umami-event-location="hero"><%= safe_phrase('litetracker_btn-get_started', 'Get started') %> &rightarrow;</a>
         <a href="<%= app_login_url_with_utm('https://cal.com/neshaz/litetracker') %>" class="rounded-xl border border-gray-200 px-5 py-3 shadow-xs text-base font-semibold text-gray-900 hover:bg-gray-100" data-umami-event="cta-demo" data-umami-event-location="hero"><%= safe_phrase('litetracker_btn-human_talk', 'Talk to human') %> <span aria-hidden="true">→</span></a>
       </div>
 
@@ -854,7 +854,7 @@
             </ul>
           </div>
           <div class="h-11 w-fit">
-            <a href="/pricing" class="flex items-center opacity-100 justify-center rounded-xl h-full pr-4 pl-5 font-semibold text-white bg-black hover:bg-gray-800 shadow-[rgba(0,0,0,0.25)_0px_1px_4px_0px]" data-umami-event="cta-signup" data-umami-event-location="download-apps">
+            <a href="/pricing" class="flex items-center opacity-100 justify-center rounded-xl h-full pr-4 pl-5 font-semibold text-white bg-black hover:bg-gray-800 shadow-[rgba(0,0,0,0.25)_0px_1px_4px_0px]" data-umami-event="signup-click" data-umami-event-location="download-apps">
               <span>Download now</span>
               <svg class="h-4"  width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z"/>
