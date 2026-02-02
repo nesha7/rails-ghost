@@ -47,4 +47,8 @@ module ApplicationHelper
 			'https://ruby.ci'
 		end
 	end
+
+	def user_logged_in_to_app?
+		cookies[:litetracker_logged_in] == "true"
+	end
 end

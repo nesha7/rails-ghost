@@ -21,9 +21,15 @@
           <a href="/blog?page=1" class="text-sm/6 font-semibold text-gray-900" data-umami-event="nav-click" data-umami-event-link="blog">Blog</a>
           <a href="https://litetracker.featurebase.app/roadmap" target="_blank" class="text-sm/6 font-semibold text-gray-900" data-umami-event="nav-click" data-umami-event-link="changelog">Changelog</a>
         </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-          <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="text-sm/6 font-semibold text-gray-900" data-umami-event="login-click">Log in</a>
-          <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="text-sm/6 font-semibold text-gray-900" data-umami-event="signup-click">Sign up <span aria-hidden="true">&rarr;</span></a>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <% if user_logged_in_to_app? %>
+            <a href="https://app.litetracker.com" class="rounded-lg bg-gray-900 px-4 py-2 text-sm/6 font-semibold text-white hover:bg-gray-800" data-umami-event="dashboard-click">Go to Dashboard <span aria-hidden="true">&rarr;</span></a>
+          <% else %>
+            <div class="flex items-center gap-x-4">
+              <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="text-sm/6 font-semibold text-gray-900" data-umami-event="login-click">Log in</a>
+              <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="text-sm/6 font-semibold text-gray-900" data-umami-event="signup-click">Sign up <span aria-hidden="true">&rarr;</span></a>
+            </div>
+          <% end %>
         </div>
       </nav>
       <div class="bg-[#E6E6EB] h-px">
@@ -55,8 +61,12 @@
                     <a href="https://litetracker.featurebase.app/roadmap" target="_blank" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" data-umami-event="nav-click" data-umami-event-link="changelog">Changelog</a>
                   </div>
                   <div class="py-6 space-y-2">
-                    <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" data-umami-event="login-click">Log in</a>
-                    <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" data-umami-event="signup-click">Sign up</a>
+                    <% if user_logged_in_to_app? %>
+                      <a href="https://app.litetracker.com/dashboard" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" data-umami-event="dashboard-click">Go to Dashboard</a>
+                    <% else %>
+                      <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" data-umami-event="login-click">Log in</a>
+                      <a href="<%= app_login_url_with_utm('https://app.litetracker.com/login') %>" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" data-umami-event="signup-click">Sign up</a>
+                    <% end %>
                   </div>
                 </div>
               </div>
