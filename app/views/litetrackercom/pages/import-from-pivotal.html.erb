@@ -1,0 +1,653 @@
+<% content_for :title, "#{resolve_title_metadata(request.path) || 'Import from Pivotal Tracker | LiteTracker'}" %>
+<% content_for :description, 'Import your Pivotal Tracker projects to LiteTracker in minutes. Preserve all your stories, epics, labels, comments, and history. Free migration with full data transfer.' %>
+
+<main>
+  <!-- Hero Section -->
+  <section id="hero-section" class="relative px-6 lg:px-8 overflow-hidden">
+    <div class="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-green-400/20 via-teal-300/20 to-blue-300/20 rounded-full blur-[100px] opacity-60 will-change-transform pointer-events-none"></div>
+
+    <div class="z-10 mx-auto max-w-7xl flex flex-col items-center gap-10 py-16 md:py-24">
+      <!-- Badge -->
+      <div class="hidden sm:flex sm:justify-center">
+        <div class="rounded-full bg-green-50 px-4 py-1.5 text-sm font-medium text-green-700 ring-1 ring-inset ring-green-700/10">
+          Free Import Tool
+        </div>
+      </div>
+
+      <!-- Hero content -->
+      <div class="flex flex-col items-center gap-6 max-w-4xl text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-balance text-gray-900">
+          Import from Pivotal Tracker in Minutes
+        </h1>
+        <p class="mx-auto max-w-2xl text-lg text-gray-600">
+          Transfer all your projects, stories, epics, and history to LiteTracker with our automatic import tool. No data left behind, no manual work required.
+        </p>
+      </div>
+
+      <!-- CTA buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <a href="<%= app_login_url_with_utm('https://app.litetracker.com/register') %>" class="rounded-xl bg-black px-6 py-3.5 text-base font-semibold text-white shadow-xs hover:bg-black/80" data-umami-event="signup-click" data-umami-event-location="import-hero">
+          Start Free Import &rightarrow;
+        </a>
+        <a href="<%= app_login_url_with_utm('https://cal.com/neshaz/litetracker') %>" class="rounded-xl border border-gray-200 px-6 py-3.5 shadow-xs text-base font-semibold text-gray-900 hover:bg-gray-100" data-umami-event="cta-demo" data-umami-event-location="import-hero">
+          Get Import Assistance <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8">
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gray-900">500+</p>
+          <p class="text-sm text-gray-600">Projects Imported</p>
+        </div>
+        <div class="hidden sm:block w-px h-12 bg-gray-200"></div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gray-900">100K+</p>
+          <p class="text-sm text-gray-600">Stories Migrated</p>
+        </div>
+        <div class="hidden sm:block w-px h-12 bg-gray-200"></div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gray-900">100%</p>
+          <p class="text-sm text-gray-600">Data Preserved</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="relative px-6 lg:px-8 bg-gray-50">
+    <div class="mx-auto max-w-7xl py-16 sm:py-24">
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <div class="flex items-center justify-center text-green-dark text-xs mb-4">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+          </svg>
+          <p class="pl-1 font-bold">How It Works</p>
+        </div>
+        <h2 class="text-heading">Three Simple Steps</h2>
+        <p class="mt-4 text-subheading">From Pivotal Tracker to LiteTracker in under 5 minutes</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="relative bg-white rounded-3xl p-8 border border-[#E6E6EB]">
+          <div class="absolute -top-4 left-8 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+          <div class="mt-4">
+            <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+              <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Get Your API Token</h3>
+            <p class="mt-4 text-sm/6 text-gray-600">Log into Pivotal Tracker and copy your API token from your profile settings. This allows us to securely access your data.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative bg-white rounded-3xl p-8 border border-[#E6E6EB]">
+          <div class="absolute -top-4 left-8 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+          <div class="mt-4">
+            <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+              <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Select Projects</h3>
+            <p class="mt-4 text-sm/6 text-gray-600">Choose which projects to import. You can import all at once or start with a single project to test the waters.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative bg-white rounded-3xl p-8 border border-[#E6E6EB]">
+          <div class="absolute -top-4 left-8 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+          <div class="mt-4">
+            <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+              <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">Start Working</h3>
+            <p class="mt-4 text-sm/6 text-gray-600">Your data is imported automatically. Stories, epics, labels, comments—everything is ready. Start working immediately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Gets Imported Section -->
+  <section id="what-gets-imported" class="relative px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl py-16 sm:py-24">
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <div class="flex items-center justify-center text-blue-dark text-xs mb-4">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg>
+          <p class="pl-1 font-bold">Complete Data Transfer</p>
+        </div>
+        <h2 class="text-heading">Everything Gets Imported</h2>
+        <p class="mt-4 text-subheading">No data left behind—we transfer your complete Pivotal Tracker history</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Stories -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Stories</h3>
+            <p class="text-sm text-gray-600 mt-1">Features, bugs, chores, and releases with all their details intact</p>
+          </div>
+        </div>
+
+        <!-- Epics -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Epics</h3>
+            <p class="text-sm text-gray-600 mt-1">All your epics with story associations preserved</p>
+          </div>
+        </div>
+
+        <!-- Labels -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Labels</h3>
+            <p class="text-sm text-gray-600 mt-1">Labels and their colors transferred to stories</p>
+          </div>
+        </div>
+
+        <!-- Comments -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Comments</h3>
+            <p class="text-sm text-gray-600 mt-1">Full comment history with timestamps and authors</p>
+          </div>
+        </div>
+
+        <!-- Activity History -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Activity History</h3>
+            <p class="text-sm text-gray-600 mt-1">Complete activity log for audit trails</p>
+          </div>
+        </div>
+
+        <!-- Attachments -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Attachments</h3>
+            <p class="text-sm text-gray-600 mt-1">Files and images attached to your stories</p>
+          </div>
+        </div>
+
+        <!-- Story Points -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Story Points</h3>
+            <p class="text-sm text-gray-600 mt-1">Estimates preserved for velocity calculations</p>
+          </div>
+        </div>
+
+        <!-- Owners -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Owners & Requesters</h3>
+            <p class="text-sm text-gray-600 mt-1">Team assignments maintained on import</p>
+          </div>
+        </div>
+
+        <!-- Project Settings -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Project Settings</h3>
+            <p class="text-sm text-gray-600 mt-1">Iteration length, point scale, and more</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Import Methods Section -->
+  <section id="import-methods" class="relative px-6 lg:px-8 bg-gray-50">
+    <div class="mx-auto max-w-7xl py-16 sm:py-24">
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <div class="flex items-center justify-center text-orange text-xs mb-4">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+          </svg>
+          <p class="pl-1 font-bold">Import Methods</p>
+        </div>
+        <h2 class="text-heading">Two Ways to Import</h2>
+        <p class="mt-4 text-subheading">Choose the method that works best for you</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- CSV Import -->
+        <div class="bg-white rounded-3xl p-8 border border-[#E6E6EB] shadow-lg">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
+              <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900">CSV Import</h3>
+              <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded-full">Recommended</span>
+            </div>
+          </div>
+          <p class="text-gray-600 mb-6">Export your data from Pivotal Tracker as CSV and upload it to LiteTracker.</p>
+          <ul class="space-y-3 text-sm text-gray-600 mb-6">
+            <li class="flex items-start gap-2">
+              <svg class="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>No API token needed</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Works with PT exports</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Import stories & epics</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Attachments included</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- API Import -->
+        <div class="bg-white rounded-3xl p-8 border border-[#E6E6EB]">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
+              <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900">API Import</h3>
+          </div>
+          <p class="text-gray-600 mb-6">Connect directly with your Pivotal Tracker API token for the fastest, most complete import.</p>
+          <ul class="space-y-3 text-sm text-gray-600 mb-6">
+            <li class="flex items-start gap-2">
+              <svg class="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Fastest import method</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Includes all data types</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Preserves attachments</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="h-5 w-5 text-gray-900 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Full activity history</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visual Import Demo Section -->
+  <section id="import-demo" class="relative px-6 lg:px-8">
+    <div class="relative mx-auto max-w-7xl py-16 sm:pt-24">
+      <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-x-36 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:content-center">
+          <div class="flex flex-col gap-10 px-6 lg:px-0">
+            <div class="flex flex-col gap-4">
+              <p class="flex items-center gap-1 text-green-dark font-semibold text-sm">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                </svg>
+                Seamless Migration
+              </p>
+              <p class="text-heading tracking-tight text-black">Watch Your Data Flow In</p>
+              <p class="text-subheading">Our import tool shows you real-time progress as your Pivotal Tracker data migrates to LiteTracker. Track every project, story, and epic as it transfers.</p>
+              <ul class="space-y-3 text-subheading">
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Real-time progress tracking
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Detailed import logs
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Error handling with retry options
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-dark mr-2">•</span>
+                  Email notification when complete
+                </li>
+              </ul>
+            </div>
+            <div class="h-11 w-fit">
+              <a href="<%= app_login_url_with_utm('https://app.litetracker.com/register') %>" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="signup-click" data-umami-event-location="import-demo">
+                <span>Start Your Import</span>
+                <svg class="h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="sm:px-6 lg:px-0">
+            <div class="relative px-6 sm:mx-auto sm:max-w-2xl sm:pl-0 sm:pr-0 lg:mx-0 lg:max-w-none">
+              <div class="relative mx-auto w-full sm:mx-0">
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-xl">
+                  <div class="flex items-center gap-4 mb-6">
+                    <!-- Pivotal Tracker Icon -->
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                      <svg viewBox="0 0 32 32" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="6" fill="#4A9187"/>
+                        <path d="M16 6L8 16l8 10 8-10L16 6z" fill="#357C72"/>
+                        <path d="M16 6l8 10-8 4V6z" fill="#5AAFA3"/>
+                        <path d="M16 20l-8-4 8-10v14z" fill="#fff" fill-opacity="0.9"/>
+                      </svg>
+                    </div>
+                    <svg class="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                    <!-- LiteTracker Favicon-style Icon -->
+                    <div class="w-12 h-12 rounded-xl bg-[#1a1a1a] flex items-center justify-center">
+                      <svg viewBox="0 0 24 24" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="4" width="18" height="3" rx="1" fill="#22c55e"/>
+                        <rect x="3" y="10" width="12" height="3" rx="1" fill="#22c55e" fill-opacity="0.7"/>
+                        <rect x="3" y="16" width="15" height="3" rx="1" fill="#22c55e" fill-opacity="0.4"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <div>
+                      <div class="flex items-center justify-between text-sm mb-1">
+                        <span class="text-gray-600">Projects</span>
+                        <span class="text-green-dark font-medium">12 / 12</span>
+                      </div>
+                      <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-green-dark h-2 rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex items-center justify-between text-sm mb-1">
+                        <span class="text-gray-600">Stories</span>
+                        <span class="text-green-dark font-medium">2,847 / 2,847</span>
+                      </div>
+                      <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-green-dark h-2 rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex items-center justify-between text-sm mb-1">
+                        <span class="text-gray-600">Epics</span>
+                        <span class="text-green-dark font-medium">156 / 156</span>
+                      </div>
+                      <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-green-dark h-2 rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex items-center justify-between text-sm mb-1">
+                        <span class="text-gray-600">Comments</span>
+                        <span class="text-green-dark font-medium">8,432 / 8,432</span>
+                      </div>
+                      <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-green-dark h-2 rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-center gap-2 mt-6 text-green-dark">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-sm font-medium">Import complete!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq-section" class="pb-16 lg:pb-28 bg-gray-50">
+    <div class="relative mx-auto max-w-7xl py-16 sm:pt-24 flex flex-col items-center gap-y-24">
+      <div class="mx-auto max-w-2xl flex flex-col gap-y-6 text-center">
+        <div class="flex items-center justify-center text-green-dark text-xs">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="pl-1 font-bold">Import FAQ</p>
+        </div>
+        <h3 class="text-heading">Common Import Questions</h3>
+        <p class="text-base font-normal text-gray-500 sm:text-lg">
+          Everything you need to know about importing from Pivotal Tracker.
+        </p>
+      </div>
+      <div class="flex-grow px-7 md:px-10 xl:px-2 py-4">
+        <div class="mx-auto max-w-2xl sm:min-w-2xl">
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="import-answer-1" id="import-answer-1" class="peer sr-only">
+            <label for="import-answer-1" class="cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>Where do I find my Pivotal Tracker API token?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              Log into Pivotal Tracker, click your profile icon in the top-right corner, then select "Profile". Scroll down to the "API Token" section where you can view or create your token. Copy this token and paste it into LiteTracker's import tool.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="import-answer-2" id="import-answer-2" class="peer sr-only">
+            <label for="import-answer-2" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>How long does the import take?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              Most imports complete within a few minutes. Small projects (under 500 stories) typically finish in under a minute. Larger projects with thousands of stories and extensive comment history may take a few minutes. You can monitor progress in real-time during the import.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="import-answer-3" id="import-answer-3" class="peer sr-only">
+            <label for="import-answer-3" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>Can I import just one project first?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              Yes, absolutely! When you connect your Pivotal Tracker account, you can choose exactly which projects to import. We recommend starting with one project to test the process, then importing the rest once you're satisfied with the results.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="import-answer-4" id="import-answer-4" class="peer sr-only">
+            <label for="import-answer-4" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>What if something goes wrong during import?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              Our import tool is designed to handle errors gracefully. If an individual item fails to import, the process continues with the remaining data. You'll see a detailed log of any issues, and you can retry failed items. Our support team is also available to help with any import problems.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="import-answer-5" id="import-answer-5" class="peer sr-only">
+            <label for="import-answer-5" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>Is my data secure during import?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              Yes. All data transfers happen over encrypted HTTPS connections. Your Pivotal Tracker API token is used only during the import process and is not stored permanently. We never share your data with third parties, and you maintain full ownership of all imported content.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="import-answer-6" id="import-answer-6" class="peer sr-only">
+            <label for="import-answer-6" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>Can I re-import if I need to update data?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              You can run the import multiple times. If you import a project that already exists, you'll have the option to update existing data or create a new project. This is useful if you've made changes in Pivotal Tracker since your last import.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta" class="relative px-6 lg:px-8">
+    <div class="relative mx-auto max-w-7xl py-16 sm:py-24 flex items-center flex-col justify-start gap-y-24">
+      <div class="grid grid-cols-1 gap-x-36 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-center">
+        <div class="flex flex-col gap-10 px-2 xs:px-6 lg:px-0">
+          <div class="flex flex-col gap-4 text-center xs:text-left">
+            <p class="flex items-center justify-center xs:justify-start gap-1 text-green-dark font-semibold text-sm">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+              Ready to Import?
+            </p>
+            <p class="text-heading font-medium tracking-tight text-black">Your Data, Safely Transferred</p>
+            <p class="text-subheading">
+              Join hundreds of teams who have successfully imported their Pivotal Tracker data to LiteTracker. Start your free import today—no credit card required.
+            </p>
+          </div>
+          <div class="flex items-center justify-center xs:justify-start gap-4">
+            <div class="h-11 w-fit">
+              <a href="<%= app_login_url_with_utm('https://app.litetracker.com/register') %>" class="bg-black flex items-center justify-center rounded-xl h-full px-4 text-sm/6 font-semibold text-white border border-black" data-umami-event="signup-click" data-umami-event-location="import-cta">
+                <span>Start Free Import</span>
+                <svg class="h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+            <div class="h-11 w-fit">
+              <a href="<%= app_login_url_with_utm('https://cal.com/neshaz/litetracker') %>" class="flex items-center justify-center rounded-xl h-full px-4 text-sm/6 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="cta-demo" data-umami-event-location="import-cta">
+                <span>Get Help</span>
+                <svg class="h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="grow flex items-center justify-start sm:px-6 lg:px-0 max-w-md w-full xs:w-px">
+          <div class="grow h-80 xs:h-112 aspect-square relative px-2 xs:px-6 mx-auto rounded-2xl sm:pl-0 sm:pr-0 lg:mx-0">
+            <div class="xs:absolute shadow-xl rounded-2xl overflow-hidden">
+              <%= image_tag 'litetracker/default.png', alt: "LiteTracker Dashboard", class: "w-full h-full rounded-2xl object-cover object-center" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
