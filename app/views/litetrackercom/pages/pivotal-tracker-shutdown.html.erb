@@ -1,0 +1,556 @@
+<% content_for :title, "#{resolve_title_metadata(request.path) || 'Pivotal Tracker Shutdown - Save Your Data | LiteTracker'}" %>
+<% content_for :description, 'Pivotal Tracker has shut down. Don\'t lose your projects, stories, and years of work. Migrate to LiteTracker and continue where you left off with the same workflow you know.' %>
+
+<main>
+  <!-- Hero Section -->
+  <section id="hero-section" class="relative px-6 lg:px-8 overflow-hidden">
+    <div class="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-br from-red-400/20 via-orange-300/20 to-yellow-300/20 rounded-full blur-[100px] opacity-60 will-change-transform pointer-events-none"></div>
+
+    <div class="z-10 mx-auto max-w-7xl flex flex-col items-center gap-10 py-16 md:py-24">
+      <!-- Badge -->
+      <div class="hidden sm:flex sm:justify-center">
+        <div class="rounded-full bg-red-50 px-4 py-1.5 text-sm font-medium text-red-700 ring-1 ring-inset ring-red-700/10">
+          Pivotal Tracker Has Shut Down
+        </div>
+      </div>
+
+      <!-- Hero content -->
+      <div class="flex flex-col items-center gap-6 max-w-4xl text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-balance text-gray-900">
+          Pivotal Tracker Is Gone. Your Work Doesn't Have to Be.
+        </h1>
+        <p class="mx-auto max-w-2xl text-lg text-gray-600">
+          After years of service, Pivotal Tracker has officially shut down. But your projects, stories, and team's history can live on. Migrate to LiteTracker and keep working with the same velocity-based workflow you've always used.
+        </p>
+      </div>
+
+      <!-- CTA buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <a href="<%= app_login_url_with_utm('https://app.litetracker.com/register') %>" class="rounded-xl bg-black px-6 py-3.5 text-base font-semibold text-white shadow-xs hover:bg-black/80" data-umami-event="signup-click" data-umami-event-location="shutdown-hero">
+          Restore Your Data Now &rightarrow;
+        </a>
+        <a href="<%= app_login_url_with_utm('https://cal.com/neshaz/litetracker') %>" class="rounded-xl border border-gray-200 px-6 py-3.5 shadow-xs text-base font-semibold text-gray-900 hover:bg-gray-100" data-umami-event="cta-demo" data-umami-event-location="shutdown-hero">
+          Get Migration Help <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <!-- Urgency Stats -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8">
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gray-900">500+</p>
+          <p class="text-sm text-gray-600">Teams Already Migrated</p>
+        </div>
+        <div class="hidden sm:block w-px h-12 bg-gray-200"></div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gray-900">100%</p>
+          <p class="text-sm text-gray-600">Data Preserved</p>
+        </div>
+        <div class="hidden sm:block w-px h-12 bg-gray-200"></div>
+        <div class="text-center">
+          <p class="text-3xl font-bold text-gray-900">Free</p>
+          <p class="text-sm text-gray-600">Migration Tool</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Act Now Section -->
+  <section id="why-act-now" class="relative px-6 lg:px-8 bg-gray-50">
+    <div class="mx-auto max-w-7xl py-16 sm:py-24">
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <div class="flex items-center justify-center text-gray-900 text-xs mb-4">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+          </svg>
+          <p class="pl-1 font-bold">Why Act Now</p>
+        </div>
+        <h2 class="text-heading">Don't Lose Years of Work</h2>
+        <p class="mt-4 text-subheading">Pivotal Tracker's shutdown means your data export window is limited. Here's what's at stake.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-3xl p-8 border border-[#E6E6EB]">
+          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">Project History</h3>
+          <p class="mt-4 text-sm/6 text-gray-600">Years of velocity data, iteration history, and team learnings—gone if you don't export in time.</p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 border border-[#E6E6EB]">
+          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">Team Knowledge</h3>
+          <p class="mt-4 text-sm/6 text-gray-600">Comments, discussions, and context that your team built over time—irreplaceable once deleted.</p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 border border-[#E6E6EB]">
+          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">Workflow Continuity</h3>
+          <p class="mt-4 text-sm/6 text-gray-600">Your team's established process and workflow patterns shouldn't have to start from scratch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Gets Preserved Section -->
+  <section id="what-gets-preserved" class="relative px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl py-16 sm:py-24">
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <div class="flex items-center justify-center text-gray-900 text-xs mb-4">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="pl-1 font-bold">What Gets Preserved</p>
+        </div>
+        <h2 class="text-heading">Save Everything You've Built</h2>
+        <p class="mt-4 text-subheading">LiteTracker preserves your complete Pivotal Tracker history</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Stories -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">All Your Stories</h3>
+            <p class="text-sm text-gray-600 mt-1">Features, bugs, chores, and releases—every story preserved</p>
+          </div>
+        </div>
+
+        <!-- Epics -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Epics & Structure</h3>
+            <p class="text-sm text-gray-600 mt-1">Epic organization and story relationships intact</p>
+          </div>
+        </div>
+
+        <!-- Velocity -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Velocity History</h3>
+            <p class="text-sm text-gray-600 mt-1">Story points and velocity data for planning</p>
+          </div>
+        </div>
+
+        <!-- Comments -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Comments & Context</h3>
+            <p class="text-sm text-gray-600 mt-1">Every discussion and decision preserved</p>
+          </div>
+        </div>
+
+        <!-- Labels -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Labels & Tags</h3>
+            <p class="text-sm text-gray-600 mt-1">Your categorization system maintained</p>
+          </div>
+        </div>
+
+        <!-- Attachments -->
+        <div class="flex items-start gap-4 p-6 bg-white rounded-2xl border border-gray-200">
+          <div class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="h-5 w-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900">Attachments</h3>
+            <p class="text-sm text-gray-600 mt-1">Files and images saved with your stories</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Same Workflow Section -->
+  <section id="same-workflow" class="relative px-6 lg:px-8 bg-gray-50">
+    <div class="mx-auto max-w-7xl py-16 sm:py-24">
+      <div class="mx-auto max-w-2xl text-center mb-16">
+        <div class="flex items-center justify-center text-gray-900 text-xs mb-4">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+          </svg>
+          <p class="pl-1 font-bold">Same Workflow</p>
+        </div>
+        <h2 class="text-heading">Keep Working the Way You Know</h2>
+        <p class="mt-4 text-subheading">LiteTracker was built by Pivotal Tracker fans, for Pivotal Tracker fans</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center">
+          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
+            <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900">Velocity Tracking</h3>
+          <p class="text-sm text-gray-600 mt-2">Same velocity-based planning you rely on</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center">
+          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
+            <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900">Story States</h3>
+          <p class="text-sm text-gray-600 mt-2">Start, Finish, Deliver, Accept workflow</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center">
+          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
+            <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900">Iterations</h3>
+          <p class="text-sm text-gray-600 mt-2">Sprint planning with automatic scheduling</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center">
+          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4 mx-auto">
+            <svg class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-gray-900">Icebox & Backlog</h3>
+          <p class="text-sm text-gray-600 mt-2">Organize work the PT way</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Migration Demo Section -->
+  <section id="migration-demo" class="relative px-6 lg:px-8">
+    <div class="relative mx-auto max-w-7xl py-16 sm:pt-24">
+      <div class="mx-auto max-w-7xl md:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-x-36 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:content-center">
+          <div class="flex flex-col gap-10 px-6 lg:px-0">
+            <div class="flex flex-col gap-4">
+              <p class="flex items-center gap-1 text-gray-900 font-semibold text-sm">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                </svg>
+                Quick Migration
+              </p>
+              <p class="text-heading tracking-tight text-black">Migrate Before It's Too Late</p>
+              <p class="text-subheading">Export your Pivotal Tracker data and import it into LiteTracker. The process is simple and preserves everything.</p>
+              <ul class="space-y-3 text-subheading">
+                <li class="flex items-start">
+                  <span class="text-gray-900 mr-2">1.</span>
+                  Export your data from Pivotal Tracker (CSV)
+                </li>
+                <li class="flex items-start">
+                  <span class="text-gray-900 mr-2">2.</span>
+                  Sign up for a free LiteTracker account
+                </li>
+                <li class="flex items-start">
+                  <span class="text-gray-900 mr-2">3.</span>
+                  Upload your export and start working
+                </li>
+              </ul>
+            </div>
+            <div class="h-11 w-fit">
+              <a href="<%= app_login_url_with_utm('https://app.litetracker.com/register') %>" class="flex items-center justify-center rounded-xl h-full pr-4 pl-5 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="signup-click" data-umami-event-location="shutdown-demo">
+                <span>Start Migration</span>
+                <svg class="h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="sm:px-6 lg:px-0">
+            <div class="relative px-6 sm:mx-auto sm:max-w-2xl sm:pl-0 sm:pr-0 lg:mx-0 lg:max-w-none">
+              <div class="relative mx-auto w-full sm:mx-0">
+                <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-xl">
+                  <div class="flex items-center gap-4 mb-6">
+                    <!-- Pivotal Tracker Icon (faded) -->
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden opacity-50">
+                      <svg viewBox="0 0 32 32" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="6" fill="#4A9187"/>
+                        <path d="M16 6L8 16l8 10 8-10L16 6z" fill="#357C72"/>
+                        <path d="M16 6l8 10-8 4V6z" fill="#5AAFA3"/>
+                        <path d="M16 20l-8-4 8-10v14z" fill="#fff" fill-opacity="0.9"/>
+                      </svg>
+                    </div>
+                    <svg class="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                    <!-- LiteTracker Favicon-style Icon -->
+                    <div class="w-12 h-12 rounded-xl bg-[#1a1a1a] flex items-center justify-center">
+                      <svg viewBox="0 0 24 24" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="4" width="18" height="3" rx="1" fill="#22c55e"/>
+                        <rect x="3" y="10" width="12" height="3" rx="1" fill="#22c55e" fill-opacity="0.7"/>
+                        <rect x="3" y="16" width="15" height="3" rx="1" fill="#22c55e" fill-opacity="0.4"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="space-y-4">
+                    <div>
+                      <div class="flex items-center justify-between text-sm mb-1">
+                        <span class="text-gray-600">Projects</span>
+                        <span class="text-green-600 font-medium">8 / 8 saved</span>
+                      </div>
+                      <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-green-600 h-2 rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex items-center justify-between text-sm mb-1">
+                        <span class="text-gray-600">Stories</span>
+                        <span class="text-green-600 font-medium">1,523 / 1,523 saved</span>
+                      </div>
+                      <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-green-600 h-2 rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex items-center justify-between text-sm mb-1">
+                        <span class="text-gray-600">Epics</span>
+                        <span class="text-green-600 font-medium">89 / 89 saved</span>
+                      </div>
+                      <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-green-600 h-2 rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex items-center justify-between text-sm mb-1">
+                        <span class="text-gray-600">Comments</span>
+                        <span class="text-green-600 font-medium">4,891 / 4,891 saved</span>
+                      </div>
+                      <div class="w-full bg-gray-100 rounded-full h-2">
+                        <div class="bg-green-600 h-2 rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-center gap-2 mt-6 text-green-600">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span class="text-sm font-medium">Your data is safe!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq-section" class="pb-16 lg:pb-28 bg-gray-50">
+    <div class="relative mx-auto max-w-7xl py-16 sm:pt-24 flex flex-col items-center gap-y-24">
+      <div class="mx-auto max-w-2xl flex flex-col gap-y-6 text-center">
+        <div class="flex items-center justify-center text-gray-900 text-xs">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="pl-1 font-bold">Shutdown FAQ</p>
+        </div>
+        <h3 class="text-heading">Questions About the Shutdown</h3>
+        <p class="text-base font-normal text-gray-500 sm:text-lg">
+          What you need to know about Pivotal Tracker's closure and your options.
+        </p>
+      </div>
+      <div class="flex-grow px-7 md:px-10 xl:px-2 py-4">
+        <div class="mx-auto max-w-2xl sm:min-w-2xl">
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="shutdown-answer-1" id="shutdown-answer-1" class="peer sr-only">
+            <label for="shutdown-answer-1" class="cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>When did Pivotal Tracker shut down?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              Pivotal Tracker announced its shutdown and has ceased operations. If you still have access to export your data, we recommend doing so immediately to preserve your project history before access is permanently removed.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="shutdown-answer-2" id="shutdown-answer-2" class="peer sr-only">
+            <label for="shutdown-answer-2" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>Can I still export my data from Pivotal Tracker?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              If Pivotal Tracker is still allowing data exports, go to your project settings and export as CSV. If you've already exported your data or have a backup, you can import that directly into LiteTracker. Contact us if you need help with the migration process.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="shutdown-answer-3" id="shutdown-answer-3" class="peer sr-only">
+            <label for="shutdown-answer-3" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>Why should I choose LiteTracker over other tools?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              LiteTracker was built specifically for Pivotal Tracker users. Unlike Jira or other alternatives, we use the same velocity-based workflow, story states, and iteration planning that PT users know. Your team won't need to relearn anything—just import and keep working.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="shutdown-answer-4" id="shutdown-answer-4" class="peer sr-only">
+            <label for="shutdown-answer-4" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>What happens to my velocity history?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              When you import your Pivotal Tracker data, we preserve story points and completion dates. LiteTracker will calculate velocity based on your imported data, so your team's historical performance is maintained for planning purposes.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="shutdown-answer-5" id="shutdown-answer-5" class="peer sr-only">
+            <label for="shutdown-answer-5" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>Is there a free option to get started?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              Yes! LiteTracker offers a free tier with up to 200 stories, which is perfect for testing the migration. Import your data, explore the interface, and upgrade when you're ready. The migration tool itself is completely free regardless of plan.
+            </div>
+          </div>
+          <div class="border-b border-gray-200">
+            <input type="checkbox" name="shutdown-answer-6" id="shutdown-answer-6" class="peer sr-only">
+            <label for="shutdown-answer-6" class="group cursor-pointer flex w-full items-center gap-x-5 justify-between rounded-lg text-left text-xl font-normal text-black focus:outline-none p-6 peer-checked:[&_.open-icon]:hidden peer-checked:[&_.close-icon]:block">
+              <span>Can I get help with the migration?</span>
+              <svg class="h-5 w-5 open-icon block" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+              <svg class="h-5 w-5 close-icon hidden" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </label>
+            <div class="answer pt-2 pb-5 px-5 text-sm lg:text-base text-black font-light hidden peer-checked:block">
+              Absolutely. We offer free onboarding assistance for teams migrating from Pivotal Tracker. Book a call with our team and we'll walk you through the export and import process, answer questions, and make sure your transition is smooth.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta" class="relative px-6 lg:px-8">
+    <div class="relative mx-auto max-w-7xl py-16 sm:py-24 flex items-center flex-col justify-start gap-y-24">
+      <div class="grid grid-cols-1 gap-x-36 gap-y-16 sm:gap-y-20 lg:grid-cols-2 lg:items-center">
+        <div class="flex flex-col gap-10 px-2 xs:px-6 lg:px-0">
+          <div class="flex flex-col gap-4 text-center xs:text-left">
+            <p class="flex items-center justify-center xs:justify-start gap-1 text-gray-900 font-semibold text-sm">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Don't Wait
+            </p>
+            <p class="text-heading font-medium tracking-tight text-black">Save Your Work Today</p>
+            <p class="text-subheading">
+              Pivotal Tracker may be gone, but your team's work doesn't have to disappear with it. Migrate to LiteTracker and keep your projects, history, and workflow intact.
+            </p>
+          </div>
+          <div class="flex items-center justify-center xs:justify-start gap-4">
+            <div class="h-11 w-fit">
+              <a href="<%= app_login_url_with_utm('https://app.litetracker.com/register') %>" class="bg-black flex items-center justify-center rounded-xl h-full px-4 text-sm/6 font-semibold text-white border border-black" data-umami-event="signup-click" data-umami-event-location="shutdown-cta">
+                <span>Start Free Migration</span>
+                <svg class="h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+            <div class="h-11 w-fit">
+              <a href="<%= app_login_url_with_utm('https://cal.com/neshaz/litetracker') %>" class="flex items-center justify-center rounded-xl h-full px-4 text-sm/6 border border-gray-200 text-black font-semibold hover:bg-gray-100" data-umami-event="cta-demo" data-umami-event-location="shutdown-cta">
+                <span>Get Help</span>
+                <svg class="h-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"/>
+                  <polyline points="9 6 15 12 9 18" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="grow flex items-center justify-start sm:px-6 lg:px-0 max-w-md w-full xs:w-px">
+          <div class="grow h-80 xs:h-112 aspect-square relative px-2 xs:px-6 mx-auto rounded-2xl sm:pl-0 sm:pr-0 lg:mx-0">
+            <div class="xs:absolute shadow-xl rounded-2xl overflow-hidden">
+              <%= image_tag 'litetracker/default.png', alt: "LiteTracker Dashboard", class: "w-full h-full rounded-2xl object-cover object-center" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
