@@ -72,8 +72,14 @@
     /* ========== TRUSTED BY ========== */
     .lr-trusted { padding: 60px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); text-align: center; }
     .lr-trusted p { font-size: 14px; color: var(--text-secondary); margin-bottom: 32px; font-weight: 500; }
-    .lr-logo-ticker { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; opacity: 0.5; }
-    .lr-logo-ticker img { height: 28px; width: auto; }
+    .lr-logo-ticker { overflow: hidden; position: relative; }
+    .lr-logo-ticker::before, .lr-logo-ticker::after { content: ''; position: absolute; top: 0; bottom: 0; width: 100px; z-index: 2; pointer-events: none; }
+    .lr-logo-ticker::before { left: 0; background: linear-gradient(to right, var(--white), transparent); }
+    .lr-logo-ticker::after { right: 0; background: linear-gradient(to left, var(--white), transparent); }
+    .lr-logo-track { display: flex; align-items: center; gap: 60px; width: max-content; animation: lr-marquee 25s linear infinite; }
+    .lr-logo-track img { height: 28px; width: auto; opacity: 0.5; flex-shrink: 0; transition: opacity 0.3s; }
+    .lr-logo-track img:hover { opacity: 0.8; }
+    @keyframes lr-marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
     /* ========== SECTION COMMON ========== */
     .lr-section { padding: 100px 0; }
