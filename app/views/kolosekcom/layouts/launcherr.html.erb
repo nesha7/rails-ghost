@@ -94,13 +94,19 @@
     .lr-section-header-center .lr-section-desc { margin: 0 auto; }
 
     /* ========== HOW IT WORKS ========== */
-    .lr-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .lr-step-card { background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; display: flex; flex-direction: column; }
-    .lr-step-number { width: 40px; height: 40px; border-radius: 10px; background: var(--text-primary); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; margin-bottom: 20px; }
-    .lr-step-card h3 { font-size: 18px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2em; margin-bottom: 8px; }
-    .lr-step-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 24px; }
-    .lr-step-image { margin-top: auto; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); background: var(--white); }
-    .lr-step-image img { width: 100%; }
+    .lr-hiw { display: flex; flex-direction: column; gap: 48px; }
+    .lr-hiw-heading { text-align: center; }
+    .lr-hiw-heading .lr-section-desc { margin: 0 auto; }
+    .lr-hiw-cards-wrapper { flex: 1; min-width: 0; border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; position: relative; }
+    .lr-hiw-grid-bg { position: absolute; inset: 0; background-image: url('https://framerusercontent.com/images/zkZcqLYKrbf3IcoLGmkQF4odXvY.svg'); background-repeat: repeat; background-size: 63px auto; opacity: 0.08; pointer-events: none; }
+    .lr-hiw-cards { display: flex; position: relative; z-index: 1; }
+    .lr-hiw-card { flex: 1; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 24px; border-right: 1px solid var(--border-color); background: rgba(255,255,255,0.6); }
+    .lr-hiw-card:last-child { border-right: none; }
+    .lr-hiw-card-img { width: 100%; aspect-ratio: 1; overflow: hidden; mask: radial-gradient(50% 50% at 50% 50%, rgb(0,0,0) 57%, rgba(0,0,0,0.85) 76%, rgba(0,0,0,0) 100%); -webkit-mask: radial-gradient(50% 50% at 50% 50%, rgb(0,0,0) 57%, rgba(0,0,0,0.85) 76%, rgba(0,0,0,0) 100%); }
+    .lr-hiw-card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .lr-hiw-card-text { text-align: center; }
+    .lr-hiw-card-text h3 { font-size: 18px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2em; margin-bottom: 8px; }
+    .lr-hiw-card-text p { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
 
     /* ========== FEATURES BENTO GRID ========== */
     .lr-bento { display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); }
@@ -229,7 +235,9 @@
       .lr-hero-buttons .lr-btn { width: 100%; justify-content: center; }
       .lr-section { padding: 60px 0; }
       .lr-section-heading { font-size: 26px; }
-      .lr-steps { grid-template-columns: 1fr; }
+      .lr-hiw-cards { flex-direction: column; }
+      .lr-hiw-card { border-right: none; border-bottom: 1px solid var(--border-color); }
+      .lr-hiw-card:last-child { border-bottom: none; }
       .lr-bento { grid-template-columns: 1fr; grid-template-rows: auto; }
       .lr-bento-card { border-left: none; }
       .lr-bento-card:nth-child(n+2) { border-top: 1px solid var(--border-color); }
