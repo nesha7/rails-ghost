@@ -24,6 +24,7 @@
       });
     }, { threshold: 0.15 });
     document.querySelectorAll('.lr-fade-in').forEach(function(el) { observer.observe(el); });
+    document.querySelectorAll('.lr-stagger').forEach(function(el) { observer.observe(el); });
 
     document.querySelectorAll('.lr-faq-question').forEach(function(btn) {
       btn.addEventListener('click', function() {

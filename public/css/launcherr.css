@@ -208,9 +208,75 @@ input { font-family: inherit; }
 .lr-footer-socials a:hover { background: var(--bg-light); }
 .lr-footer-socials svg { width: 16px; height: 16px; color: var(--text-secondary); }
 
-/* ========== SCROLL FADE IN ========== */
-.lr-fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.lr-fade-in.lr-visible { opacity: 1; transform: translateY(0); }
+/* ========== ANIMATIONS ========== */
+.lr-fade-in {
+  opacity: 0; transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lr-fade-in.lr-visible { opacity: 1; transform: none; }
+
+/* Hero: section visible immediately, children stagger in */
+.lr-hero.lr-fade-in { opacity: 1; transform: none; }
+.lr-hero .lr-hero-tag {
+  opacity: 0; transform: translateY(-16px);
+  transition: opacity 0.6s 0.1s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lr-hero h1 {
+  opacity: 0; transform: translateY(20px) scale(0.97); filter: blur(4px);
+  transition: opacity 0.8s 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lr-hero p {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity 0.6s 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lr-hero .lr-hero-buttons {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.6s 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lr-hero .lr-hero-collage {
+  opacity: 0; transform: translateY(40px) scale(0.96);
+  transition: opacity 1s 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 1s 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lr-hero.lr-visible .lr-hero-tag,
+.lr-hero.lr-visible h1,
+.lr-hero.lr-visible p,
+.lr-hero.lr-visible .lr-hero-buttons,
+.lr-hero.lr-visible .lr-hero-collage { opacity: 1; transform: none; filter: none; }
+
+/* Staggered children for card grids */
+.lr-stagger > .lr-stagger-item {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lr-stagger.lr-visible > .lr-stagger-item { opacity: 1; transform: none; }
+.lr-stagger.lr-visible > .lr-stagger-item:nth-child(1) { transition-delay: 0.06s; }
+.lr-stagger.lr-visible > .lr-stagger-item:nth-child(2) { transition-delay: 0.13s; }
+.lr-stagger.lr-visible > .lr-stagger-item:nth-child(3) { transition-delay: 0.2s; }
+.lr-stagger.lr-visible > .lr-stagger-item:nth-child(4) { transition-delay: 0.27s; }
+.lr-stagger.lr-visible > .lr-stagger-item:nth-child(5) { transition-delay: 0.34s; }
+.lr-stagger.lr-visible > .lr-stagger-item:nth-child(6) { transition-delay: 0.41s; }
+
+/* Header slide-in */
+.lr-header { animation: lr-header-slide 0.5s 0.05s cubic-bezier(0.16, 1, 0.3, 1) both; }
+@keyframes lr-header-slide { from { opacity: 0; transform: translateY(-100%); } to { opacity: 1; transform: none; } }
+
+/* Card hover lifts */
+.lr-bento-card { transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease; }
+.lr-bento-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+.lr-metric-card { transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease; }
+.lr-metric-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.lr-pricing-card { transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease; }
+.lr-pricing-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); }
+
+/* Blog image zoom */
+.lr-blog-card-img img { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+.lr-blog-card:hover .lr-blog-card-img img { transform: scale(1.04); }
+.lr-blog-small-img img { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+.lr-blog-small:hover .lr-blog-small-img img { transform: scale(1.06); }
+
+/* Button micro-interactions */
+.lr-btn:hover { transform: translateY(-1px); }
+.lr-btn:active { transform: translateY(0) scale(0.98); transition-duration: 0.1s; }
 
 /* ========== MOBILE MENU ========== */
 .lr-menu-btn { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--border-color); }
