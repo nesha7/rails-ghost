@@ -291,6 +291,27 @@ input { font-family: inherit; }
 .lr-menu-btn { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid var(--border-color); }
 .lr-menu-btn svg { width: 20px; height: 20px; }
 
+/* ========== MOBILE NAV ========== */
+@media (max-width: 768px) {
+  .lr-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 24px 16px;
+  }
+  .lr-nav a { padding: 12px 0; border-bottom: 1px solid var(--border-color); font-size: 15px; }
+  .lr-nav a:last-child { border-bottom: none; }
+  .lr-menu-open .lr-nav { display: flex; }
+  .lr-menu-open .lr-menu-btn { background: var(--bg-light); }
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
   .lr-hero h1 { font-size: 48px; }
@@ -311,7 +332,6 @@ input { font-family: inherit; }
 }
 
 @media (max-width: 768px) {
-  .lr-nav { display: none; }
   .lr-badge-hiring { display: none; }
   .lr-menu-btn { display: flex; }
   .lr-hero { padding: 60px 0 48px; }
