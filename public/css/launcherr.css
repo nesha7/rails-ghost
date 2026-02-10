@@ -516,3 +516,33 @@ input { font-family: inherit; }
   .lr-about-stat h3 { font-size: 36px; }
   .lr-about-tech-row { gap: 24px; }
   .lr-about-tech-row img { height: 48px; }
+}
+
+/* ========== FEATURED PAGE - SHOWCASE CARDS ========== */
+.lr-showcase-card { display: flex; gap: 48px; align-items: center; margin-bottom: 64px; }
+.lr-showcase-card:last-child { margin-bottom: 0; }
+.lr-showcase-card-reverse { flex-direction: row-reverse; }
+.lr-showcase-img { flex: 1; min-width: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-color); }
+.lr-showcase-img img { width: 100%; height: auto; display: block; }
+.lr-showcase-text { flex: 1; min-width: 0; }
+.lr-showcase-text h3 { font-size: 28px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 4px; }
+.lr-showcase-subtitle { font-size: 15px; color: var(--accent-blue); font-weight: 500; margin-bottom: 16px; }
+.lr-showcase-text p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+.lr-showcase-text .lr-btn { margin-bottom: 0; }
+
+/* More projects image */
+.lr-more-project-img { border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); margin-bottom: 16px; }
+.lr-more-project-img img { width: 100%; height: auto; display: block; }
+
+/* Featured responsive - tablet */
+@media (max-width: 1024px) {
+  .lr-showcase-card { gap: 32px; }
+  .lr-showcase-text h3 { font-size: 24px; }
+}
+
+/* Featured responsive - mobile */
+@media (max-width: 768px) {
+  .lr-showcase-card { flex-direction: column; gap: 24px; margin-bottom: 48px; }
+  .lr-showcase-card-reverse { flex-direction: column; }
+  .lr-showcase-text h3 { font-size: 22px; }
+  .lr-showcase-text p { font-size: 14px; }
