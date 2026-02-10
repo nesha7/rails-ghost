@@ -315,6 +315,7 @@ input { font-family: inherit; }
   .lr-badge-hiring { display: none; }
   .lr-menu-btn { display: flex; }
   .lr-hero { padding: 60px 0 48px; }
+  .lr-hero-tag { gap: 2px; }
   .lr-hero h1 { font-size: 32px; letter-spacing: -0.02em; }
   .lr-hero-collage { height: 280px; max-width: 100%; }
   .lr-collage-1 { width: 200px; height: 140px; top: 30px; }
