@@ -601,3 +601,22 @@ input { font-family: inherit; }
   .lr-process-step-content p { font-size: 14px; }
   .lr-process-form-wrapper { padding: 24px 16px; }
 }
+
+/* ========== CODE REVIEW PAGE ========== */
+.lr-review-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.lr-review-step-card { background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; text-align: center; transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease; }
+.lr-review-step-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+.lr-review-step-num { width: 48px; height: 48px; border-radius: 50%; background: var(--accent-blue); color: var(--white); font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+.lr-review-step-card h3 { font-size: 18px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.2em; margin-bottom: 8px; }
+.lr-review-step-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+/* Code review responsive - tablet */
+@media (max-width: 1024px) {
+  .lr-review-steps { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .lr-review-step-card { padding: 24px; }
+}
+
+/* Code review responsive - mobile */
+@media (max-width: 768px) {
+  .lr-review-steps { grid-template-columns: 1fr; }
+}

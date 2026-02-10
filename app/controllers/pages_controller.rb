@@ -26,7 +26,7 @@ class PagesController < ApplicationController
 	private
 
 	def resolve_layout
-		if ['/launcherr', '/launcherr-about', '/launcherr-featured', '/launcherr-contact', '/launcherr-process'].include?(request.path)
+		if ['/launcherr', '/launcherr-about', '/launcherr-featured', '/launcherr-contact', '/launcherr-process', '/launcherr-code-review'].include?(request.path)
 			"#{app_name}/layouts/launcherr"
 		elsif !page_exists?(request.path) && layout_exists?(:page)
 			"#{app_name}/layouts/page"
