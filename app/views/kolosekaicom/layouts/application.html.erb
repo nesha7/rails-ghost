@@ -13,7 +13,9 @@
   <%= stylesheet_link_tag '/css/launcherr.css', media: 'all', "data-turbo-track": "reload" %>
 </head>
 <body>
+  <%= render "kolosekaicom/partials/header" %>
   <%= yield %>
+  <%= render "kolosekaicom/partials/footer" %>
 
   <script>
     var observer = new IntersectionObserver(function(entries) {
