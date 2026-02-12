@@ -387,10 +387,10 @@
       </div><!-- /.row -->
       <div class="row">
         <% @featured.each do |post| %>
-          <%= render 'kolosekoldcom/pages/partials/post_card', post: post %>
+          <%= render 'kolosekcom/pages/partials/post_card', post: post %>
         <% end %>
         <% @posts.first(5).each do |post| %>
-          <%= render 'kolosekoldcom/pages/partials/post_card', post: post %>
+          <%= render 'kolosekcom/pages/partials/post_card', post: post %>
         <% end %>
       </div>
     </div><!-- /.container -->

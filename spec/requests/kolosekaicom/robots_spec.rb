@@ -2,17 +2,17 @@ require 'rails_helper'
 
 RSpec.describe "Kolosekaicom::Robots", type: :request do
   before do
-    host! "kolosek.com"
+    host! "kolosekai.com"
   end
 
   describe "GET /robots.txt" do
     context "when sitemap directory exists" do
       before do
-        FileUtils.mkdir_p(Rails.root.join('public', 'sitemaps', 'kolosekcom'))
+        FileUtils.mkdir_p(Rails.root.join('public', 'sitemaps', 'kolosekaicom'))
       end
 
       after do
-        FileUtils.rm_rf(Rails.root.join('public', 'sitemaps', 'kolosekcom'))
+        FileUtils.rm_rf(Rails.root.join('public', 'sitemaps', 'kolosekaicom'))
       end
 
       it "returns http success" do
@@ -27,10 +27,10 @@ RSpec.describe "Kolosekaicom::Robots", type: :request do
         expect(response.content_type).to include("text/plain")
       end
 
-      it "includes sitemap URL for kolosek.com" do
+      it "includes sitemap URL for kolosekai.com" do
         get "/robots.txt"
 
-        expect(response.body).to include("Sitemap: https://kolosek.com/sitemap.xml.gz")
+        expect(response.body).to include("Sitemap: https://kolosekai.com/sitemap.xml.gz")
       end
 
       it "allows all user agents" do
@@ -43,7 +43,7 @@ RSpec.describe "Kolosekaicom::Robots", type: :request do
 
     context "when sitemap directory does not exist" do
       before do
-        FileUtils.rm_rf(Rails.root.join('public', 'sitemaps', 'kolosekcom'))
+        FileUtils.rm_rf(Rails.root.join('public', 'sitemaps', 'kolosekaicom'))
       end
 
       it "returns a basic robots.txt" do

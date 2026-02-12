@@ -56,7 +56,7 @@ RSpec.describe "Kolosekaicom::Pages", type: :request do
       get "/"
 
       expect(response.body).to include("Kolosek AI - Native AI Agency")
-      expect(response.body).to include("kolosekcom.css")
+      expect(response.body).to include("kolosekaicom.css")
     end
   end
 

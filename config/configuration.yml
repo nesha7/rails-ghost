@@ -9,7 +9,7 @@ default: &default
     litetrackercom:
       host: https://blog.litetracker.com
       key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_LITETRACKER") { '' } %>
-    kolosekoldcom:
+    kolosekcom:
       host: https://blog.kolosek.com
       key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_KOLOSEK") { '' } %>
     rubyci:
@@ -18,7 +18,7 @@ default: &default
     fastci:
       host: https://blog.fast.ci
       key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_FASTCI") { '' } %>
-    kolosekcom:
+    kolosekaicom:
       host: <%= ENV.fetch("GHOST_API_HOST_KOLOSEKAI") { '' } %>
       key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_KOLOSEKAI") { '' } %>
 

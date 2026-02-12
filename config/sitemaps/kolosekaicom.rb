@@ -1,5 +1,5 @@
-SitemapGenerator::Sitemap.default_host = "https://kolosek.com"
-SitemapGenerator::Sitemap.public_path = 'public/sitemaps/kolosekcom/'
+SitemapGenerator::Sitemap.default_host = "https://kolosekai.com"
+SitemapGenerator::Sitemap.public_path = 'public/sitemaps/kolosekaicom/'
 SitemapGenerator::Sitemap.create do
   add '/', changefreq: 'monthly', priority: 0.9
   add '/about', changefreq: 'monthly', priority: 0.8
