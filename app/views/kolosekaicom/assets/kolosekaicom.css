@@ -518,7 +518,7 @@ input { font-family: inherit; }
   .lr-footer-links { flex-wrap: wrap; gap: 32px; }
   .lr-footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
   .lr-about-stats { grid-template-columns: repeat(2, 1fr); }
-  .lr-compare-table { display: none; }
+  .lr-compare-section { display: none; }
   .lr-about-story { flex-direction: column; }
   .lr-about-story-text, .lr-about-story-visual { flex: none; width: 100%; }
 }
