@@ -162,4 +162,35 @@ RSpec.describe "Kolosekaicom::Pages", type: :request do
     end
   end
 
+  describe "GET /pricing" do
+    it "returns http success" do
+      get "/pricing"
+
+      expect(response).to have_http_status(:success)
+    end
+
+    it "renders the pricing hero" do
+      get "/pricing"
+
+      expect(response.body).to include("Simple, transparent")
+      expect(response.body).to include("pricing")
+    end
+
+    it "contains all four pricing tiers" do
+      get "/pricing"
+
+      expect(response.body).to include("Project-Based")
+      expect(response.body).to include("Time & Materials")
+      expect(response.body).to include("Dedicated Team")
+      expect(response.body).to include("Enterprise")
+    end
+
+    it "contains pricing FAQ section" do
+      get "/pricing"
+
+      expect(response.body).to include("What's included in the pricing?")
+      expect(response.body).to include("Do you offer hourly rates?")
+    end
+  end
+
 end

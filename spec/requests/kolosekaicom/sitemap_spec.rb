@@ -17,6 +17,7 @@ RSpec.describe "Kolosekaicom::Sitemap", type: :request do
             <url><loc>https://kolosekai.com/</loc></url>
             <url><loc>https://kolosekai.com/about</loc></url>
             <url><loc>https://kolosekai.com/featured</loc></url>
+            <url><loc>https://kolosekai.com/pricing</loc></url>
             <url><loc>https://kolosekai.com/contact</loc></url>
           </urlset>
         XML
@@ -48,6 +49,7 @@ RSpec.describe "Kolosekaicom::Sitemap", type: :request do
         expect(response.body).to include("https://kolosekai.com/")
         expect(response.body).to include("https://kolosekai.com/about")
         expect(response.body).to include("https://kolosekai.com/featured")
+        expect(response.body).to include("https://kolosekai.com/pricing")
         expect(response.body).to include("https://kolosekai.com/contact")
       end
     end
