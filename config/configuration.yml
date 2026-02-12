@@ -9,9 +9,12 @@ default: &default
     litetrackercom:
       host: https://blog.litetracker.com
       key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_LITETRACKER") { '' } %>
-    kolosekcom:
+    kolosekoldcom:
       host: https://blog.kolosek.com
       key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_KOLOSEK") { '' } %>
+    kolosekcom:
+      host: <%= ENV.fetch("GHOST_API_HOST_KOLOSEKAI") { '' } %>
+      key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_KOLOSEKAI") { '' } %>
     rubyci:
       host: https://blog.ruby.ci
       key: <%= ENV.fetch("GHOST_CONTENT_API_KEY_RUBYCI") { '' } %>

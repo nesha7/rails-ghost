@@ -29,12 +29,12 @@
         </span>
       </a> 
 
-      <%= render 'kolosekcom/layouts/partials/header_ghost' %>
+      <%= render 'kolosekoldcom/layouts/partials/header_ghost' %>
       <main id="main" tabindex="-1" class="flex-none outline-none"> 
         <%= yield %>
       </main>
 
-      <%= render 'kolosekcom/layouts/partials/footer_ghost' %>
+      <%= render 'kolosekoldcom/layouts/partials/footer_ghost' %>
     </div>
     <%= raw @settings['codeinjection_foot'] %>
     <%= raw @post['codeinjection_foot'] if @post.present? %>

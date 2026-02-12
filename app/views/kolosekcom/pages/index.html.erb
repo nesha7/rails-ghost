@@ -1,398 +1,501 @@
-<main class="home">
-  <header class="heading">
-    <div class="container position-relative">
-      <!-- <a class="ic-chat" href="#"><img src="assets/images/ic-chat.svg" alt=""></a> -->
-      <div class="row">
-        <div class="col-12 d-flex align-items-center flex-column mb-0">
-          <p class="text-secondary fs-5 text-center">
-            We're hiring! Visit our <a class="text-secondary" href="https://poslovi.kolosek.com/" data-umami-event="cta-careers">Careers</a> page
-          </p>
-          <h1 class="text-center position-relative">
-            Creating software solutions
-            <br class="d-none d-md-block">
-            that work
-          </h1>
-          <a href="/contact" class="btn btn-primary mx-auto" data-umami-event="cta-start-project">Start your Project</a>
-        </div>
-      </div><!-- /.row -->
+<!-- ========== HERO ========== -->
+<section class="lr-hero lr-hero-index lr-fade-in">
+  <div class="lr-hero-bg-nodes">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <div class="container">
+    <div class="lr-hero-tag">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      AI-native development, human-driven results.
     </div>
-  </header>
-  <section class="home-intro">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="text-center h2 mb-5">
-            State-of-the-art
-            <br>
-            front-end & back-end systems
-          </h2>
-          <p class="text-center fs-5 mb-5 mb-lg-12">
-            Why state-of-the-art? Because every app we create is a unique piece of work
-            <br>
-            which our team, in cooperation with you, has dedicated its time to
-          </p>
+    <h1>We build AI-powered products. <span>Natively</span></h1>
+    <p>From concept to production, we design and ship intelligent software that transforms your business.</p>
+    <div class="lr-hero-buttons">
+      <a href="/contact" class="lr-btn lr-btn-primary lr-btn-lg">
+        Start a project
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="/featured" class="lr-btn lr-btn-secondary lr-btn-lg">View our work</a>
+    </div>
+    <div class="lr-hero-collage">
+      <div class="lr-collage-item lr-collage-1"><%= image_tag 'kolosek/featured-movie-pilot.png', alt: 'MoviePilot' %></div>
+      <div class="lr-collage-item lr-collage-2"><%= image_tag 'litetracker/hero-image.webp', alt: 'LiteTracker' %></div>
+      <div class="lr-collage-item lr-collage-3"><%= image_tag 'kolosek/featured-ruby-ci.jpg', alt: 'Ruby.ci' %></div>
+      <div class="lr-collage-item lr-collage-4"><%= image_tag 'kolosek/featured-squire.avif', alt: 'Squire' %></div>
+      <div class="lr-collage-item lr-collage-5"><%= image_tag 'kolosek/featured-boardspan.png', alt: 'Boardspan' %></div>
+      <div class="lr-collage-item lr-collage-6"><%= image_tag 'kolosek/featured-wrap.png', alt: 'WRAP' %></div>
+      <div class="lr-collage-item lr-collage-7"><%= image_tag 'kolosek/featured-oschool.jpg', alt: 'O.school' %></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT YOU GET ========== -->
+<section class="lr-section lr-section-bordered lr-fade-in">
+  <div class="container">
+    <div class="lr-section-header lr-section-header-center">
+      <div class="lr-section-tag">
+        <svg viewBox="0 0 24 24" fill="none" style="width:14px;height:14px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 4L12 14.01l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        What you get
+      </div>
+      <h2 class="lr-section-heading">Your product, live<br><span>in weeks, not months</span></h2>
+      <p class="lr-section-desc">We ship fast and build to last. AI-native development means you go to market sooner, spend less, and stay ahead.</p>
+    </div>
+    <div class="lr-value-grid lr-stagger">
+      <div class="lr-value-card lr-stagger-item">
+        <div class="lr-value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-4">
-          <div class="card d-block mb-5 mb-lg-0">
-            <%= image_tag 'kolosek/ic-web.svg', alt: "" %>
-            <div class="card-body">
-              <h3 class="h4 card-title">Web Development</h3>
-              <p class="card-text">
-                Our developers and designers are there to find the best and the most creative solutions for you  and help you end up with a reliable product and user experience
-              </p>
+        <h3>AI-Accelerated Delivery</h3>
+        <p>Ship your product in weeks, not months. Our AI-native workflow compresses timelines without cutting corners.</p>
+      </div>
+      <div class="lr-value-card lr-stagger-item">
+        <div class="lr-value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Rapid Return on Investment</h3>
+        <p>See measurable business impact within weeks. We prioritize features that drive revenue and reduce costs first.</p>
+      </div>
+      <div class="lr-value-card lr-stagger-item">
+        <div class="lr-value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Low Maintenance Cost</h3>
+        <p>Clean architecture and automated testing mean fewer bugs, easier updates, and lower long-term operational costs.</p>
+      </div>
+      <div class="lr-value-card lr-stagger-item">
+        <div class="lr-value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Production-Ready from Day One</h3>
+        <p>Battle-tested infrastructure, CI/CD pipelines, and monitoring included. Your product launches stable and scales effortlessly.</p>
+      </div>
+      <div class="lr-value-card lr-stagger-item">
+        <div class="lr-value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Full IP Ownership</h3>
+        <p>Every line of code is yours. No lock-in, no licensing fees, no hidden dependencies. Walk away with everything.</p>
+      </div>
+      <div class="lr-value-card lr-stagger-item">
+        <div class="lr-value-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M23 6l-9.5 9.5-5-5L1 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 6h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Continuous Innovation</h3>
+        <p>AI evolves fast and so will your product. We keep you ahead with the latest models, tools, and techniques.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TRUSTED BY ========== -->
+<section class="lr-trusted lr-fade-in">
+  <div class="container">
+    <p>Trusted by startups and enterprises we've built for</p>
+    <div class="lr-logo-ticker">
+      <div class="lr-logo-track">
+        <%= image_tag 'kolosek/logo-closet.png', alt: 'Closet' %>
+        <%= image_tag 'kolosek/logo-squire.png', alt: 'Squire' %>
+        <%= image_tag 'kolosek/logo-simone-leblanc.png', alt: 'Simone LeBlanc' %>
+        <%= image_tag 'kolosek/logo-listium.png', alt: 'Listium' %>
+        <%= image_tag 'kolosek/logo-oschool.png', alt: 'O.school' %>
+        <%= image_tag 'kolosek/logo-movie-pilot.png', alt: 'Movie Pilot' %>
+        <%= image_tag 'kolosek/logo-wrap.png', alt: 'Wrap' %>
+        <%= image_tag 'kolosek/logo-ruby-ci.png', alt: 'RubyCI' %>
+        <%= image_tag 'kolosek/logo-versa-commerce.png', alt: 'VersaCommerce' %>
+        <%= image_tag 'kolosek/logo-style-myle.png', alt: 'StyleMyle' %>
+        <%= image_tag 'kolosek/logo-closet.png', alt: 'Closet' %>
+        <%= image_tag 'kolosek/logo-squire.png', alt: 'Squire' %>
+        <%= image_tag 'kolosek/logo-simone-leblanc.png', alt: 'Simone LeBlanc' %>
+        <%= image_tag 'kolosek/logo-listium.png', alt: 'Listium' %>
+        <%= image_tag 'kolosek/logo-oschool.png', alt: 'O.school' %>
+        <%= image_tag 'kolosek/logo-movie-pilot.png', alt: 'Movie Pilot' %>
+        <%= image_tag 'kolosek/logo-wrap.png', alt: 'Wrap' %>
+        <%= image_tag 'kolosek/logo-ruby-ci.png', alt: 'RubyCI' %>
+        <%= image_tag 'kolosek/logo-versa-commerce.png', alt: 'VersaCommerce' %>
+        <%= image_tag 'kolosek/logo-style-myle.png', alt: 'StyleMyle' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOW IT WORKS ========== -->
+<section class="lr-section lr-section-bordered lr-fade-in">
+  <div class="container">
+    <div class="lr-hiw">
+      <div class="lr-hiw-heading">
+        <div class="lr-section-tag">
+          <svg viewBox="0 0 24 24" fill="none" style="width:14px;height:14px;"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Our process
+        </div>
+        <h2 class="lr-section-heading">How we bring your AI product to <span>life</span></h2>
+        <p class="lr-section-desc">A streamlined approach from discovery to deployment, built around your business goals</p>
+      </div>
+      <div class="lr-hiw-cards-wrapper">
+        <div class="lr-hiw-grid-bg"></div>
+        <div class="lr-hiw-cards lr-stagger">
+          <div class="lr-hiw-card lr-stagger-item">
+            <div class="lr-hiw-card-img">
+              <img src="https://framerusercontent.com/images/HxVb3cLrKIiRLq2gz9yUZrBJc.png?scale-down-to=512&width=1024&height=1024" alt="Sign Up & Customize" loading="lazy">
+            </div>
+            <div class="lr-hiw-card-text">
+              <h3>Discover &amp; Define</h3>
+              <p>We analyze your business needs and define the AI strategy that fits.</p>
             </div>
           </div>
-        </div>
-        <div class="col-12 col-lg-4 mb-5 mb-lg-0">
-          <div class="card d-block">
-            <%= image_tag 'kolosek/ic-mobile.svg', alt: "" %>
-            <h3 class="h4 card-title">Custom Mobile Apps</h3>
-            <p class="card-text">
-              Mobile apps are timeless. With their number constantly rising, we make sure to deliver an amazing experience combined with high performance across multiple platforms
-            </p>
-          </div>
-        </div>
-        <div class="col-12 col-lg-4 mb-5 mb-lg-0">
-          <div class="card d-block">
-            <%= image_tag 'kolosek/ic-ux.svg', alt: "" %>
-            <h3 class="h4 card-title highlight">User Experience</h3>
-            <p class="card-text">
-              A good user experience should speak to the end user's emotions. Why? Because it's your user's perception of the product that is going to set you apart from all the other apps out there and your competition
-            </p>
-          </div>
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </section><!-- /section -->
-  <section class="home-product">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h2 class="text-center h2">
-            Round-the-clock care for your products
-          </h2>
-          <p class="text-center fs-5 text-black-50">
-            We always know what is ongoing and have a good advice
-          </p>
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <%= image_tag 'kolosek/product-carex2.png', class: 'img-fluid', alt: "" %>
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </section><!-- /section -->
-  <section class="home-ux">
-    <h2 class="text-center h2 mb-5">
-      Quality code which will be presented
-      <br>
-      through excellent UX
-    </h2>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-10 offset-lg-1">
-          <p class="text-center fs-5">
-            The Kolosek team consists of development and designer teams which make sure that clients get to fully
-            experience our product development process — from coming up with a project idea, to design and front-end
-            development, all the way to back-end development
-          </p>
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </section><!-- /section -->
-  <section class="home-other">
-    <h2 class="text-center h2">
-      ..and also
-    </h2>
-    <div class="container">
-      <div class="row h5">
-        <div class="col-md-6 col-lg-4">
-          <ul class="list-unstyled">
-            <li>Product research</li>
-            <li>UI UX Design</li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <ul class="list-unstyled">
-            <li>Test driven development</li>
-            <li>DevOps</li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <ul class="list-unstyled">
-            <li>Project management</li>
-            <li>Marketing & Sales</li>
-          </ul>
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </section><!-- /section -->
-  <section class="home-featured home-featured-our">
-    <div class="container">
-      <div class="row">
-        <div class="col-10 offset-1 d-flex align-items-center flex-column mb-0">
-          <h2 class="text-center h2">
-            Our projects
-          </h2>
-          <p class="text-center fs-5">
-            We are continuously creating new solutions that transform the way you work
-          </p>
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-    <div class="container">
-      <div class="row home-featured-row flex-column-reverse flex-md-row">
-        <div class="col-12 col-md-6">
-          <%= image_tag 'kolosek/featured-movie-pilot.png', class: 'img-fluid', alt: "MoviePilot" %>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="card">
-            <div class="d-flex align-items-center">
-              <h3 class="card-title">MoviePilot</h3>
-              <div class="project-services-icons">
-                <%= image_tag 'kolosek/ic-research.svg', alt: "" %>
-                <%= image_tag 'kolosek/ic-development.svg', alt: "" %>
-              </div>
+          <div class="lr-hiw-card lr-stagger-item">
+            <div class="lr-hiw-card-img">
+              <img src="https://framerusercontent.com/images/1lecFKd5tGPxp2r2bpdZD4G8.png?scale-down-to=512&width=1024&height=1024" alt="Integrate Seamlessly" loading="lazy">
             </div>
-            <h4 class="h5">Your guide to films & cinemas</h4>
-            <p class="card-text">
-              Alternative of IMDB for Germany speaking market with huge number of visitors
-              <br><br>
-              We are sole technology partner using Ruby on Rails and React for several years
-            </p>
-            <a href="https://www.moviepilot.de/" class="btn btn-outline-primary btn-outline-secondary btn-sm" target="_blank" data-text="Check out" data-umami-event="project-checkout">
-              <span>
-                Check out
-              </span>
-            </a>
-          </div>
-        </div>
-      </div><!-- /.row -->
-      <div class="row home-featured-row">
-        <div class="col-12 col-md-6">
-          <div class="card">
-            <div class="d-flex align-items-center">
-              <h3 class="card-title">LiteTracker</h3>
-              <div class="project-services-icons">
-                <%= image_tag 'kolosek/ic-research.svg', alt: "" %>
-                <%= image_tag 'kolosek/ic-design.svg', alt: "" %>
-                <%= image_tag 'kolosek/ic-development.svg', alt: "" %>
-              </div>
-            </div>
-            <h4 class="h5">The most complete Pivotal Tracker successor</h4>
-            <p class="card-text">
-              Agile project management platform for teams migrating from Pivotal Tracker
-              <br><br>
-              Story management, velocity tracking, and real-time collaboration with integrations for GitHub, Slack, and 50+ tools
-            </p>
-            <a href="https://litetracker.com" class="btn btn-outline-primary btn-outline-secondary btn-sm" target="_blank" data-text="Check out" data-umami-event="project-checkout">
-              <span>
-                Check out
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <%= image_tag 'litetracker/hero-image.webp', class: 'img-fluid', alt: "LiteTracker" %>
-        </div>
-      </div><!-- /.row -->
-      <div class="row home-featured-row flex-column-reverse flex-md-row">
-        <div class="col-12 col-md-6">
-          <%= image_tag 'kolosek/featured-ruby-ci.jpg', class: 'img-fluid', alt: "Ruby.ci" %>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="card">
-            <div class="d-flex align-items-center">
-              <h3 class="card-title">Ruby.ci</h3>
-              <div class="project-services-icons">
-                <%= image_tag 'kolosek/ic-research.svg', alt: "" %>
-                <%= image_tag 'kolosek/ic-design.svg', alt: "" %>
-                <%= image_tag 'kolosek/ic-development.svg', alt: "" %>
-              </div>
-            </div>
-            <h4 class="h5">Best CI platform for your Rails application</h4>
-            <p class="card-text">
-              2-min setup with no extra code, tools & UI built for your Ruby on Rails Application
-              <br><br>
-              Most complex code for best user experience
-              Combining Elixir, Ruby and React
-            </p>
-            <a href="https://ruby.ci" class="btn btn-outline-primary btn-outline-secondary btn-sm" target="_blank" data-text="Check out" data-umami-event="project-checkout">
-              <span>
-                Check out
-              </span>
-            </a>
-          </div>
-        </div>
-      </div><!-- /.row -->
-      <div class="row home-featured-row">
-        <div class="col-12 col-md-6">
-          <div class="card">
-            <div class="d-flex align-items-center">
-              <h3 class="card-title">WRAP</h3>
-              <div class="project-services-icons">
-                <%= image_tag 'kolosek/ic-research.svg', alt: "" %>
-                <%= image_tag 'kolosek/ic-development.svg', alt: "" %>
-              </div>
-            </div>
-            <h4 class="h5">Mobile engagement technology</h4>
-            <p class="card-text">
-              Tell your story, provide service, or sell products right in the messaging feed. All with no programming, no waiting, and no apps to download
-              <br><br>
-              The Wrap was a big startup that raised Series B funding. At the time we were working together, Kolosek team had a chance to partner up with around 100 people from the San Francisco office
-            </p>
-            <a href="https://www.wrap.co/" class="btn btn-outline-primary btn-outline-secondary btn-sm" target="_blank" data-text="Check out" data-umami-event="project-checkout">
-              <span>
-                Check out
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-12 col-md-6">
-          <%= image_tag 'kolosek/featured-wrap.png', class: 'img-fluid', alt: "WRAP" %>
-        </div>
-      </div><!-- /.row -->
-      <div class="row home-featured-row flex-column-reverse flex-md-row">
-        <div class="col-12 col-md-6">
-          <%= image_tag 'kolosek/featured-oschool.jpg', class: 'img-fluid', alt: "O.school" %>
-        </div>
-        <div class="col-12 col-md-6">
-          <div class="card">
-            <div class="d-flex align-items-center">
-              <h3 class="card-title">O.school</h3>
-              <div class="project-services-icons">
-                <%= image_tag 'kolosek/ic-research.svg', alt: "" %>
-                <%= image_tag 'kolosek/ic-development.svg', alt: "" %>
-              </div>
-            </div>
-            <h4 class="h5">Educational platform</h4>
-            <p class="card-text">
-              Judgment-free, science-based sexual wellness platform · Initial product planning and execution · A virtual classroom app, based on live streaming technology and moderated chat · Featured on Techcrunch
-            </p>
-            <a href="https://www.o.school/" class="btn btn-outline-primary btn-outline-secondary btn-sm" target="_blank" data-text="Check out" data-umami-event="project-checkout">
-              <span>
-                Check out
-              </span>
-            </a>
-          </div>
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </section><!-- /section -->
-  <section class="home-tabbed">
-    <div class="container">
-      <div class="row">
-        <div class="col-10 offset-1 d-flex align-items-center flex-column mb-0">
-          <h2 class="text-center h2 mb-5">
-            Prioritizing privacy & security
-          </h2>
-          <p class="text-center fs-5">
-            We believe in process driven development & privacy of the data
-            <br>
-            ISO 9001:2013, ISO 27001:2013 USA certification
-          </p>
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div class="d-flex flex-column flex-lg-row align-items-start">
-            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <button class="nav-link active" id="v-pills-quality-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                <span>
-                  Build quality software faster!
-                </span>
-                With our automated optimization tools
-              </button>
-              <button class="nav-link" id="v-pills-no-searching-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                <span>Monitoring and responding on errors</span>
-                So your users stay using the product
-              </button>
-              <button class="nav-link" id="v-pills-report-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                <span>Quality product is properly tested one</span>
-                High test coverage rate, less complaints from users
-              </button>
-              <button class="nav-link" id="v-pills-on-track-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
-                <span>Inside out reports</span>
-                Know exactly what your product is actually doing
-              </button>
-            </div>
-            <div class="tab-content" id="v-pills-tabContent">
-              <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-quality-tab" tabindex="0">
-                <%= image_tag 'kolosek/interface.png', alt: "" %>
-              </div>
-              <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-no-searching-tab" tabindex="0">
-                <%= image_tag 'kolosek/performance.png', alt: "" %>
-              </div>
-              <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-report-tab" tabindex="0">
-                <%= image_tag 'kolosek/traffic.png', alt: "" %>
-              </div>
-              <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-on-track-tab" tabindex="0">
-                <%= image_tag 'kolosek/builds.png', alt: "" %>
-              </div>
+            <div class="lr-hiw-card-text">
+              <h3>Design &amp; Build</h3>
+              <p>Our engineers craft and ship your AI-powered product end to end.</p>
             </div>
           </div>
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container-fluid -->
-  </section><!-- /section -->
-  <section class="partners home-partners">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <p>
-            TRUSTED BY
-          </p>
+          <div class="lr-hiw-card lr-stagger-item">
+            <div class="lr-hiw-card-img">
+              <img src="https://framerusercontent.com/images/eep5x4yVUVfYZ1rrim7nFUhoU.png?scale-down-to=512&width=1024&height=1024" alt="Analyze & Optimize" loading="lazy">
+            </div>
+            <div class="lr-hiw-card-text">
+              <h3>Launch &amp; Scale</h3>
+              <p>We deploy, monitor, and iterate so your product grows with you.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <a href="#"><%= image_tag 'kolosek/logo-closet.png', class: 'img-fluid', alt: "" %></a>
-          <a href="#"><%= image_tag 'kolosek/logo-closet.png', class: 'img-fluid', alt: "" %></a>
-          <a href="#"><%= image_tag 'kolosek/logo-squire.png', class: 'img-fluid', alt: "" %></a>
-          <a href="#"><%= image_tag 'kolosek/logo-simone-leblanc.png', class: 'img-fluid', alt: "" %></a>
-          <a href="#"><%= image_tag 'kolosek/logo-listium.png', class: 'img-fluid', alt: "" %></a>
-          <a href="#" class="d-md-none"><%= image_tag 'kolosek/logo-oschool.png', class: 'img-fluid', alt: "" %></a>
-        </div>
-        <div class="col-12">
-          <a href="#" class="d-none d-md-flex"><%= image_tag 'kolosek/logo-oschool.png', class: 'img-fluid', alt: "" %></a>
-          <a href="#"><%= image_tag 'kolosek/logo-movie-pilot.png', class: 'img-fluid', alt: "" %></a>
-          <a href="#"><%= image_tag 'kolosek/logo-wrap.png', class: 'img-fluid', alt: "" %></a>
-          <a href="#"><%= image_tag 'kolosek/logo-ruby-ci.png', class: 'img-fluid', alt: "" %></a>
-          <a href="#"><%= image_tag 'kolosek/logo-versa-commerce.png', class: 'img-fluid', alt: "" %></a>
-          <a href="#"><%= image_tag 'kolosek/logo-style-myle.png', class: 'img-fluid', alt: "" %></a>
-        </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </section><!-- /section -->
-  <section class="home-blog">
-    <div class="container">
-      <div class="row">
-        <div class="col-10 offset-1 d-flex align-items-center flex-column mb-0">
-          <h2 class="text-center h2">
-            From the blog
-          </h2>
-          <p class="text-center fs-5">
-            Usually we are writing about what we are interested in doing. Visit our <a href="/blog" data-umami-event="cta-blog">Blog</a> for more
-          </p>
-        </div>
-      </div><!-- /.row -->
-      <div class="row">
-        <% @featured.each do |post| %>
-          <%= render 'kolosekcom/pages/partials/post_card', post: post %>
-        <% end %>
-        <% @posts.first(5).each do |post| %>
-          <%= render 'kolosekcom/pages/partials/post_card', post: post %>
-        <% end %>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FEATURES ========== -->
+<section id="features" class="lr-section lr-section-bordered lr-fade-in">
+  <div class="container">
+    <div class="lr-section-header lr-section-header-center">
+      <div class="lr-section-tag">
+        <svg viewBox="0 0 24 24" fill="none" style="width:14px;height:14px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        What we do
       </div>
-    </div><!-- /.container -->
-  </section><!-- /section -->
-</main><!-- /main -->
+      <h2 class="lr-section-heading">AI expertise across<br><span>the full stack</span></h2>
+    </div>
+    <div class="lr-bento lr-stagger">
+      <div class="lr-bento-card lr-stagger-item">
+        <div class="lr-bento-card-img">
+          <img src="https://framerusercontent.com/images/VudWsxtCvkDJRbhx1kEk1NPbwA.png?scale-down-to=1024&width=1412&height=1100" alt="Custom AI Agents" loading="lazy">
+        </div>
+        <div class="lr-bento-card-text">
+          <h3>Custom AI Agents</h3>
+          <p>Autonomous agents tailored to your domain and workflows</p>
+        </div>
+      </div>
+      <div class="lr-bento-card lr-stagger-item">
+        <div class="lr-bento-card-img">
+          <img src="https://framerusercontent.com/images/CSG3W3NHjYPkfBOLiTUNqMoHOM.png?scale-down-to=1024&width=1412&height=1100" alt="LLM Integration" loading="lazy">
+        </div>
+        <div class="lr-bento-card-text">
+          <h3>LLM Integration</h3>
+          <p>Seamless integration of GPT, Claude, and open-source models</p>
+        </div>
+      </div>
+      <div class="lr-bento-card lr-stagger-item">
+        <div class="lr-bento-card-img">
+          <img src="https://framerusercontent.com/images/p3iTTJ2Aj89ayPKuT7qGzqq8I.png?scale-down-to=1024&width=1412&height=1100" alt="Rapid Prototyping" loading="lazy">
+        </div>
+        <div class="lr-bento-card-text">
+          <h3>Rapid Prototyping</h3>
+          <p>From idea to working prototype in days, not months</p>
+        </div>
+      </div>
+      <div class="lr-bento-card lr-stagger-item">
+        <div class="lr-bento-card-img">
+          <img src="https://framerusercontent.com/images/eK9QJ9rhIifSrdd7jGZXxAldQ.png?scale-down-to=1024&width=1412&height=1100" alt="Workflow Automation" loading="lazy">
+        </div>
+        <div class="lr-bento-card-text">
+          <h3>Workflow Automation</h3>
+          <p>Intelligent pipelines that eliminate manual bottlenecks</p>
+        </div>
+      </div>
+      <div class="lr-bento-card lr-stagger-item">
+        <div class="lr-bento-card-img">
+          <img src="https://framerusercontent.com/images/arlJONJLbyH70YZPnL3QnVX5eM.png?scale-down-to=1024&width=1412&height=1100" alt="API & Data Pipelines" loading="lazy">
+        </div>
+        <div class="lr-bento-card-text">
+          <h3>API &amp; Data Pipelines</h3>
+          <p>Connect any data source and build robust AI-ready infrastructure</p>
+        </div>
+      </div>
+      <div class="lr-bento-card lr-stagger-item">
+        <div class="lr-bento-card-img">
+          <img src="https://framerusercontent.com/images/WUpw5NuBWSiEFM7cQDBNE58yQ.png?scale-down-to=1024&width=1412&height=1100" alt="Full-Stack Development" loading="lazy">
+        </div>
+        <div class="lr-bento-card-text">
+          <h3>Full-Stack Development</h3>
+          <p>End-to-end product engineering with Rails, React, and beyond</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== METRICS ========== -->
+<section class="lr-section lr-section-bordered lr-fade-in">
+  <div class="container">
+    <div class="lr-section-header lr-section-header-center">
+      <div class="lr-section-tag">
+        <svg viewBox="0 0 24 24" fill="none" style="width:14px;height:14px;"><path d="M18 20V10M12 20V4M6 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Results
+      </div>
+      <h2 class="lr-section-heading">Why teams choose<br><span>Native AI Agency</span></h2>
+      <p class="lr-section-desc">Measurable impact from day one, backed by deep AI and engineering expertise</p>
+    </div>
+    <div class="lr-metrics-grid lr-stagger">
+      <div class="lr-metric-card lr-stagger-item">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          3x faster delivery
+        </h3>
+        <p>AI-assisted development accelerates your time to market compared to traditional agencies.</p>
+      </div>
+      <div class="lr-metric-card lr-stagger-item">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          50+ AI projects shipped
+        </h3>
+        <p>From intelligent chatbots to full AI platforms, we've delivered across every industry.</p>
+      </div>
+      <div class="lr-metric-card lr-stagger-item">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="7" r="4" stroke="currentColor" stroke-width="2"/><path d="M20 8v6M23 11h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          Dedicated AI team
+        </h3>
+        <p>Senior engineers with hands-on experience in LLMs, RAG, fine-tuning, and production ML systems.</p>
+      </div>
+      <div class="lr-metric-card lr-stagger-item">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 20V10M18 20V4M6 20v-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          End-to-end ownership
+        </h3>
+        <p>We handle architecture, development, deployment, and ongoing optimization under one roof.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PRICING ========== -->
+<section id="pricing" class="lr-section lr-section-bordered lr-fade-in">
+  <div class="container">
+    <div class="lr-section-header lr-section-header-center">
+      <div class="lr-section-tag">
+        <svg viewBox="0 0 24 24" fill="none" style="width:14px;height:14px;"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Engagement models
+      </div>
+      <h2 class="lr-section-heading">Flexible <span>engagement</span></h2>
+      <p class="lr-section-desc">Choose the model that fits your stage, from a quick prototype to a dedicated AI team.</p>
+    </div>
+    <div class="lr-pricing-cards lr-stagger">
+      <!-- Project-Based -->
+      <div class="lr-pricing-card lr-stagger-item">
+        <div class="lr-pricing-name">
+          <h3>Project-Based</h3>
+        </div>
+        <p class="lr-pricing-desc">Fixed scope, fixed timeline, fixed price. Perfect for defined projects.</p>
+        <div class="lr-pricing-price">
+          <span class="dollar">$</span>
+          <span class="amount">25k</span>
+          <span class="period">+</span>
+        </div>
+        <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">Starting price</p>
+        <hr class="lr-pricing-divider">
+        <div class="lr-pricing-features">
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Fixed scope & timeline
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Dedicated team
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Weekly progress updates
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Full documentation
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            3 months support
+          </div>
+        </div>
+        <div class="lr-pricing-cta">
+          <a href="/contact" class="lr-btn lr-btn-secondary">Get a quote</a>
+        </div>
+      </div>
+
+      <!-- Time & Materials -->
+      <div class="lr-pricing-card lr-pricing-card-featured lr-stagger-item">
+        <span class="lr-popular-badge">Most Popular</span>
+        <div class="lr-pricing-name">
+          <h3>Time & Materials</h3>
+        </div>
+        <p class="lr-pricing-desc">Flexible scope, pay as you go. Ideal for evolving projects.</p>
+        <div class="lr-pricing-price">
+          <span class="dollar">$</span>
+          <span class="amount">8k</span>
+          <span class="period">/week</span>
+        </div>
+        <p style="font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 20px;">Per senior engineer</p>
+        <hr class="lr-pricing-divider">
+        <div class="lr-pricing-features">
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Flexible scope
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Scale team up/down
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Daily standups
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Direct access to engineers
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Continuous delivery
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Cancel anytime
+          </div>
+        </div>
+        <div class="lr-pricing-cta">
+          <a href="/contact" class="lr-btn lr-btn-primary">Start now</a>
+        </div>
+      </div>
+
+      <!-- Dedicated Team -->
+      <div class="lr-pricing-card lr-stagger-item">
+        <div class="lr-pricing-name">
+          <h3>Dedicated Team</h3>
+        </div>
+        <p class="lr-pricing-desc">Long-term partnership with a full AI-native team.</p>
+        <div class="lr-pricing-price">
+          <span class="amount" style="font-size: 32px;">Custom</span>
+        </div>
+        <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 20px;">3-5 engineers</p>
+        <hr class="lr-pricing-divider">
+        <div class="lr-pricing-features">
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Full-stack team
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Product ownership
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Architecture guidance
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Priority support
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Quarterly reviews
+          </div>
+          <div class="lr-pricing-feature">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Custom SLA
+          </div>
+        </div>
+        <div class="lr-pricing-cta">
+          <a href="/contact" class="lr-btn lr-btn-secondary">Let's talk</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section id="faq" class="lr-section lr-section-bordered lr-fade-in">
+  <div class="container">
+    <div class="lr-section-header lr-section-header-center">
+      <h2 class="lr-section-heading">Frequently asked questions</h2>
+      <p class="lr-section-desc">Everything you need to know about working with us</p>
+    </div>
+    <div class="lr-faq-list lr-stagger">
+      <div class="lr-faq-item lr-stagger-item">
+        <button class="lr-faq-question">
+          What kind of AI projects do you build?
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lr-faq-answer">
+          <p>We build custom AI agents, LLM-powered applications, RAG systems, intelligent automation pipelines, and full-stack products with AI at the core. If it involves AI and software, we can build it.</p>
+        </div>
+      </div>
+      <div class="lr-faq-item lr-stagger-item">
+        <button class="lr-faq-question">
+          What technologies and AI models do you work with?
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lr-faq-answer">
+          <p>We work with OpenAI, Anthropic Claude, open-source models like Llama and Mistral, plus frameworks like LangChain, Rails, React, and Python. We pick the best tools for your specific use case.</p>
+        </div>
+      </div>
+      <div class="lr-faq-item lr-stagger-item">
+        <button class="lr-faq-question">
+          How long does a typical project take?
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lr-faq-answer">
+          <p>Discovery sprints take 2 weeks. Full product builds typically range from 6-16 weeks depending on scope. We move fast with AI-assisted development and ship iteratively so you see progress early.</p>
+        </div>
+      </div>
+      <div class="lr-faq-item lr-stagger-item">
+        <button class="lr-faq-question">
+          Do you work with startups or only enterprises?
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lr-faq-answer">
+          <p>Both. We've helped early-stage startups build their first AI-powered MVP and partnered with established companies to integrate AI into existing products. Our engagement models adapt to your stage and budget.</p>
+        </div>
+      </div>
+      <div class="lr-faq-item lr-stagger-item">
+        <button class="lr-faq-question">
+          Will we own the code and IP?
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lr-faq-answer">
+          <p>Yes, 100%. Everything we build for you is yours. Full source code, documentation, and deployment assets are transferred to you. No lock-in, no hidden dependencies.</p>
+        </div>
+      </div>
+      <div class="lr-faq-item lr-stagger-item">
+        <button class="lr-faq-question">
+          How do we get started?
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="lr-faq-answer">
+          <p>Reach out through our contact page. We'll schedule a free discovery call to understand your goals, then propose the right engagement model and timeline. No commitment required to start the conversation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="lr-cta lr-fade-in">
+  <div class="container">
+    <h2>Ready to build something<br><span>intelligent together?</span></h2>
+    <a href="/contact" class="lr-btn lr-btn-primary lr-btn-lg">
+      Start a project
+      <svg viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
