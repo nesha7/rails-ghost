@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def ghost_client
-    @ghost_client ||= Ghost::Client.new(request.host)
+    @ghost_client ||= Ghost::Client.new(Site::Config.site.app_domain.presence || request.host)
   end
 
   def set_settings
