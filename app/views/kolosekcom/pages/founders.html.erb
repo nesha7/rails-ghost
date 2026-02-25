@@ -1,0 +1,649 @@
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "kolosek", {origin:"https://cal.com"});
+  Cal.ns.kolosek("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
+
+<!-- ========== HERO ========== -->
+<section class="lr-hero lr-fade-in" style="padding:60px 0 80px;text-align:left;">
+  <div class="lr-hero-bg-nodes">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <div class="container">
+    <div class="founders-hero-grid">
+      <!-- Left column: Copy + CTAs -->
+      <div class="founders-hero-copy">
+        <h1 style="text-align:left;margin-left:0;margin-right:0;max-width:none;font-size:48px;line-height:1.1;">Founder-Led. <span>ROI-Driven.</span></h1>
+        <p style="text-align:left;margin-left:0;margin-right:0;max-width:none;">Hands-on founder involvement, limited slots, every decision focused on ROI.</p>
+
+        <div class="lr-hero-buttons" style="justify-content:flex-start;">
+          <a href="#" class="lr-btn lr-btn-primary lr-btn-lg" data-cal-link="neshaz/intro" data-cal-namespace="kolosek" data-cal-config='{"layout":"month_view"}' data-umami-event="cta-chat" data-umami-event-location="founders-hero" aria-label="Let's have a chat">
+            Let's have a chat
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="/startups" class="lr-btn lr-btn-secondary lr-btn-lg" data-umami-event="cta-how-it-works" data-umami-event-location="founders-hero" aria-label="See how it works">
+            See how it works
+          </a>
+        </div>
+
+        <!-- Scarcity line -->
+        <p style="margin-top:24px;font-size:14px;color:var(--text-secondary);line-height:1.6;">
+          Limited annual slots &mdash; by design, so your product gets real founder attention.
+        </p>
+
+        <!-- Microproof -->
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;">
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--text-secondary);background:var(--bg-light);border:1px solid var(--border-color);border-radius:999px;padding:6px 14px;">
+            <svg style="width:14px;height:14px;color:var(--accent-green);flex-shrink:0;" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Senior-only engineers
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--text-secondary);background:var(--bg-light);border:1px solid var(--border-color);border-radius:999px;padding:6px 14px;">
+            <svg style="width:14px;height:14px;color:var(--accent-green);flex-shrink:0;" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Weekly founder sync
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--text-secondary);background:var(--bg-light);border:1px solid var(--border-color);border-radius:999px;padding:6px 14px;">
+            <svg style="width:14px;height:14px;color:var(--accent-green);flex-shrink:0;" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            ROI-driven delivery
+          </span>
+        </div>
+      </div>
+
+      <!-- Right column: Founder card -->
+      <div class="founders-hero-card-wrap">
+        <div class="founders-card">
+          <div class="founders-card-avatar">
+            <%= image_tag 'litetracker/founder.avif', alt: 'Photo of Nesha Zoric, founder', style: 'width:100%;height:100%;object-fit:cover;object-position:right center;border-radius:50%;' %>
+          </div>
+          <h3 style="font-size:20px;font-weight:600;margin-bottom:2px;color:var(--text-primary);">Nesha Zoric</h3>
+          <p style="font-size:14px;font-weight:500;color:var(--accent-blue);margin-bottom:12px;">Founder &amp; CEO, Kolosek</p>
+
+          <!-- Social links -->
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <a href="https://github.com/neshaz" target="_blank" aria-label="GitHub" style="width:32px;height:32px;border-radius:8px;border:1px solid var(--border-color);display:flex;align-items:center;justify-content:center;transition:background 0.2s;" data-umami-event="founder-social-github">
+              <svg viewBox="0 0 24 24" fill="none" style="width:16px;height:16px;color:var(--text-secondary);"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://rs.linkedin.com/in/neshaz" target="_blank" aria-label="LinkedIn" style="width:32px;height:32px;border-radius:8px;border:1px solid var(--border-color);display:flex;align-items:center;justify-content:center;transition:background 0.2s;" data-umami-event="founder-social-linkedin">
+              <svg viewBox="0 0 24 24" fill="none" style="width:16px;height:16px;color:var(--text-secondary);"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+
+          <!-- Stats -->
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px;width:100%;margin-bottom:16px;">
+            <span style="display:inline-flex;align-items:center;gap:5px;background:var(--bg-light);border-radius:999px;padding:4px 12px;font-size:12px;color:var(--text-secondary);"><strong style="color:var(--text-primary);">15+</strong> yrs</span>
+            <span style="display:inline-flex;align-items:center;gap:5px;background:var(--bg-light);border-radius:999px;padding:4px 12px;font-size:12px;color:var(--text-secondary);"><strong style="color:var(--text-primary);">50+</strong> products</span>
+            <span style="display:inline-flex;align-items:center;gap:5px;background:var(--bg-light);border-radius:999px;padding:4px 12px;font-size:12px;color:var(--text-secondary);"><strong style="color:var(--accent-green);">12</strong> exits</span>
+            <span style="display:inline-flex;align-items:center;gap:5px;background:var(--bg-light);border-radius:999px;padding:4px 12px;font-size:12px;color:var(--text-secondary);"><strong style="color:var(--text-secondary);">5</strong> failures</span>
+          </div>
+
+          <!-- Track record -->
+          <div style="display:flex;flex-direction:column;gap:8px;width:100%;padding-top:16px;border-top:1px solid var(--border-color);">
+            <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);">
+              <svg style="width:14px;height:14px;color:var(--accent-blue);flex-shrink:0;" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Helped clients raise $10M+ in funding
+            </span>
+            <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);">
+              <svg style="width:14px;height:14px;color:var(--accent-blue);flex-shrink:0;" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Led products through 3 acquisitions
+            </span>
+            <span style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);">
+              <svg style="width:14px;height:14px;color:var(--accent-blue);flex-shrink:0;" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              5 failures that shaped the process
+            </span>
+          </div>
+
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border-color);width:100%;">
+            <a href="#" class="lr-btn lr-btn-primary" style="width:100%;justify-content:center;" data-cal-link="neshaz/intro" data-cal-namespace="kolosek" data-cal-config='{"layout":"month_view"}' data-umami-event="cta-chat" data-umami-event-location="founders-card" aria-label="Let's have a chat">
+              Let's have a chat
+              <svg viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .founders-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 64px;
+    align-items: center;
+  }
+  .founders-hero-copy { display: flex; flex-direction: column; }
+  .founders-hero-card-wrap { display: flex; justify-content: center; }
+  .founders-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+    width: 100%;
+    max-width: 340px;
+  }
+  .founders-card-avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 3px solid var(--accent-blue-light);
+  }
+  @media (max-width: 1024px) {
+    .founders-hero-grid { grid-template-columns: 1fr 320px; gap: 40px; }
+  }
+  @media (max-width: 768px) {
+    .founders-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .founders-hero-copy { order: 1; }
+    .founders-hero-card-wrap { order: 6; }
+    .founders-hero-copy .lr-hero-tag { order: 1; }
+    .founders-hero-copy h1 { order: 2; font-size: 32px !important; }
+    .founders-hero-copy > p:first-of-type { order: 3; }
+    .founders-hero-copy .lr-hero-buttons { order: 4; }
+    .founders-card { max-width: 100%; }
+  }
+</style>
+
+<!-- ========== SOCIAL PROOF ========== -->
+<section class="lr-trusted lr-fade-in">
+  <div class="container">
+    <p>Trusted by startups and enterprises we've built for</p>
+    <div class="lr-logo-ticker">
+      <div class="lr-logo-track">
+        <%= image_tag 'kolosek/logo-closet.png', alt: 'Closet' %>
+        <%= image_tag 'kolosek/logo-squire.png', alt: 'Squire' %>
+        <%= image_tag 'kolosek/logo-simone-leblanc.png', alt: 'Simone LeBlanc' %>
+        <%= image_tag 'kolosek/logo-listium.png', alt: 'Listium' %>
+        <%= image_tag 'kolosek/logo-oschool.png', alt: 'O.school' %>
+        <%= image_tag 'kolosek/logo-movie-pilot.png', alt: 'Movie Pilot' %>
+        <%= image_tag 'kolosek/logo-wrap.png', alt: 'Wrap' %>
+        <%= image_tag 'kolosek/logo-ruby-ci.png', alt: 'RubyCI' %>
+        <%= image_tag 'kolosek/logo-versa-commerce.png', alt: 'VersaCommerce' %>
+        <%= image_tag 'kolosek/logo-style-myle.png', alt: 'StyleMyle' %>
+        <%= image_tag 'kolosek/logo-closet.png', alt: 'Closet' %>
+        <%= image_tag 'kolosek/logo-squire.png', alt: 'Squire' %>
+        <%= image_tag 'kolosek/logo-simone-leblanc.png', alt: 'Simone LeBlanc' %>
+        <%= image_tag 'kolosek/logo-listium.png', alt: 'Listium' %>
+        <%= image_tag 'kolosek/logo-oschool.png', alt: 'O.school' %>
+        <%= image_tag 'kolosek/logo-movie-pilot.png', alt: 'Movie Pilot' %>
+        <%= image_tag 'kolosek/logo-wrap.png', alt: 'Wrap' %>
+        <%= image_tag 'kolosek/logo-ruby-ci.png', alt: 'RubyCI' %>
+        <%= image_tag 'kolosek/logo-versa-commerce.png', alt: 'VersaCommerce' %>
+        <%= image_tag 'kolosek/logo-style-myle.png', alt: 'StyleMyle' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EXECUTION PROBLEM ========== -->
+<section class="lr-section lr-section-bordered lr-fade-in">
+  <div class="container">
+    <div class="lr-section-header lr-section-header-center">
+      <div class="lr-section-tag">
+        <svg viewBox="0 0 24 24" fill="none" style="width:14px;height:14px;"><path d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        The problem
+      </div>
+      <h2 class="lr-section-heading">It's an Execution Problem.</h2>
+    </div>
+
+    <div class="lr-value-grid lr-stagger" style="grid-template-columns: repeat(3, 1fr);">
+      <!-- You can have -->
+      <div class="lr-value-card lr-stagger-item">
+        <h3 style="margin-bottom: 20px;">You can have:</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--accent-green);" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Great developers
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--accent-green);" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            A promising idea
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--accent-green);" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Early traction
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--accent-green);" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            AI speeding up delivery
+          </div>
+        </div>
+        <p style="margin-top:20px;font-size:14px;font-weight:500;color:var(--text-primary);">And still waste months building the wrong things.</p>
+      </div>
+
+      <!-- Without structure -->
+      <div class="lr-value-card lr-stagger-item">
+        <h3 style="margin-bottom: 20px;">Because without structure:</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--text-secondary);" viewBox="0 0 20 20" fill="currentColor"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>
+            Backlogs become dumping grounds
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--text-secondary);" viewBox="0 0 20 20" fill="currentColor"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>
+            Priorities shift weekly
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--text-secondary);" viewBox="0 0 20 20" fill="currentColor"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>
+            Features ship without validation
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--text-secondary);" viewBox="0 0 20 20" fill="currentColor"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>
+            Technical debt quietly accumulates
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--text-secondary);" viewBox="0 0 20 20" fill="currentColor"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>
+            Effort doesn't translate into ROI
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical debt graph -->
+      <div class="lr-value-card lr-stagger-item">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+          <h3 style="margin-bottom:0;">Technical debt</h3>
+          <span style="font-size:13px;color:var(--text-secondary);">cost/sprint</span>
+        </div>
+        <div>
+          <svg viewBox="0 0 280 200" style="width:100%;height:auto;" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="40" x2="280" y2="40" stroke="var(--border-color)" stroke-width="1"/>
+            <line x1="0" y1="80" x2="280" y2="80" stroke="var(--border-color)" stroke-width="1"/>
+            <line x1="0" y1="120" x2="280" y2="120" stroke="var(--border-color)" stroke-width="1"/>
+            <line x1="0" y1="160" x2="280" y2="160" stroke="var(--border-color)" stroke-width="1"/>
+            <text x="0" y="38" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif">High</text>
+            <text x="0" y="118" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif">Med</text>
+            <text x="0" y="158" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif">Low</text>
+            <defs>
+              <linearGradient id="debtGradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="var(--accent-blue)" stop-opacity="0.12"/>
+                <stop offset="100%" stop-color="var(--accent-blue)" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M30 168 C50 166, 60 164, 75 160 C90 156, 100 152, 115 146 C130 138, 140 130, 155 118 C170 106, 180 96, 195 82 C210 68, 220 58, 235 46 C250 34, 258 28, 265 24 L265 180 L30 180 Z" fill="url(#debtGradient)"/>
+            <path d="M30 168 C50 166, 60 164, 75 160 C90 156, 100 152, 115 146 C130 138, 140 130, 155 118 C170 106, 180 96, 195 82 C210 68, 220 58, 235 46 C250 34, 258 28, 265 24" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 3"/>
+            <circle cx="30" cy="168" r="3" fill="var(--accent-blue)"/>
+            <circle cx="75" cy="160" r="3" fill="var(--accent-blue)"/>
+            <circle cx="115" cy="146" r="3" fill="var(--accent-blue)"/>
+            <circle cx="155" cy="118" r="3" fill="var(--accent-blue)"/>
+            <circle cx="195" cy="82" r="3" fill="var(--accent-blue)"/>
+            <circle cx="235" cy="46" r="3" fill="var(--accent-blue)"/>
+            <circle cx="265" cy="24" r="3" fill="var(--accent-blue)"/>
+            <text x="30" y="196" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif" text-anchor="middle">Mo 1</text>
+            <text x="115" y="196" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif" text-anchor="middle">Mo 3</text>
+            <text x="195" y="196" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif" text-anchor="middle">Mo 6</text>
+            <text x="265" y="196" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif" text-anchor="middle">Mo 9</text>
+          </svg>
+        </div>
+        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border-color);">
+          <p style="font-size:13px;color:var(--text-secondary);">Without structure, debt compounds exponentially. Rework costs more than building right.</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:48px;text-align:center;font-size:18px;font-weight:500;color:var(--text-primary);">
+      Unstructured execution is the biggest hidden cost in early-stage startups.
+    </p>
+  </div>
+</section>
+
+<!-- ========== STRUCTURE BEATS FLEXIBILITY ========== -->
+<section class="lr-section lr-section-bordered lr-fade-in" style="background:var(--bg-light);">
+  <div class="container">
+    <div class="lr-section-header lr-section-header-center">
+      <h2 class="lr-section-heading">Structure Beats <span>Flexibility</span></h2>
+      <p class="lr-section-desc">Open-ended tools feel powerful. But without guardrails, teams drift. Here's what that looks like over 6 months.</p>
+    </div>
+
+    <!-- Graph -->
+    <div style="background:var(--white);border:1px solid var(--border-color);border-radius:16px;padding:32px;margin-bottom:40px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;">
+        <p style="font-size:14px;font-weight:500;color:var(--text-primary);">Sprint output over time</p>
+        <div style="display:flex;align-items:center;gap:24px;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="width:20px;height:0;border-top:2px dashed var(--text-secondary);"></span>
+            <span style="font-size:12px;color:var(--text-secondary);">Blank canvas</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="width:20px;height:2px;background:var(--accent-blue);"></span>
+            <span style="font-size:12px;color:var(--text-secondary);">With guardrails</span>
+          </div>
+        </div>
+      </div>
+      <svg viewBox="0 0 480 200" style="width:100%;height:auto;" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="30" y1="30" x2="460" y2="30" stroke="var(--border-color)" stroke-width="1"/>
+        <line x1="30" y1="70" x2="460" y2="70" stroke="var(--border-color)" stroke-width="1"/>
+        <line x1="30" y1="110" x2="460" y2="110" stroke="var(--border-color)" stroke-width="1"/>
+        <line x1="30" y1="150" x2="460" y2="150" stroke="var(--border-color)" stroke-width="1"/>
+        <text x="0" y="34" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif">High</text>
+        <text x="0" y="114" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif">Med</text>
+        <text x="0" y="154" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif">Low</text>
+        <defs>
+          <linearGradient id="guardrailsGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2193F4" stop-opacity="0.08"/>
+            <stop offset="100%" stop-color="#2193F4" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path d="M40 148 C80 140, 110 128, 150 112 C190 96, 220 80, 260 66 C300 54, 330 44, 370 36 C410 30, 440 28, 450 27 L450 170 L40 170 Z" fill="url(#guardrailsGrad)"/>
+        <path d="M40 148 C70 142, 90 136, 120 130 C150 124, 170 122, 200 124 C230 126, 250 130, 280 136 C310 142, 330 146, 360 150 C390 154, 420 156, 450 158" stroke="var(--text-secondary)" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 4"/>
+        <path d="M40 148 C80 140, 110 128, 150 112 C190 96, 220 80, 260 66 C300 54, 330 44, 370 36 C410 30, 440 28, 450 27" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="40" cy="148" r="3" fill="var(--accent-blue)"/>
+        <circle cx="150" cy="112" r="3" fill="var(--accent-blue)"/>
+        <circle cx="260" cy="66" r="3" fill="var(--accent-blue)"/>
+        <circle cx="370" cy="36" r="3" fill="var(--accent-blue)"/>
+        <circle cx="450" cy="27" r="3" fill="var(--accent-blue)"/>
+        <circle cx="40" cy="148" r="3" fill="var(--text-secondary)"/>
+        <circle cx="150" cy="124" r="3" fill="var(--text-secondary)"/>
+        <circle cx="260" cy="136" r="3" fill="var(--text-secondary)"/>
+        <circle cx="370" cy="150" r="3" fill="var(--text-secondary)"/>
+        <circle cx="450" cy="158" r="3" fill="var(--text-secondary)"/>
+        <text x="40" y="188" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif" text-anchor="middle">Mo 1</text>
+        <text x="150" y="188" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif" text-anchor="middle">Mo 2</text>
+        <text x="260" y="188" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif" text-anchor="middle">Mo 3</text>
+        <text x="370" y="188" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif" text-anchor="middle">Mo 5</text>
+        <text x="450" y="188" fill="var(--text-secondary)" font-size="9" font-family="Geist, sans-serif" text-anchor="middle">Mo 6</text>
+      </svg>
+    </div>
+
+    <div class="lr-metrics-grid lr-stagger" style="grid-template-columns: repeat(2, 1fr); margin-top: 0;">
+      <div class="lr-value-card lr-stagger-item">
+        <h3 style="margin-bottom: 20px;">Blank canvas tools</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--text-secondary);" viewBox="0 0 20 20" fill="currentColor"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>
+            Empty boards, no direction
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--text-secondary);" viewBox="0 0 20 20" fill="currentColor"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>
+            Endless customization overhead
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--text-secondary);" viewBox="0 0 20 20" fill="currentColor"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>
+            Process reinvented every sprint
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-secondary);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--text-secondary);" viewBox="0 0 20 20" fill="currentColor"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"/></svg>
+            Output plateaus, then declines
+          </div>
+        </div>
+      </div>
+
+      <div class="lr-value-card lr-stagger-item" style="background:var(--text-primary);border-color:var(--text-primary);">
+        <h3 style="margin-bottom: 20px; color: var(--white);">With guardrails</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--white);" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Story-driven workflow from day one
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--white);" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Built-in iteration structure
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--white);" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Startup-focused blueprint
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:rgba(255,255,255,0.7);">
+            <svg style="width:18px;height:18px;flex-shrink:0;color:var(--white);" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Compounding output every month
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:48px;text-align:center;font-size:18px;font-weight:500;color:var(--text-primary);">
+      You don't need more freedom. You need direction.
+    </p>
+  </div>
+</section>
+
+<!-- ========== MAXIMIZE ROI ========== -->
+<section class="lr-section lr-section-bordered lr-fade-in">
+  <div class="container">
+    <div class="lr-section-header lr-section-header-center">
+      <div class="lr-section-tag">
+        <svg viewBox="0 0 24 24" fill="none" style="width:14px;height:14px;"><path d="M23 6l-9.5 9.5-5-5L1 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 6h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        ROI-driven
+      </div>
+      <h2 class="lr-section-heading">Designed to Maximize <span>Product ROI</span></h2>
+      <p class="lr-section-desc">High ROI products share patterns:</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;">
+      <!-- Principles list -->
+      <div style="background:var(--white);border:1px solid var(--border-color);border-radius:16px;padding:32px;">
+        <div style="display:flex;flex-direction:column;border-top:1px solid var(--border-color);">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--border-color);">
+            <p style="font-size:14px;color:var(--text-secondary);">Clear user stories before code</p>
+            <span style="font-size:14px;font-weight:600;color:var(--text-primary);">1</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--border-color);">
+            <p style="font-size:14px;color:var(--text-secondary);">Structured iteration cycles</p>
+            <span style="font-size:14px;font-weight:600;color:var(--text-primary);">2</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--border-color);">
+            <p style="font-size:14px;color:var(--text-secondary);">Intentional prioritization</p>
+            <span style="font-size:14px;font-weight:600;color:var(--text-primary);">3</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--border-color);">
+            <p style="font-size:14px;color:var(--text-secondary);">Continuous validation</p>
+            <span style="font-size:14px;font-weight:600;color:var(--text-primary);">4</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;">
+            <p style="font-size:14px;color:var(--text-secondary);">Measured velocity</p>
+            <span style="font-size:14px;font-weight:600;color:var(--text-primary);">5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Velocity graph -->
+      <div style="background:var(--white);border:1px solid var(--border-color);border-radius:16px;padding:32px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;">
+          <p style="font-size:14px;font-weight:500;color:var(--text-primary);">Velocity over time</p>
+          <span style="font-size:13px;color:var(--text-secondary);">pts/sprint</span>
+        </div>
+        <svg viewBox="0 0 400 200" style="width:100%;height:auto;" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="40" x2="400" y2="40" stroke="var(--border-color)" stroke-width="1"/>
+          <line x1="0" y1="80" x2="400" y2="80" stroke="var(--border-color)" stroke-width="1"/>
+          <line x1="0" y1="120" x2="400" y2="120" stroke="var(--border-color)" stroke-width="1"/>
+          <line x1="0" y1="160" x2="400" y2="160" stroke="var(--border-color)" stroke-width="1"/>
+          <text x="0" y="38" fill="var(--text-secondary)" font-size="10" font-family="Geist, sans-serif">40</text>
+          <text x="0" y="78" fill="var(--text-secondary)" font-size="10" font-family="Geist, sans-serif">30</text>
+          <text x="0" y="118" fill="var(--text-secondary)" font-size="10" font-family="Geist, sans-serif">20</text>
+          <text x="0" y="158" fill="var(--text-secondary)" font-size="10" font-family="Geist, sans-serif">10</text>
+          <defs>
+            <linearGradient id="velocityGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2193F4" stop-opacity="0.1"/>
+              <stop offset="100%" stop-color="#2193F4" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M30 165 C55 162, 65 158, 80 155 C95 152, 105 148, 120 142 C135 136, 145 130, 160 122 C175 114, 185 108, 200 100 C215 92, 225 86, 240 78 C255 70, 265 65, 280 58 C295 51, 305 47, 320 42 C335 37, 345 35, 360 32 C375 29, 385 28, 390 27 L390 180 L30 180 Z" fill="url(#velocityGradient)"/>
+          <path d="M30 165 C55 162, 65 158, 80 155 C95 152, 105 148, 120 142 C135 136, 145 130, 160 122 C175 114, 185 108, 200 100 C215 92, 225 86, 240 78 C255 70, 265 65, 280 58 C295 51, 305 47, 320 42 C335 37, 345 35, 360 32 C375 29, 385 28, 390 27" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="30" cy="165" r="3" fill="var(--accent-blue)"/>
+          <circle cx="80" cy="155" r="3" fill="var(--accent-blue)"/>
+          <circle cx="120" cy="142" r="3" fill="var(--accent-blue)"/>
+          <circle cx="160" cy="122" r="3" fill="var(--accent-blue)"/>
+          <circle cx="200" cy="100" r="3" fill="var(--accent-blue)"/>
+          <circle cx="240" cy="78" r="3" fill="var(--accent-blue)"/>
+          <circle cx="280" cy="58" r="3" fill="var(--accent-blue)"/>
+          <circle cx="320" cy="42" r="3" fill="var(--accent-blue)"/>
+          <circle cx="360" cy="32" r="3" fill="var(--accent-blue)"/>
+          <circle cx="390" cy="27" r="3" fill="var(--accent-blue)"/>
+          <text x="30" y="196" fill="var(--text-secondary)" font-size="10" font-family="Geist, sans-serif" text-anchor="middle">Wk 1</text>
+          <text x="120" y="196" fill="var(--text-secondary)" font-size="10" font-family="Geist, sans-serif" text-anchor="middle">Wk 4</text>
+          <text x="210" y="196" fill="var(--text-secondary)" font-size="10" font-family="Geist, sans-serif" text-anchor="middle">Wk 8</text>
+          <text x="300" y="196" fill="var(--text-secondary)" font-size="10" font-family="Geist, sans-serif" text-anchor="middle">Wk 10</text>
+          <text x="390" y="196" fill="var(--text-secondary)" font-size="10" font-family="Geist, sans-serif" text-anchor="middle">Wk 12</text>
+        </svg>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:16px;border-top:1px solid var(--border-color);">
+          <div>
+            <p style="font-size:12px;color:var(--text-secondary);">Month 1</p>
+            <p style="font-size:14px;font-weight:600;color:var(--text-primary);">8 pts</p>
+          </div>
+          <div>
+            <p style="font-size:12px;color:var(--text-secondary);">Month 2</p>
+            <p style="font-size:14px;font-weight:600;color:var(--text-primary);">21 pts</p>
+          </div>
+          <div>
+            <p style="font-size:12px;color:var(--text-secondary);">Month 3</p>
+            <p style="font-size:14px;font-weight:600;color:var(--text-primary);">38 pts</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:48px;text-align:center;">
+      <p style="font-size:16px;color:var(--text-secondary);">Every story exists for a reason. Every sprint has focus. Every release moves learning forward.</p>
+      <p style="margin-top:16px;font-size:18px;font-weight:500;color:var(--text-primary);">Execution becomes predictable instead of reactive.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOW IT WORKS ========== -->
+<section id="process" class="lr-section lr-section-bordered lr-fade-in" style="background:var(--bg-light);">
+  <div class="container">
+    <div class="lr-section-header lr-section-header-center">
+      <div class="lr-section-tag">
+        <svg viewBox="0 0 24 24" fill="none" style="width:14px;height:14px;"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Our process
+      </div>
+      <h2 class="lr-section-heading">How It <span>Works</span></h2>
+    </div>
+
+    <div class="lr-value-grid lr-stagger" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="lr-value-card lr-stagger-item">
+        <div style="width:40px;height:40px;border-radius:50%;background:var(--text-primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;margin-bottom:16px;">1</div>
+        <h3>Capture Real User Stories</h3>
+        <p>Define outcomes, not just tasks. Every story maps to a user need before a single line of code is written.</p>
+      </div>
+      <div class="lr-value-card lr-stagger-item">
+        <div style="width:40px;height:40px;border-radius:50%;background:var(--text-primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;margin-bottom:16px;">2</div>
+        <h3>Structure Into Iterations</h3>
+        <p>Avoid backlog chaos with disciplined cycles. Each iteration has a clear scope and measurable goal.</p>
+      </div>
+      <div class="lr-value-card lr-stagger-item">
+        <div style="width:40px;height:40px;border-radius:50%;background:var(--text-primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;margin-bottom:16px;">3</div>
+        <h3>Prioritize Based on Learning</h3>
+        <p>Build what moves the metric. Data from past sprints shapes what ships next.</p>
+      </div>
+      <div class="lr-value-card lr-stagger-item">
+        <div style="width:40px;height:40px;border-radius:50%;background:var(--text-primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;margin-bottom:16px;">4</div>
+        <h3>Ship With Intent</h3>
+        <p>Stop feature accumulation without direction. Every release has purpose and delivers value.</p>
+      </div>
+      <div class="lr-value-card lr-stagger-item">
+        <div style="width:40px;height:40px;border-radius:50%;background:var(--text-primary);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;margin-bottom:16px;">5</div>
+        <h3>Measure Execution Health</h3>
+        <p>Track velocity and progress transparently. Know exactly where your team stands every week.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:48px;text-align:center;font-size:14px;font-style:italic;color:var(--text-secondary);">
+      Millions of stories have been structured using this framework.
+    </p>
+  </div>
+</section>
+
+<!-- ========== BUILT FOR FOUNDERS ========== -->
+<section class="lr-section lr-section-bordered lr-fade-in">
+  <div class="container">
+    <div class="lr-section-header lr-section-header-center">
+      <h2 class="lr-section-heading">Built for <span>Founders</span></h2>
+      <p class="lr-section-desc">This isn't enterprise overhead. This isn't bloated agile dogma.</p>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;">
+      <span style="display:inline-flex;align-items:center;background:var(--white);border:1px solid var(--border-color);border-radius:999px;padding:10px 20px;font-size:14px;font-weight:500;color:var(--text-primary);">Lightweight</span>
+      <span style="display:inline-flex;align-items:center;background:var(--white);border:1px solid var(--border-color);border-radius:999px;padding:10px 20px;font-size:14px;font-weight:500;color:var(--text-primary);">Practical</span>
+      <span style="display:inline-flex;align-items:center;background:var(--white);border:1px solid var(--border-color);border-radius:999px;padding:10px 20px;font-size:14px;font-weight:500;color:var(--text-primary);">Startup-ready</span>
+      <span style="display:inline-flex;align-items:center;background:var(--white);border:1px solid var(--border-color);border-radius:999px;padding:10px 20px;font-size:14px;font-weight:500;color:var(--text-primary);">AI-compatible</span>
+      <span style="display:inline-flex;align-items:center;background:var(--white);border:1px solid var(--border-color);border-radius:999px;padding:10px 20px;font-size:14px;font-weight:500;color:var(--text-primary);">Focused on results</span>
+    </div>
+
+    <p style="margin-top:40px;text-align:center;font-size:16px;color:var(--text-secondary);">
+      You stay in control of product direction. We keep execution aligned.
+    </p>
+  </div>
+</section>
+
+<!-- ========== NOT YOUR TYPICAL AGENCY ========== -->
+<section class="lr-section lr-section-bordered lr-fade-in" style="background:var(--bg-light);">
+  <div class="container" style="max-width:720px;">
+    <div class="lr-section-header lr-section-header-center">
+      <h2 class="lr-section-heading">Not Your Typical <span>Agency.</span></h2>
+      <p class="lr-section-desc">Founders have been burned before. We built our process to fix exactly that.</p>
+    </div>
+
+    <div style="background:var(--white);border:1px solid var(--border-color);border-radius:16px;overflow:hidden;">
+      <div style="display:flex;align-items:flex-start;gap:12px;padding:20px 24px;border-bottom:1px solid var(--border-color);">
+        <svg style="width:18px;height:18px;flex-shrink:0;color:var(--accent-green);margin-top:2px;" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <p style="font-size:14px;font-weight:500;color:var(--text-primary);">No vanishing after handoff</p>
+          <p style="font-size:13px;color:var(--text-secondary);margin-top:2px;">We stay through launch and beyond. You get ongoing support as long as you need it.</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:12px;padding:20px 24px;border-bottom:1px solid var(--border-color);">
+        <svg style="width:18px;height:18px;flex-shrink:0;color:var(--accent-green);margin-top:2px;" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <p style="font-size:14px;font-weight:500;color:var(--text-primary);">No scope surprises</p>
+          <p style="font-size:13px;color:var(--text-secondary);margin-top:2px;">Clear deliverables, weekly updates, and structured sprints. You always know what's being built and why.</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:12px;padding:20px 24px;border-bottom:1px solid var(--border-color);">
+        <svg style="width:18px;height:18px;flex-shrink:0;color:var(--accent-green);margin-top:2px;" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <p style="font-size:14px;font-weight:500;color:var(--text-primary);">No black-box process</p>
+          <p style="font-size:13px;color:var(--text-secondary);margin-top:2px;">Full transparency into priorities, velocity, and decisions. You're a partner, not a ticket in a queue.</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:12px;padding:20px 24px;">
+        <svg style="width:18px;height:18px;flex-shrink:0;color:var(--accent-green);margin-top:2px;" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <p style="font-size:14px;font-weight:500;color:var(--text-primary);">No tech debt left behind</p>
+          <p style="font-size:13px;color:var(--text-secondary);margin-top:2px;">Clean, tested, documented code you can maintain yourself. We build to hand over, not to lock you in.</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:40px;text-align:center;font-size:16px;color:var(--text-secondary);">
+      We've worked with 50+ startups. We know what founders actually need.
+    </p>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section id="cta" class="lr-section lr-fade-in" style="background:var(--text-primary);border-top:none;">
+  <div class="container" style="max-width:640px;text-align:center;">
+    <h2 class="lr-section-heading" style="color:var(--white);font-size:42px;">Let's Build Together.</h2>
+    <p style="font-size:16px;color:rgba(255,255,255,0.6);line-height:1.7;margin-top:16px;">
+      Stop searching for the right team. Start shipping with one that's built for founders.
+    </p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;margin-top:32px;">
+      <a href="#" class="lr-btn lr-btn-lg" style="background:var(--white);color:var(--text-primary);" data-cal-link="neshaz/intro" data-cal-namespace="kolosek" data-cal-config='{"layout":"month_view"}' data-umami-event="cta-talk-to-us" data-umami-event-location="founders-final-cta">
+        Talk to Us
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <!-- Tech stack -->
+    <div style="margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.15);">
+      <p style="font-size:14px;color:rgba(255,255,255,0.5);margin-bottom:8px;">We build with the tools that ship fastest.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px;margin-top:16px;">
+        <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.4);">Rails</span>
+        <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.4);">React</span>
+        <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.4);">OpenAI</span>
+        <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.4);">Claude</span>
+        <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.4);">LangChain</span>
+        <span style="font-size:13px;font-weight:500;color:rgba(255,255,255,0.4);">PostgreSQL</span>
+      </div>
+    </div>
+  </div>
+</section>
