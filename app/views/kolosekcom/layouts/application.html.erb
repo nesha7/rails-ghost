@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kolosek AI - Native AI Agency</title>
-  <meta name="description" content="We build AI-powered products natively. From custom AI agents to full-stack development, Kolosek delivers intelligent software from concept to production.">
+  <title>
+    <%= content_for?(:title) ? yield(:title) : "Kolosek | Native AI Agency" %>
+  </title>
+  <meta name="description" content="<%= @settings['meta_description'].present? ? @settings['meta_description'] : 'We build AI-powered products natively. From custom AI agents to full-stack development, Kolosek delivers intelligent software from concept to production.' %>">
   <%= csrf_meta_tags %>
+
   <%= favicon_link_tag 'kolosek/favicon.svg' %>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +25,6 @@
   <%= render "kolosekcom/partials/footer" %>
 
   <script src="/files/kolosekcom.js"></script>
-  
   <%= raw @settings['codeinjection_foot'] %>
   <%= raw @footer_script if @footer_script.present? %>
 </body>
