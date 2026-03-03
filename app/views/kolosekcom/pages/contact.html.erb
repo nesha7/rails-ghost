@@ -78,6 +78,56 @@
   </div>
 </section>
 
+<!-- ========== NATIVE CONTACT FORM ========== -->
+<section class="lr-section lr-section-bordered lr-fade-in">
+  <div class="container">
+    <div class="lr-section-header lr-section-header-center">
+      <div class="lr-section-tag">
+        <svg viewBox="0 0 24 24" fill="none" style="width:14px;height:14px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Send a message
+      </div>
+      <h2 class="lr-section-heading">Or fill out the form <span>below</span></h2>
+      <p class="lr-section-desc">Tell us about your project and we'll get back to you within 24 hours.</p>
+    </div>
+
+    <div class="lr-native-form-wrapper">
+      <div id="form_response"></div>
+      <%= form_with url: forms_path, method: :post, data: { turbo: true }, class: "lr-native-form" do |f| %>
+        <input type="hidden" name="form[form_type]" value="contact">
+        <div class="lr-form-row">
+          <div class="lr-form-group">
+            <label for="first_name" class="lr-form-label">First Name</label>
+            <input type="text" id="first_name" name="first_name" required class="lr-form-input" placeholder="John">
+          </div>
+          <div class="lr-form-group">
+            <label for="last_name" class="lr-form-label">Last Name</label>
+            <input type="text" id="last_name" name="last_name" required class="lr-form-input" placeholder="Doe">
+          </div>
+        </div>
+        <div class="lr-form-group">
+          <label for="form_email" class="lr-form-label">Email</label>
+          <input type="email" id="form_email" name="form[email]" required class="lr-form-input" placeholder="john@example.com">
+        </div>
+        <div class="lr-form-group">
+          <label for="project_name" class="lr-form-label">Project Name</label>
+          <input type="text" id="project_name" name="project_name" class="lr-form-input" placeholder="My awesome project">
+        </div>
+        <div class="lr-form-group">
+          <label for="message" class="lr-form-label">Message</label>
+          <textarea id="message" name="message" rows="5" required class="lr-form-textarea" placeholder="Tell us about your project, goals, and timeline..."></textarea>
+        </div>
+        <input type="hidden" name="form[name]" id="form_name_hidden">
+        <input type="hidden" name="form[data][project_name]" id="form_data_project_name">
+        <input type="hidden" name="form[data][message]" id="form_data_message">
+        <button type="submit" class="lr-btn lr-btn-primary lr-btn-lg lr-form-submit" data-umami-event="contact-form-submit" onclick="document.getElementById('form_name_hidden').value = document.getElementById('first_name').value + ' ' + document.getElementById('last_name').value; document.getElementById('form_data_project_name').value = document.getElementById('project_name').value; document.getElementById('form_data_message').value = document.getElementById('message').value;">
+          Send message
+          <svg viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      <% end %>
+    </div>
+  </div>
+</section>
+
 <!-- ========== CTA ========== -->
 <section class="lr-cta lr-fade-in">
   <div class="container">
