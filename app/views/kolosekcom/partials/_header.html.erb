@@ -11,10 +11,20 @@
       <a href="https://poslovi.kolosek.com" target="_blank" data-umami-event="nav-careers">Careers</a>
       <a href="/blog" data-umami-event="nav-blog">Blog</a>
       <a href="/contact" data-umami-event="nav-contact">Contact</a>
+      <% if current_user&.admin? %>
+        <a href="/admin" class="lr-btn lr-mobile-nav-cta" data-umami-event="nav-admin">Admin</a>
+      <% elsif current_user %>
+        <a href="<%= destroy_user_session_path %>" class="lr-btn lr-mobile-nav-cta" data-umami-event="nav-logout">Logout</a>
+      <% end %>
       <a href="/contact" class="lr-btn lr-btn-primary lr-mobile-nav-cta" data-umami-event="cta-start-project">Start a project</a>
     </nav>
     <div class="lr-header-right">
       <a href="https://poslovi.kolosek.com" target="_blank" class="lr-badge-hiring" data-umami-event="nav-careers">We are hiring</a>
+      <% if current_user&.admin? %>
+        <a href="/admin" class="lr-btn" data-umami-event="nav-admin">Admin</a>
+      <% elsif current_user %>
+        <a href="<%= destroy_user_session_path %>" class="lr-btn" data-umami-event="nav-logout">Logout</a>
+      <% end %>
       <a href="/contact" class="lr-btn lr-btn-primary" data-umami-event="cta-start-project">
         Start a project
         <svg viewBox="0 0 16 16" fill="none"><path d="M3.33 8h9.34M8.67 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
