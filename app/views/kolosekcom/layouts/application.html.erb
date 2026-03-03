@@ -15,7 +15,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/files/kolosekcom.css">
   <%= stylesheet_link_tag '/css/ghost.min.css', media: 'all', "data-turbo-track": "reload" %>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.17/dist/turbo.es2017-esm.min.js"></script>
+  <script type="module">
+    import * as Turbo from "https://cdn.jsdelivr.net/npm/@hotwired/turbo@8.0.17/dist/turbo.es2017-esm.min.js";
+    Turbo.start();
+  </script>
   <%= raw @settings['codeinjection_head'] %>
 
   <%= raw @header_script if @header_script.present? %>
