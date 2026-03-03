@@ -611,11 +611,7 @@ input { font-family: inherit; }
 .lr-contact-link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--accent-blue); transition: color 0.2s; }
 .lr-contact-link:hover { color: var(--accent-blue-dark); }
 .lr-contact-link svg { width: 14px; height: 14px; }
-.lr-contact-form-card { background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 16px; padding: 8px; overflow: hidden; }
-.lr-contact-form-card iframe { border-radius: 12px; }
-
-/* Native contact form */
-.lr-native-form-wrapper { max-width: 680px; margin: 0 auto; background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 16px; padding: 40px; }
+.lr-contact-form-card { background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; }
 .lr-native-form { display: flex; flex-direction: column; gap: 20px; }
 .lr-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .lr-form-group { display: flex; flex-direction: column; gap: 6px; }
@@ -644,8 +640,7 @@ input { font-family: inherit; }
 /* Contact responsive - mobile */
 @media (max-width: 768px) {
   .lr-contact-grid { grid-template-columns: 1fr; gap: 40px; }
-  .lr-contact-form-card iframe { height: 600px !important; }
-  .lr-native-form-wrapper { padding: 24px 16px; }
+  .lr-contact-form-card { padding: 24px 16px; }
   .lr-form-row { grid-template-columns: 1fr; }
 }
 
