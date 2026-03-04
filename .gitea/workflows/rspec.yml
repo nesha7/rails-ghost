@@ -6,13 +6,26 @@ on:
       - '**'
 
 jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3.0'
+          bundler-cache: true
+
   test:
+    needs: setup
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        ci_node_index: [0, 1]
-        ci_node_total: [2]
+        ci_node_index: [0, 1, 2]
+        ci_node_total: [3]
 
     services:
       postgres:
@@ -40,24 +53,55 @@ jobs:
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
+        id: setup-ruby
+        continue-on-error: true
         with:
           ruby-version: '3.3.0'
+          bundler-cache: true
 
-      - name: Cache bundle
-        uses: actions/cache@v4
+      - name: Retry Set up Ruby
+        if: steps.setup-ruby.outcome == 'failure'
+        uses: ruby/setup-ruby@v1
         with:
-          path: vendor/bundle
-          key: bundle-${{ hashFiles('Gemfile.lock') }}
-          restore-keys: bundle-
-
-      - name: Install dependencies
-        run: bundle install --jobs 4 --retry 3 --path vendor/bundle
+          ruby-version: '3.3.0'
+          bundler-cache: true
 
       - name: Set up database
         run: bin/rails db:create db:schema:load
 
       - name: Split and run RSpec
         run: |
-          FILES=$(find spec -name '*_spec.rb' | sort | awk "NR % ${{ matrix.ci_node_total }} == ${{ matrix.ci_node_index }}")
+          TIMING_FILE=/mnt/data/gitea/rspec_timings/${{ github.repository_owner }}/${{ github.event.repository.name }}/timings.txt
+          if [ -f "$TIMING_FILE" ]; then
+            echo "Timing file found with $(wc -l < $TIMING_FILE) entries"
+          else
+            echo "No timing file found, using fallback"
+          fi
+          FILES=$(.gitea/scripts/split_tests.sh ${{ matrix.ci_node_index }} ${{ matrix.ci_node_total }} $TIMING_FILE)
           echo "Running: $FILES"
-          bundle exec rspec $FILES
+          bundle exec rspec $FILES --format progress --format json --out tmp/rspec_results.json
+
+      - name: Save node timing data
+        if: always()
+        run: |
+          TIMING_DIR=/mnt/data/gitea/rspec_timings/${{ github.repository_owner }}/${{ github.event.repository.name }}
+          mkdir -p $TIMING_DIR
+          if [ -f tmp/rspec_results.json ]; then
+            jq -r '.examples[] | "\(.run_time) \(.file_path | ltrimstr("./"))"' tmp/rspec_results.json | \
+              awk '{files[$2]+=$1} END {for(f in files) printf "%.4f %s\n", files[f], f}' \
+              > $TIMING_DIR/node_${{ matrix.ci_node_index }}.txt
+            echo "Timing data from this node: $(wc -l < $TIMING_DIR/node_${{ matrix.ci_node_index }}.txt) entries"
+          fi
+
+  merge-timings:
+    needs: test
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge timing data from all nodes
+        run: |
+          TIMING_DIR=/mnt/data/gitea/rspec_timings/${{ github.repository_owner }}/${{ github.event.repository.name }}
+          cat $TIMING_DIR/node_*.txt | \
+            awk '{files[$2]=$1} END {for(f in files) print files[f], f}' | \
+            sort -k2 > $TIMING_DIR/timings.txt
+          echo "Total timing entries: $(wc -l < $TIMING_DIR/timings.txt)"
