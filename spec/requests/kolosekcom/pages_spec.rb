@@ -55,7 +55,7 @@ RSpec.describe "Kolosekaicom::Pages", type: :request do
     it "renders the layout with navigation and footer" do
       get "/"
 
-      expect(response.body).to include("Kolosek AI - Native AI Agency")
+      expect(response.body).to include("Kolosek | Native AI Agency")
       expect(response.body).to include("kolosekcom.css")
     end
   end
@@ -158,7 +158,7 @@ RSpec.describe "Kolosekaicom::Pages", type: :request do
     it "contains the embedded contact form" do
       get "/contact"
 
-      expect(response.body).to include("contact-form-uqybag")
+      expect(response.body).to include("lr-native-form")
     end
   end
 
