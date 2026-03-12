@@ -4,7 +4,6 @@
 bundle exec rails server
 ``
 ## Phrasing
-
 ### Sign in
 go to /users/sign_in
 
