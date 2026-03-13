@@ -8,7 +8,6 @@ bundle exec rails server
 go to /users/sign_in
 ### Sign out
 go to /users/sign_out
-
 ### Remove unused keys
 ``
 used_keys = Dir.glob("app/views/**/*.{erb,haml,slim}").flat_map do |file|
